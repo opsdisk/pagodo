@@ -91,10 +91,10 @@ class GHDBCollector:
         #self.queue.put(10)
         #self.queue.join()
 
-        print("=" * 50)
+        print("-" * 50)
         for d in self.dorks:
             print(d)
-        print("=" * 50)
+        print("-" * 50)
 
         if self.saveDorks:
             self.f = open(self.saveDirectory + '/' + 'google_dorks_' + get_timestamp() + '.txt', 'a')
@@ -115,8 +115,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='GHDB Collector - Retrieve the Google Hacking Database dorks from exploit-db.com')
     parser.add_argument('-n', dest='minDorkNum', action='store', type=int, default=5, help='Minimum Google dork number to start at (default is 5).')
     parser.add_argument('-x', dest='maxDorkNum', action='store', type=int, default=100, help='Maximum Google dork number, not the total, to retrieve (default 100).  It is currently around 3800.  There is no logic in this script to determine when it has reached the end.')
-    parser.add_argument('-o', dest='saveDirectory', action='store', default=os.getcwd(), help='Directory to save downloaded files (default is cwd, ".")')
-    parser.add_argument('-f', dest='saveDorks', action='store_true', default=False, help='Save the Google dorks to google_dorks_<TIMESTAMP>.txt file')
+    parser.add_argument('-d', dest='saveDirectory', action='store', default=os.getcwd(), help='Directory to save downloaded files (default is cwd, ".")')
+    parser.add_argument('-s', dest='saveDorks', action='store_true', default=False, help='Save the Google dorks to google_dorks_<TIMESTAMP>.txt file')
     parser.add_argument('-t', dest='numThreads', action='store', type=int, default=3, help='Number of search threads (default is 3)')
 
     args = parser.parse_args()
