@@ -4,7 +4,7 @@
 from __future__ import print_function
 
 import argparse
-import google  # https://pypi.python.org/pypi/google
+import google  # google >= 1.9.3, https://pypi.python.org/pypi/google
 import numpy
 import os
 import random
@@ -12,42 +12,12 @@ import sys
 import time
 
 
-# Rewritting google.get_page to randomize User-Agent
-'''
-def new_get_page(url):
-    """
-    Request the given URL and return the response page, using the cookie jar.
-
-    @type  url: str
-    @param url: URL to retrieve.
-
-    @rtype:  str
-    @return: Web page retrieved for the given URL.
-
-    @raise IOError: An exception is raised on error.
-    @raise urllib2.URLError: An exception is raised on error.
-    @raise urllib2.HTTPError: An exception is raised on error.
-    """
-    request = Request(url)
-    userAgent = random.choice(pgd.randomUserAgents)
-    print("[*] User-Agent", userAgent)
-    request.add_header('User-Agent', userAgent)  #'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)')
-    cookie_jar.add_cookie_header(request)
-    response = urlopen(request)
-    cookie_jar.extract_cookies(response, request)
-    html = response.read()
-    response.close()
-    cookie_jar.save()
-    return html
-
-get_page = new_get_page
-'''
-
 class Pagodo:
 
-    def __init__(self, domain, googleDorks, searchMax, saveLinks, delay):
+    def __init__(self, domain, googleDorks, searchMax, saveLinks, delay, jitter):
         self.domain = domain
-        self.googleDorks = open(googleDorks, 'r')
+        with open(googleDorks) as fp:
+            self.googleDorks = fp.read().splitlines()
         self.searchMax = searchMax
         self.saveLinks = saveLinks
         if saveLinks:
@@ -55,13 +25,11 @@ class Pagodo:
         self.delay = delay
         self.totalDorks = 0
 
-        #with open('user_agents.txt') as fp:
-        #    self.randomUserAgents = fp.readlines()
-
         # Create an array of jitter values to add to delay, favoring longer search times.
-        self.jitter = numpy.random.uniform(low=-.2 * self.delay, high=2 * self.delay, size=(50,))
+        self.jitter = numpy.random.uniform(low=self.delay, high=jitter * self.delay, size=(50,))
         
     def go(self):
+        i = 1 
         for dork in self.googleDorks:
             try:
                 dork = dork.strip()
@@ -75,9 +43,9 @@ class Pagodo:
                     query = dork
                 
                 pauseTime = self.delay + random.choice(self.jitter)
-                print("[*] Searching for Google dork [ " + query + " ] and waiting " + str(pauseTime) + " seconds between searches")                
+                print("[*] Search ( " + str(i) + " / " + str(len(self.googleDorks)) + " ) for Google dork [ " + query + " ] and waiting " + str(pauseTime) + " seconds between searches")                
                 
-                for url in google.search(query, start=0, stop=self.searchMax, num=100, pause=pauseTime, extra_params={'filter': '0'}):
+                for url in google.search(query, start=0, stop=self.searchMax, num=100, pause=pauseTime, extra_params={'filter': '0'}, randomizeUserAgent=True):
                     self.links.append(url)
                 
                 # Since google.search method retreives URLs in batches of 100, ensure the file list only contains the requested amount
@@ -102,6 +70,8 @@ class Pagodo:
             except:
                 print("[-] ERROR with dork: " + dork)
         
+            i += 1
+
         self.googleDorks.close
         print("[*] Total sites found with Google dorks: " + str(self.totalDorks))
 
@@ -117,9 +87,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Passive Google Dork - pagodo')
     parser.add_argument('-d', dest='domain', action='store', required=False, help='Domain to search for Google dork hits.')
     parser.add_argument('-g', dest='googleDorks', action='store', required=True, help='File containing Google dorks, 1 per line.')
+    parser.add_argument('-j', dest='jitter', action='store', type=float, default=1.25, help='jitter factor (multipled times delay value) added to randomize lookups times')
     parser.add_argument('-l', dest='searchMax', action='store', type=int, default=100, help='Maximum results to search (default 100).')
     parser.add_argument('-s', dest='saveLinks', action='store_true', default=False, help='Save the html links to pagodo_results__<TIMESTAMP>.txt file.')
-    parser.add_argument('-e', dest='delay', action='store', type=float, default=10.0, help='Delay (in seconds) between searches.  If it\'s too small Google may block your IP, too big and your search may take a while. Default: 10.0')
+    parser.add_argument('-e', dest='delay', action='store', type=float, default=15.0, help='Minimum delay (in seconds) between searches...jitter (up to -j X delay value) is added to this value to randomize lookups. If it\'s too small Google may block your IP, too big and your search may take a while. Default: 15.0')
 
     args = parser.parse_args()
 
@@ -130,8 +101,10 @@ if __name__ == "__main__":
         print("[!] Delay must be greater than 0")
         sys.exit()
 
+    print("[*] Initiation timestamp: " + get_timestamp())
     #print(vars(args))
     pgd = Pagodo(**vars(args))
     pgd.go()
+    print("[*] Completion timestamp: " + get_timestamp())
 
     print("[+] Done!")
