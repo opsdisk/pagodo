@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# GPL v 2.0 License
+# GPL v 3.0 License
 # Opsdisk LLC | opsdisk.com
 from __future__ import print_function
 

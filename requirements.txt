@@ -1,1 +1,2 @@
+beautifulsoup4
 google >= 1.9.3
