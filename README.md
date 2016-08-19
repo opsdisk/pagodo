@@ -2,7 +2,7 @@
 
 The goal of this project was to develop a passive Google dork script to collect potentially vulnerable web pages and applications on the Internet.  There are 2 parts.  The first is **ghdb\_scraper.py** that retrieves Google Dorks and the second portion is **pagodo.py** that leverages the information gathered by **ghdb\_scraper.py**.
 
-To my knowledge, AeonDave beat **pagodo.py** to market with the similar "doork" tool (https://github.com/AeonDave/doork), so definitely check that one out too.  I have been working sporadically on the scripts for a couple months and finally got it to a publishable point.
+To my knowledge, AeonDave beat **pagodo.py** to market with the similar "doork" tool (https://github.com/AeonDave/doork), so definitely check that one out too.  I have been working sporadically on the scripts for a couple months and finally got them to a publishable point.
 
 #### tl;dr
 
@@ -61,7 +61,7 @@ The `-d` switch can be used to specify a domain and functions as the Google sear
 
 Performing ~3800 search requests to Google as fast as possible will simply not work.  Google will rightfully detect it as a bot and block your IP for a set period of time.  In order to make the search queries appear more human, a couple of enhancements have been made.  A pull request was made and accepted by the maintainer of the Python `google` module to allow for User-Agent randomization in the Google search queries.  This feature is available in 1.9.3 (https://pypi.python.org/pypi/google) and allows you to randomize the different user agents used for each search.  This emulates the different browsers used in a large corporate environment.
 
-The second enhancement focuses on randomizing the time between search queries.  A minimum delay is specified using the `-e` option (default is 30.0 seconds) and a jitter factor is used to add time on to the minimum delay number. A list of 50 times is created and one is randomly appended to the minimum delay time for each Google dork search.  
+The second enhancement focuses on randomizing the time between search queries.  A minimum delay is specified using the `-e` option (default is 30.0 seconds) and a jitter factor is used to add time on to the minimum delay number. A list of 50 jitter times is created and one is randomly appended to the minimum delay time for each Google dork search.  
 
 ```python
 # Create an array of jitter values to add to delay, favoring longer search times.
@@ -74,7 +74,7 @@ Latter in the script, a random time is selected from the jitter array and added 
 pauseTime = self.delay + random.choice(self.jitter)
 ```
 
-Experiment with the values, but the defaults successfully worked without Google blocking my IP.  Note that it could take a few hours/days to run so be sure you have the time. 
+Experiment with the values, but the defaults successfully worked without Google blocking my IP.  Note that it could take a few hours/days to run so be sure you have the time...the first successful run took over 48 hours. 
 
 #### pagodo.py Switches
 The script's switches are self explanatory:
