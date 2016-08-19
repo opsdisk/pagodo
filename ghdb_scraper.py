@@ -23,24 +23,11 @@ class Worker(threading.Thread):
             # Grab URL off the queue and build the request
             dorkNum = ghdb.queue.get()
             url = 'https://www.exploit-db.com/ghdb/' + str(dorkNum) + '/'
-            req = urllib2.Request(url)
-            req.add_header('User-Agent', 'Googlebot/2.1 (+http://www.google.com/bot.html') #'Mozilla/5.0 (X11; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0') #Googlebot/2.1 (+http://www.google.com/bot.html)
+            request = urllib2.Request(url)
+            request.add_header('User-Agent', 'Googlebot/2.1 (+http://www.google.com/bot.html')
 
-            '''req = urllib2.Request(url)
-            req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
-            req.add_header('Accept-Language', 'en-US,en;q=0.5')
-
-            req.add_header('Accept-Encoding', 'gzip, deflate, br')
-
-            req.add_header('Connection', 'keep-alive')
-
-            req.add_header('Cache-Control', 'max-age=0')
-
-            response = urllib2.urlopen(req)
-            response.read()'''
-                
             try:
-                page = urllib2.urlopen(req, timeout=30) # exploit-db.com takes a while to load sometimes
+                page = urllib2.urlopen(request, timeout=30)  # exploit-db.com takes a while to load sometimes
                 
                 # Using beautiful soup to drill down to the actual Google dork                
                 soup = BeautifulSoup(page.read())
@@ -49,9 +36,9 @@ class Worker(threading.Thread):
                 dork = column.contents[2].contents[0]
                            
                 try:
-                    print("[+] Retrieved dork " + str(dorkNum) + ": " + dork)
+                    print("[+] Retrieving dork " + str(dorkNum) + ": " + dork)
                     ghdb.dorks.append(dork)
-                    
+       
                 except:
                     print("[-] Dork number " + str(dorkNum) + " failed: " + dork)
                  
@@ -59,7 +46,7 @@ class Worker(threading.Thread):
             
             except:
                 print("[-] Random error with dork number " + str(dorkNum))
-                
+            
             ghdb.queue.task_done()
 
 
@@ -69,7 +56,7 @@ class GHDBCollector:
         self.minDorkNum = minDorkNum
         self.maxDorkNum = maxDorkNum
         self.saveDirectory = saveDirectory
-        self.saveDorks = saveDorks
+        self.saveDorks = saveDorks 
         self.dorks = []
 
         # Create queue and specify the number of worker threads.
@@ -83,26 +70,24 @@ class GHDBCollector:
             thread.daemon = True
             thread.start()
 
-        # Populate the queue with the google dork range.  It starts at 5.
-        for dorkNum in range(self.minDorkNum, self.maxDorkNum + 1):  # 3800
+        # Populate the queue with the Google dork range.
+        for dorkNum in range(self.minDorkNum, self.maxDorkNum + 1):
             self.queue.put(dorkNum)
         self.queue.join()
 
-        #self.queue.put(10)
-        #self.queue.join()
-
         print("-" * 50)
-        for d in self.dorks:
-            print(d)
+        for dork in self.dorks:
+            print(dork)
         print("-" * 50)
 
         if self.saveDorks:
             self.f = open(self.saveDirectory + '/' + 'google_dorks_' + get_timestamp() + '.txt', 'a')
             for dork in self.dorks:
-                self.f.write(dork + "\n")
+                self.f.write(dork.encode('utf-8') + "\n")
             self.f.close()
 
         print("[*] Total Google dorks retrieved: " + str(len(self.dorks)))
+        
 
 def get_timestamp():
     now = time.localtime()
@@ -112,12 +97,12 @@ def get_timestamp():
 
 if __name__ == "__main__":
     
-    parser = argparse.ArgumentParser(description='GHDB Collector - Retrieve the Google Hacking Database dorks from exploit-db.com')
-    parser.add_argument('-n', dest='minDorkNum', action='store', type=int, default=5, help='Minimum Google dork number to start at (default is 5).')
-    parser.add_argument('-x', dest='maxDorkNum', action='store', type=int, default=100, help='Maximum Google dork number, not the total, to retrieve (default 100).  It is currently around 3800.  There is no logic in this script to determine when it has reached the end.')
-    parser.add_argument('-d', dest='saveDirectory', action='store', default=os.getcwd(), help='Directory to save downloaded files (default is cwd, ".")')
+    parser = argparse.ArgumentParser(description='GHDB Scraper - Retrieve the Google Hacking Database dorks from exploit-db.com')
+    parser.add_argument('-n', dest='minDorkNum', action='store', type=int, default=5, help='Minimum Google dork number to start at (Default: 5).')
+    parser.add_argument('-x', dest='maxDorkNum', action='store', type=int, default=5000, help='Maximum Google dork number, not the total, to retrieve (Default: 5000).  It is currently around 3800.  There is no logic in this script to determine when it has reached the end.')
+    parser.add_argument('-d', dest='saveDirectory', action='store', default=os.getcwd(), help='Directory to save downloaded files (Default: cwd, ".")')
     parser.add_argument('-s', dest='saveDorks', action='store_true', default=False, help='Save the Google dorks to google_dorks_<TIMESTAMP>.txt file')
-    parser.add_argument('-t', dest='numThreads', action='store', type=int, default=3, help='Number of search threads (default is 3)')
+    parser.add_argument('-t', dest='numThreads', action='store', type=int, default=3, help='Number of search threads (Default: 3)')
 
     args = parser.parse_args()
 
@@ -137,7 +122,9 @@ if __name__ == "__main__":
         sys.exit()
 
     #print(vars(args))
+    print("[*] Initiation timestamp: " + get_timestamp())
     ghdb = GHDBCollector(**vars(args))
     ghdb.go()
+    print("[*] Completion timestamp: " + get_timestamp())
 
     print("[+] Done!")

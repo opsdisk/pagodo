@@ -16,24 +16,24 @@ class Pagodo:
 
     def __init__(self, domain, googleDorks, searchMax, saveLinks, delay, jitter):
         self.domain = domain
-        with open(googleDorks) as fp:
-            self.googleDorks = fp.read().splitlines()
+        with open(googleDorks) as self.fp:
+            self.googleDorks = self.fp.read().splitlines()
         self.searchMax = searchMax
         self.saveLinks = saveLinks
         if saveLinks:
             self.logFile = 'pagodo_results_' + get_timestamp() + '.txt'
         self.delay = delay
-        self.totalDorks = 0
-
+        
         # Create an array of jitter values to add to delay, favoring longer search times.
         self.jitter = numpy.random.uniform(low=self.delay, high=jitter * self.delay, size=(50,))
         
+        self.totalDorks = 0
+
     def go(self):
-        i = 1 
+        i = 1
         for dork in self.googleDorks:
             try:
                 dork = dork.strip()
-
                 self.links = []  # Stores URLs with files, clear out for each dork
 
                 # Search for the links to collect
@@ -45,7 +45,7 @@ class Pagodo:
                 pauseTime = self.delay + random.choice(self.jitter)
                 print("[*] Search ( " + str(i) + " / " + str(len(self.googleDorks)) + " ) for Google dork [ " + query + " ] and waiting " + str(pauseTime) + " seconds between searches")                
                 
-                for url in google.search(query, start=0, stop=self.searchMax, num=100, pause=pauseTime, extra_params={'filter': '0'}, randomizeUserAgent=True):
+                for url in google.search(query, start=0, stop=self.searchMax, num=100, pause=pauseTime, extra_params={'filter': '0'}, user_agent=google.get_random_user_agent()):
                     self.links.append(url)
                 
                 # Since google.search method retreives URLs in batches of 100, ensure the file list only contains the requested amount
@@ -69,11 +69,11 @@ class Pagodo:
 
             except:
                 print("[-] ERROR with dork: " + dork)
-        
+            
             i += 1
 
-        self.googleDorks.close
-        print("[*] Total sites found with Google dorks: " + str(self.totalDorks))
+        self.fp.close
+        print("[*] Total dorks found: " + str(self.totalDorks))
 
 
 def get_timestamp():
@@ -87,10 +87,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Passive Google Dork - pagodo')
     parser.add_argument('-d', dest='domain', action='store', required=False, help='Domain to search for Google dork hits.')
     parser.add_argument('-g', dest='googleDorks', action='store', required=True, help='File containing Google dorks, 1 per line.')
-    parser.add_argument('-j', dest='jitter', action='store', type=float, default=1.25, help='jitter factor (multipled times delay value) added to randomize lookups times')
+    parser.add_argument('-j', dest='jitter', action='store', type=float, default=.75, help='jitter factor (multipled times delay value) added to randomize lookups times. Default: 1.50')
     parser.add_argument('-l', dest='searchMax', action='store', type=int, default=100, help='Maximum results to search (default 100).')
     parser.add_argument('-s', dest='saveLinks', action='store_true', default=False, help='Save the html links to pagodo_results__<TIMESTAMP>.txt file.')
-    parser.add_argument('-e', dest='delay', action='store', type=float, default=15.0, help='Minimum delay (in seconds) between searches...jitter (up to -j X delay value) is added to this value to randomize lookups. If it\'s too small Google may block your IP, too big and your search may take a while. Default: 15.0')
+    parser.add_argument('-e', dest='delay', action='store', type=float, default=30.0, help='Minimum delay (in seconds) between searches...jitter (up to [jitter X delay] value) is added to this value to randomize lookups. If it\'s too small Google may block your IP, too big and your search may take a while. Default: 30.0')
 
     args = parser.parse_args()
 
@@ -100,9 +100,12 @@ if __name__ == "__main__":
     if args.delay < 0:
         print("[!] Delay must be greater than 0")
         sys.exit()
+    '''if args.jitter < 0:
+        print("[!] Jitter must be greater than 0")
+        sys.exit()'''
 
-    print("[*] Initiation timestamp: " + get_timestamp())
     #print(vars(args))
+    print("[*] Initiation timestamp: " + get_timestamp())
     pgd = Pagodo(**vars(args))
     pgd.go()
     print("[*] Completion timestamp: " + get_timestamp())
