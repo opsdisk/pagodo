@@ -48,7 +48,7 @@ The script's switches are self explanatory:
 
 To run it
 
-    python ghdb_scraper.py -n 5 -x 3785 -f -t 3
+    python ghdb_scraper.py -n 5 -x 3785 -s -t 3
 
 #### pagodo.py
 Now that a file with the most recent Google dorks exists, it can be fed into **pagodo.py** using the `-g` switch to start collecting potentially vulnerable public applications.  **pagodo.py** leverages the `google` python library to search Google for sites with the Google dork, such as:
