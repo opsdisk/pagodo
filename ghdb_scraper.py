@@ -33,7 +33,7 @@ class Worker(threading.Thread):
                 soup = BeautifulSoup(page.read())
                 table = soup.find_all('table')[0]
                 column = table.find_all('td')[1]
-                dork = column.contents[2].contents[0]
+                dork = column.contents[3].contents[0]
                            
                 try:
                     print("[+] Retrieving dork " + str(dorkNum) + ": " + dork)
