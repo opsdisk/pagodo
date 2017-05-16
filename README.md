@@ -71,7 +71,7 @@ self.jitter = numpy.random.uniform(low=self.delay, high=jitter * self.delay, siz
 Latter in the script, a random time is selected from the jitter array and added to the delay.
 
 ```python
-pauseTime = self.delay + random.choice(self.jitter)
+pause_time = self.delay + random.choice(self.jitter)
 ```
 
 Experiment with the values, but the defaults successfully worked without Google blocking my IP.  Note that it could take a few hours/days to run so be sure you have the time...the first successful run took over 48 hours. 
