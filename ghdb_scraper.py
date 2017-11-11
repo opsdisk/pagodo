@@ -25,20 +25,17 @@ class Worker(threading.Thread):
             url = 'https://www.exploit-db.com/ghdb/' + str(dork_number) + '/'
             request = urllib2.Request(url)
             request.add_header('User-Agent', 'Googlebot/2.1 (+http://www.google.com/bot.html')
-
             try:
-                page = urllib2.urlopen(request, timeout=30)  # exploit-db.com takes a while to load sometimes
+                page = urllib2.urlopen(request, timeout=60)  # exploit-db.com takes a while to load sometimes
 
                 # Using beautiful soup to drill down to the actual Google dork
                 soup = BeautifulSoup(page.read())
                 table = soup.find_all('table')[0]
-                column = table.find_all('td')[1]
-                dork = column.contents[3].contents[0]
-
+                column = table.find_all('td')[2]
+                dork = column.find_all('a')[0].contents[0]
                 try:
                     print("[+] Retrieving dork " + str(dork_number) + ": " + dork)
                     ghdb.dorks.append(dork)
-
                 except:
                     print("[-] Dork number " + str(dork_number) + " failed: " + dork)
 
