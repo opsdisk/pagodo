@@ -1,2 +1,4 @@
-beautifulsoup4
+beautifulsoup4 >= 4.6.0
 google >= 1.9.3
+numpy >= 1.13.3
+requests >= 2.18.4

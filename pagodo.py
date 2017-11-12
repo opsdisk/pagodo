@@ -4,12 +4,13 @@
 from __future__ import print_function
 
 import argparse
-import google  # google >= 1.9.3, https://pypi.python.org/pypi/google
-import numpy
 import os
 import random
 import sys
 import time
+
+import numpy
+import google  # google >= 1.9.3, https://pypi.python.org/pypi/google
 
 
 class Pagodo:

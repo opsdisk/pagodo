@@ -5,12 +5,20 @@ from __future__ import print_function
 
 import argparse
 import os
-import Queue
 import sys
 import threading
 import time
-import urllib2
-from bs4 import BeautifulSoup
+
+# https://stackoverflow.com/questions/29687837/queue-importerror-in-python-3
+is_py2 = sys.version[0] == '2'
+if is_py2:
+    import Queue as queue
+else:
+    import queue as queue
+
+
+import requests  # noqa
+from bs4 import BeautifulSoup  # noqa
 
 
 class Worker(threading.Thread):
@@ -22,30 +30,41 @@ class Worker(threading.Thread):
         while True:
             # Grab URL off the queue and build the request
             dork_number = ghdb.queue.get()
-            url = 'https://www.exploit-db.com/ghdb/' + str(dork_number) + '/'
-            request = urllib2.Request(url)
-            request.add_header('User-Agent', 'Googlebot/2.1 (+http://www.google.com/bot.html')
+            url = 'https://www.exploit-db.com/ghdb/{0}'.format(dork_number)
+
+            headers = {
+                'User-Agent': 'Googlebot/2.1 (+http://www.google.com/bot.html'
+            }
 
             try:
-                page = urllib2.urlopen(request, timeout=30)  # exploit-db.com takes a while to load sometimes
+                response = requests.get(url, headers=headers, verify=True, timeout=60)  # exploit-db.com takes a while to load sometimes
 
-                # Using beautiful soup to drill down to the actual Google dork
-                soup = BeautifulSoup(page.read())
-                table = soup.find_all('table')[0]
-                column = table.find_all('td')[1]
-                dork = column.contents[3].contents[0]
+                if response.status_code == 200:
+                    page = response.text
 
-                try:
-                    print("[+] Retrieving dork " + str(dork_number) + ": " + dork)
-                    ghdb.dorks.append(dork)
+                    # Using beautiful soup to drill down to the actual Google dork
+                    soup = BeautifulSoup(page, "html.parser")
+                    table = soup.find_all('table')[0]
+                    column = table.find_all('td')[2]
+                    dork = column.find_all('a')[0].contents[0]
 
-                except:
-                    print("[-] Dork number " + str(dork_number) + " failed: " + dork)
+                    # Clean up string by removing '\n' characters and spaces.
+                    # https://www.exploit-db.com/ghdb/9/
+                    # '\n                intitle:index.of .bash_history            ' --> intitle:index.of .bash_history
+                    dork = " ".join(dork.split())
 
-                page.close()
+                    try:
+                        print("[+] Retrieving dork {0}: {1}".format(dork_number, dork))
+                        ghdb.dorks.append(dork)
+
+                    except:
+                        print("[-] Dork number {0} failed: {1}".format(dork_number, dork))
+
+                else:
+                    print("Could not access {0}. HTTP status code: {1}".format(url, response.status_code))
 
             except:
-                print("[-] Random error with dork number " + str(dork_number))
+                print("[-] Random error with dork number {0}.".format(dork_number))
 
             ghdb.queue.task_done()
 
@@ -60,7 +79,7 @@ class GHDBCollector:
         self.dorks = []
 
         # Create queue and specify the number of worker threads.
-        self.queue = Queue.Queue()
+        self.queue = queue.Queue()
         self.number_of_threads = number_of_threads
 
     def go(self):
@@ -81,12 +100,12 @@ class GHDBCollector:
         print("-" * 50)
 
         if self.save_dorks:
-            self.f = open(self.save_directory + '/' + 'google_dorks_' + get_timestamp() + '.txt', 'a')
-            for dork in self.dorks:
-                self.f.write(dork.encode('utf-8') + "\n")
-            self.f.close()
+            google_dork_file = 'google_dorks_{0}.txt'.format(get_timestamp())
+            with open(os.path.join(self.save_directory, google_dork_file), 'a') as fh:
+                for dork in self.dorks:
+                    fh.write(dork + "\n")
 
-        print("[*] Total Google dorks retrieved: " + str(len(self.dorks)))
+        print("[*] Total Google dorks retrieved: {0}".format(len(self.dorks)))
 
 
 def get_timestamp():
@@ -96,7 +115,6 @@ def get_timestamp():
 
 
 if __name__ == "__main__":
-
     parser = argparse.ArgumentParser(description='GHDB Scraper - Retrieve the Google Hacking Database dorks from exploit-db.com')
     parser.add_argument('-n', dest='min_dork_number', action='store', type=int, default=5, help='Minimum Google dork number to start at (Default: 5).')
     parser.add_argument('-x', dest='max_dork_number', action='store', type=int, default=5000, help='Maximum Google dork number, not the total, to retrieve (Default: 5000).  It is currently around 3800.  There is no logic in this script to determine when it has reached the end.')
@@ -107,7 +125,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.save_directory:
-        print("[*] Dork file will be saved here: " + args.save_directory)
+        print("[*] Dork file will be saved here: {0}".format(args.save_directory))
         if not os.path.exists(args.save_directory):
             print("[+] Creating folder: " + args.save_directory)
             os.mkdir(args.save_directory)
@@ -121,10 +139,9 @@ if __name__ == "__main__":
         print("[!] Number of threads (-n) must be greater than 0")
         sys.exit()
 
-    #print(vars(args))
-    print("[*] Initiation timestamp: " + get_timestamp())
+    print("[*] Initiation timestamp: {0}".format(get_timestamp()))
     ghdb = GHDBCollector(**vars(args))
     ghdb.go()
-    print("[*] Completion timestamp: " + get_timestamp())
+    print("[*] Completion timestamp: {0}".format(get_timestamp()))
 
     print("[+] Done!")
