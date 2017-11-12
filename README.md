@@ -35,7 +35,7 @@ The website doesn't block requests using 3 threads, but did for 8...your mileage
 #### ghdb_scraper.py Switches
 
 The script's switches are self explanatory:
-      
+
     -n MINDORKNUM     Minimum Google dork number to start at (Default: 5).
     -x MAXDORKNUM     Maximum Google dork number, not the total, to retrieve
                       (Default: 5000). It is currently around 3800. There is no
@@ -74,11 +74,11 @@ Latter in the script, a random time is selected from the jitter array and added 
 pause_time = self.delay + random.choice(self.jitter)
 ```
 
-Experiment with the values, but the defaults successfully worked without Google blocking my IP.  Note that it could take a few hours/days to run so be sure you have the time...the first successful run took over 48 hours. 
+Experiment with the values, but the defaults successfully worked without Google blocking my IP.  Note that it could take a few hours/days to run so be sure you have the time...the first successful run took over 48 hours.
 
 #### pagodo.py Switches
 The script's switches are self explanatory:
-      
+
     -d DOMAIN       Domain to search for Google dork hits.
     -g GOOGLEDORKS  File containing Google dorks, 1 per line.
     -j JITTER       jitter factor (multipled times delay value) added to
@@ -96,11 +96,8 @@ To run it
 
 #### Future Work
 
-Future work includes grabbing the Google dork description to provide some context around the dork and why it is in the Google Hacking Database as seen below.
-
-![](/content/images/2016/08/pagodo_1.PNG)
+Future work includes grabbing the Google dork description to provide some context around the dork and why it is in the Google Hacking Database.
 
 #### Conclusion
 
-All of the code can be found on the Opsdisk Github repository here: https://github.com/opsdisk/pagodo.  Comments, suggestions, and improvements are always welcome.  Be sure to follow [@opsdisk](https://twitter.com/opsdisk) on Twitter for the latest updates. 
- 
+All of the code can be found on the Opsdisk Github repository here: https://github.com/opsdisk/pagodo.  Comments, suggestions, and improvements are always welcome.  Be sure to follow [@opsdisk](https://twitter.com/opsdisk) on Twitter for the latest updates.
