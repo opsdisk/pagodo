@@ -12,8 +12,6 @@ The code can be found here: https://github.com/opsdisk/pagodo
 
 The awesome folks at Offensive Security maintain the Google Hacking Database (GHDB) found here: https://www.exploit-db.com/google-hacking-database.  It is a collection of Google searches, called dorks, that can be used to find potentially vulnerable boxes or other juicy info that is picked up by Google's search bots.  
 
-![](/content/images/2016/08/pagodo_0.PNG)
-
 #### ghdb_scraper.py
 
 To start off, **pagodo.py** needs a list of all the current Google dorks.  Unfortunately, the entire database cannot be easily downloaded.  A couple of older projects did this, but the code was slightly stale and it wasn't multi-threaded...so collecting ~3800 Google Dorks would take a long time.  **ghdb_scraper.py** is the resulting Python script.
@@ -51,6 +49,7 @@ To run it
     python ghdb_scraper.py -n 5 -x 3785 -s -t 3
 
 #### pagodo.py
+
 Now that a file with the most recent Google dorks exists, it can be fed into **pagodo.py** using the `-g` switch to start collecting potentially vulnerable public applications.  **pagodo.py** leverages the `google` python library to search Google for sites with the Google dork, such as:
 
     intitle:"ListMail Login" admin -demo

@@ -10,7 +10,10 @@ import sys
 import time
 
 import numpy
-import google  # google >= 1.9.3, https://pypi.python.org/pypi/google
+
+# google == 2.0.1, module author changed import name
+# https://github.com/MarioVilas/googlesearch/commit/92309f4f23a6334a83c045f7c51f87b904e7d61d
+import googlesearch
 
 
 class Pagodo:
@@ -35,9 +38,9 @@ class Pagodo:
         for dork in self.google_dorks:
             try:
                 dork = dork.strip()
-                self.links = []  # Stores URLs with files, clear out for each dork
+                self.links = []  # Stores URLs with files, clear out for each dork.
 
-                # Search for the links to collect
+                # Search for the links to collect.
                 if self.domain:
                     query = dork + " site:" + self.domain
                 else:
@@ -46,10 +49,10 @@ class Pagodo:
                 pause_time = self.delay + random.choice(self.jitter)
                 print("[*] Search ( " + str(i) + " / " + str(len(self.google_dorks)) + " ) for Google dork [ " + query + " ] and waiting " + str(pause_time) + " seconds between searches")
 
-                for url in google.search(query, start=0, stop=self.search_max, num=100, pause=pause_time, extra_params={'filter': '0'}, user_agent=google.get_random_user_agent()):
+                for url in googlesearch.search(query, start=0, stop=self.search_max, num=100, pause=pause_time, extra_params={'filter': '0'}, user_agent=googlesearch.get_random_user_agent()):
                     self.links.append(url)
 
-                # Since google.search method retreives URLs in batches of 100, ensure the file list only contains the requested amount
+                # Since googlesearch.search method retreives URLs in batches of 100, ensure the file list only contains the requested amount.
                 if len(self.links) > self.search_max:
                     self.links = self.links[:-(len(self.links) - self.search_max)]
 
@@ -59,7 +62,7 @@ class Pagodo:
 
                 self.total_dorks += len(self.links)
 
-                # Only save links with valid results to an output file
+                # Only save links with valid results to an output file.
                 if self.save_links and (self.links):
                     f = open(self.log_file, 'a')
                     f.write('#: ' + dork + "\n")
@@ -101,11 +104,7 @@ if __name__ == "__main__":
     if args.delay < 0:
         print("[!] Delay must be greater than 0")
         sys.exit()
-    '''if args.jitter < 0:
-        print("[!] Jitter must be greater than 0")
-        sys.exit()'''
 
-    #print(vars(args))
     print("[*] Initiation timestamp: " + get_timestamp())
     pgd = Pagodo(**vars(args))
     pgd.go()
