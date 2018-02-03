@@ -28,7 +28,7 @@ class Worker(threading.Thread):
 
     def run(self):
         while True:
-            # Grab URL off the queue and build the request
+            # Grab URL off the queue and build the request.
             dork_number = ghdb.queue.get()
             url = 'https://www.exploit-db.com/ghdb/{0}'.format(dork_number)
 
@@ -37,12 +37,12 @@ class Worker(threading.Thread):
             }
 
             try:
-                response = requests.get(url, headers=headers, verify=True, timeout=60)  # exploit-db.com takes a while to load sometimes
+                response = requests.get(url, headers=headers, verify=True, timeout=60)  # exploit-db.com takes a while to load sometimes.
 
                 if response.status_code == 200:
                     page = response.text
 
-                    # Using beautiful soup to drill down to the actual Google dork
+                    # Using beautiful soup to drill down to the actual Google dork.
                     soup = BeautifulSoup(page, "html.parser")
                     table = soup.find_all('table')[0]
                     column = table.find_all('td')[2]
