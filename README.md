@@ -16,7 +16,7 @@ The awesome folks at Offensive Security maintain the Google Hacking Database (GH
 
 Clone the git repository and install the requirements
 ```
-pip install -r requirements.txt.
+pip install -r requirements.txt
 ```
 
 #### ghdb_scraper.py
