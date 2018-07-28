@@ -155,7 +155,7 @@ if __name__ == "__main__":
         dest="save_links",
         action="store_true",
         default=False,
-        help="Save the html links to pagodo_results__<TIMESTAMP>.txt file.",
+        help="Save the html links to pagodo_results_<TIMESTAMP>.txt file.",
     )
     parser.add_argument(
         "-e",
