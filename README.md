@@ -4,20 +4,23 @@ The goal of this project was to develop a passive Google dork script to collect 
 
 To my knowledge, AeonDave beat **pagodo.py** to market with the similar "doork" tool (https://github.com/AeonDave/doork), so definitely check that one out too.  I have been working sporadically on the scripts for a couple months and finally got them to a publishable point.
 
+
 #### tl;dr
 
 The code can be found here: https://github.com/opsdisk/pagodo
+
 
 #### What are Google Dorks?
 
 The awesome folks at Offensive Security maintain the Google Hacking Database (GHDB) found here: https://www.exploit-db.com/google-hacking-database.  It is a collection of Google searches, called dorks, that can be used to find potentially vulnerable boxes or other juicy info that is picked up by Google's search bots.  
 
+
 #### Installation
 
-Clone the git repository and install the requirements
-```
-pip install -r requirements.txt
-```
+Clone the git repository and install the requirements.
+
+    pip3 install -r requirements.txt
+
 
 #### ghdb_scraper.py
 
@@ -26,6 +29,7 @@ To start off, **pagodo.py** needs a list of all the current Google dorks.  Unfor
 The primary inspiration was taken from dustyfresh's ghdb-scrape (https://github.com/dustyfresh/ghdb-scrape).  Code was also reused from **aquabot** (https://github.com/opsdisk/aquabot) and the rewrite of **metagoofil** (https://github.com/opsdisk/metagoofil).
 
 The Google dorks start at number 5 and go up to 4318 as of this writing, but that does not mean there is a corresponding Google dork for each number.  An example URL with the Google dork specified is: https://www.exploit-db.com/ghdb/11/  There really isn't any rhyme or reason, so putting a large arbitrary max like 5000 would cover you.  The script is not smart enough to detect the end of the Google dorks.
+
 
 #### ghdb_scraper.py Execution Flow
 
@@ -37,23 +41,12 @@ The flow of execution is pretty simple:
 
 The website doesn't block requests using 3 threads, but did for 8...your mileage may vary.
 
-#### ghdb_scraper.py Switches
+To run it:
 
-The script's switches are self explanatory:
+```bash
+python ghdb_scraper.py -n 5 -x 3785 -s -t 3
+```
 
-    -n MINDORKNUM     Minimum Google dork number to start at (Default: 5).
-    -x MAXDORKNUM     Maximum Google dork number, not the total, to retrieve
-                      (Default: 5000). It is currently around 3800. There is no
-                      logic in this script to determine when it has reached the
-                      end.
-    -d SAVEDIRECTORY  Directory to save downloaded files (Default: cwd, ".")
-    -s                Save the Google dorks to google_dorks_<TIMESTAMP>.txt file
-    -t NUMTHREADS     Number of search threads (Default: 3)
-
-
-To run it
-
-    python ghdb_scraper.py -n 5 -x 3785 -s -t 3
 
 #### pagodo.py
 
@@ -65,9 +58,9 @@ The `-d` switch can be used to specify a domain and functions as the Google sear
 
     site:example.com  
 
-Performing ~3800 search requests to Google as fast as possible will simply not work.  Google will rightfully detect it as a bot and block your IP for a set period of time.  In order to make the search queries appear more human, a couple of enhancements have been made.  A pull request was made and accepted by the maintainer of the Python `google` module to allow for User-Agent randomization in the Google search queries.  This feature is available in 1.9.3 (https://pypi.python.org/pypi/google) and allows you to randomize the different user agents used for each search.  This emulates the different browsers used in a large corporate environment.
+Performing ~3800 search requests to Google as fast as possible will simply not work.  Google will rightfully detect it as a bot and block your IP for a set period of time.  In order to make the search queries appear more human, a couple of enhancements have been made.  A pull request was made and accepted by the maintainer of the Python `google` module to allow for User-Agent randomization in the Google search queries.  This feature is available in [1.9.3](https://pypi.python.org/pypi/google) and allows you to randomize the different user agents used for each search.  This emulates the different browsers used in a large corporate environment.
 
-The second enhancement focuses on randomizing the time between search queries.  A minimum delay is specified using the `-e` option (default is 30.0 seconds) and a jitter factor is used to add time on to the minimum delay number. A list of 50 jitter times is created and one is randomly appended to the minimum delay time for each Google dork search.  
+The second enhancement focuses on randomizing the time between search queries.  A minimum delay is specified using the `-e` option and a jitter factor is used to add time on to the minimum delay number. A list of 50 jitter times is created and one is randomly appended to the minimum delay time for each Google dork search.
 
 ```python
 # Create an array of jitter values to add to delay, favoring longer search times.
@@ -80,29 +73,22 @@ Latter in the script, a random time is selected from the jitter array and added 
 pause_time = self.delay + random.choice(self.jitter)
 ```
 
-Experiment with the values, but the defaults successfully worked without Google blocking my IP.  Note that it could take a few hours/days to run so be sure you have the time...the first successful run took over 48 hours.
+Experiment with the values, but the defaults successfully worked without Google blocking my IP.  Note that it could take a few days to run so be sure you have the time.
 
-#### pagodo.py Switches
-The script's switches are self explanatory:
 
-    -d DOMAIN       Domain to search for Google dork hits.
-    -g GOOGLEDORKS  File containing Google dorks, 1 per line.
-    -j JITTER       jitter factor (multipled times delay value) added to
-                    randomize lookups times. Default: 1.50
-    -l SEARCHMAX    Maximum results to search (default 100).
-    -s              Save the html links to pagodo_results__<TIMESTAMP>.txt file.
-    -e DELAY        Minimum delay (in seconds) between searches...jitter (up to
-                    [jitter X delay] value) is added to this value to randomize
-                    lookups. If it's too small Google may block your IP, too big
-                    and your search may take a while. Default: 30.0
+#### pagodo.py
 
 To run it
 
-    python pagodo.py -d example.com -g dorks.txt -l 50 -s -e 35.0 -j 1.1
+```bash
+python pagodo.py -d example.com -g dorks.txt -l 50 -s -e 35.0 -j 1.1
+```
+
 
 #### Future Work
 
 Future work includes grabbing the Google dork description to provide some context around the dork and why it is in the Google Hacking Database.
+
 
 #### Conclusion
 
