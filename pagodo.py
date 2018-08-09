@@ -22,7 +22,16 @@ import googlesearch  # noqa
 class Pagodo:
     """pagodo class object"""
 
-    def __init__(self, domain, google_dorks, search_max, save_links, delay, jitter, randomize_user_agent):
+    def __init__(
+        self,
+        domain,
+        google_dorks,
+        search_max,
+        save_links,
+        delay,
+        jitter,
+        randomize_user_agent,
+    ):
         """Iniitialize Pagodo class object."""
 
         self.domain = domain
@@ -35,7 +44,9 @@ class Pagodo:
         self.delay = delay
 
         # Create an array of jitter values to add to delay, favoring longer search times.
-        self.jitter = numpy.random.uniform(low=self.delay, high=jitter * self.delay, size=(50,))
+        self.jitter = numpy.random.uniform(
+            low=self.delay, high=jitter * self.delay, size=(50,)
+        )
 
         self.randomize_user_agent = randomize_user_agent
 
@@ -55,14 +66,38 @@ class Pagodo:
         for dork in self.google_dorks:
             try:
                 dork = dork.strip()
+
                 # Stores URLs with files, clear out for each dork.
                 self.links = []
 
                 # Search for the links to collect.
                 if self.domain:
-                    query = "{} site:{}".format(dork, self.domain)
+                    # site: must be at the beginning of the query.
+                    query = "site:{} {}".format(self.domain, dork)
                 else:
                     query = dork
+
+                """
+                Google search web GUI message for large search string queries:
+                    "the" (and any subsequent words) was ignored because we limit queries to 32 words.
+                """
+                # Search string is longer than 32 words.
+                if len(query.split(" ")) > 32:
+                    ignored_string = " ".join(query.split(" ")[32:])
+                    print(
+                        '[!] Google limits queries to 32 words (separated by spaces):  Removing from search query: "{}"'.format(
+                            ignored_string
+                        )
+                    )
+
+                    # Update query variable.
+                    updated_query = " ".join(query.split(" ")[0:32])
+
+                    # If original query is in quotes, append a quote to new truncated updated_query.
+                    if query.endswith('"'):
+                        updated_query = '{}"'.format(updated_query)
+
+                    print("[*] New search query: {}".format(updated_query))
 
                 pause_time = self.delay + random.choice(self.jitter)
 
@@ -95,7 +130,11 @@ class Pagodo:
                 if len(self.links) > self.search_max:
                     self.links = self.links[: -(len(self.links) - self.search_max)]
 
-                print("[*] Results: {} sites found for Google dork: {}".format(len(self.links), dork))
+                print(
+                    "[*] Results: {} sites found for Google dork: {}".format(
+                        len(self.links), dork
+                    )
+                )
                 for found_dork in self.links:
                     print(found_dork)
 
@@ -134,10 +173,18 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="pagodo - Passive Google Dork")
     parser.add_argument(
-        "-d", dest="domain", action="store", required=False, help="Domain to search for Google dork hits."
+        "-d",
+        dest="domain",
+        action="store",
+        required=False,
+        help="Domain to search for Google dork hits.",
     )
     parser.add_argument(
-        "-g", dest="google_dorks", action="store", required=True, help="File containing Google dorks, 1 per line."
+        "-g",
+        dest="google_dorks",
+        action="store",
+        required=True,
+        help="File containing Google dorks, 1 per line.",
     )
     parser.add_argument(
         "-j",
@@ -148,7 +195,12 @@ if __name__ == "__main__":
         help="jitter factor (multipled against delay value) added to randomize lookups times.  Default: 1.60",
     )
     parser.add_argument(
-        "-l", dest="search_max", action="store", type=int, default=100, help="Maximum results to search.  Default 100."
+        "-l",
+        dest="search_max",
+        action="store",
+        type=int,
+        default=100,
+        help="Maximum results to search.  Default 100.",
     )
     parser.add_argument(
         "-s",
