@@ -17,18 +17,24 @@ The awesome folks at Offensive Security maintain the Google Hacking Database (GH
 
 #### Installation
 
+Scripts are written for Python 3.6+.
+
 Clone the git repository and install the requirements.
 
-    pip3 install -r requirements.txt
+```bash
+git clone git@github.com:opsdisk/pagodo.git
+cd pagodo
+pip3 install -r requirements.txt
+```
 
 
 #### ghdb_scraper.py
 
 To start off, **pagodo.py** needs a list of all the current Google dorks.  Unfortunately, the entire database cannot be easily downloaded.  A couple of older projects did this, but the code was slightly stale and it wasn't multi-threaded...so collecting ~3800 Google Dorks would take a long time.  **ghdb_scraper.py** is the resulting Python script.
 
-The primary inspiration was taken from dustyfresh's ghdb-scrape (https://github.com/dustyfresh/ghdb-scrape).  Code was also reused from **aquabot** (https://github.com/opsdisk/aquabot) and the rewrite of **metagoofil** (https://github.com/opsdisk/metagoofil).
+The primary inspiration was taken from dustyfresh's [ghdb-scrape](https://github.com/dustyfresh/ghdb-scrape).  Code was also reused from [aquabot](https://github.com/opsdisk/aquabot) and the rewrite of [metagoofil](https://github.com/opsdisk/metagoofil).
 
-The Google dorks start at number 5 and go up to 4318 as of this writing, but that does not mean there is a corresponding Google dork for each number.  An example URL with the Google dork specified is: https://www.exploit-db.com/ghdb/11/  There really isn't any rhyme or reason, so putting a large arbitrary max like 5000 would cover you.  The script is not smart enough to detect the end of the Google dorks.
+The Google dorks start at number 5 and go up to 4318 as of this writing, but that does not mean there is a corresponding Google dork for each number.  An example URL with the Google dork specified is: `https://www.exploit-db.com/ghdb/11/`  There really isn't any rhyme or reason, so putting a large arbitrary max like 5000 would cover you.  The script is not smart enough to detect the end of the Google dorks.
 
 
 #### ghdb_scraper.py Execution Flow
