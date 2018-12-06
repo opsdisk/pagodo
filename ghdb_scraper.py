@@ -41,7 +41,7 @@ class Worker(threading.Thread):
                 if response.status_code == 200:
                     page = response.text
 
-                    # Use beautiful soup to drill down to the actual Google dork in the meta tags
+                    # Use beautiful soup to drill down to the actual Google dork in the meta tags.
                     """
                     <meta property="og:title" content="bash_history files">
                     <meta property="og:type" content="article" />
