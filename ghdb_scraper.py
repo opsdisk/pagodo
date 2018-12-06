@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-# GPL v 3.0 License
-# Opsdisk LLC | opsdisk.com
 
 # Standard Python libraries.
 import argparse
@@ -12,7 +10,7 @@ import time
 
 # Third party Python libraries.
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup  # noqa
 
 # Custom Python libraries.
 
@@ -31,7 +29,7 @@ class Worker(threading.Thread):
         while True:
             # Grab URL off the queue and build the request.
             dork_number = ghdb.queue.get()
-            url = "https://www.exploit-db.com/ghdb/{}".format(dork_number)
+            url = f"https://www.exploit-db.com/ghdb/{dork_number}"
 
             headers = {"User-Agent": "Googlebot/2.1 (+http://www.google.com/bot.html"}
 
@@ -43,29 +41,32 @@ class Worker(threading.Thread):
                 if response.status_code == 200:
                     page = response.text
 
-                    # Use beautiful soup to drill down to the actual Google dork.
+                    # Use beautiful soup to drill down to the actual Google dork in the meta tags
+                    """
+                    <meta property="og:title" content="bash_history files">
+                    <meta property="og:type" content="article" />
+                    <meta property="og:url" content="https://www.exploit-db.com/ghdb/9/">
+                    <meta property="og:image" content="https://www.exploit-db.com/images/spider-orange.png" />
+                    <meta property="og:site_name" content="Exploit Database" />
+                    <meta property="article:published_time" content="2003-06-24" />
+                    <meta property="article:author" content="anonymous" />
+                    <meta property="article:authorUrl" content="https://www.exploit-db.com/?author=2168" />
+                    """
                     soup = BeautifulSoup(page, "html.parser")
-                    table = soup.find_all("table")[0]
-                    column = table.find_all("td")[2]
-                    dork = column.find_all("a")[0].contents[0]
-
-                    # Clean up string by removing '\n' characters and spaces.
-                    # https://www.exploit-db.com/ghdb/9/
-                    # '\n                intitle:index.of .bash_history            ' --> intitle:index.of .bash_history
-                    dork = " ".join(dork.split())
+                    dork = soup.find("meta", property="og:title")["content"]
 
                     try:
-                        print("[+] Retrieving dork {}: {}".format(dork_number, dork))
+                        print(f"[+] Retrieving dork {dork_number}: {dork}")
                         ghdb.dorks.append(dork)
 
                     except:
-                        print("[-] Dork number {} failed: {}".format(dork_number, dork))
+                        print(f"[-] Dork number {dork_number} failed: {dork}")
 
                 else:
-                    print("Could not access {}. HTTP status code: {}".format(url, response.status_code))
+                    print(f"Could not access {url}. HTTP status code: {response.status_code}")
 
             except:
-                print("[-] Random error with dork number {}.".format(dork_number))
+                print(f"[-] Random error with dork number {dork_number}.")
 
             ghdb.queue.task_done()
 
@@ -91,7 +92,7 @@ class GHDBCollector:
 
         # Kickoff the threadpool.
         for i in range(self.number_of_threads):
-            print("[*] Spawing thread #{}".format(i))
+            print(f"[*] Spawing thread #{i}")
             thread = Worker()
             thread.daemon = True
             thread.start()
@@ -107,13 +108,13 @@ class GHDBCollector:
         print("-" * 50)
 
         if self.save_dorks:
-            google_dork_file = "google_dorks_{}.txt".format(get_timestamp())
+            google_dork_file = f"google_dorks_{get_timestamp()}.txt"
             with open(os.path.join(self.save_directory, google_dork_file), "a") as fh:
                 # Use set to remove duplicates.
                 for dork in set(self.dorks):
-                    fh.write("{}\n".format(dork))
+                    fh.write(f"{dork}\n")
 
-        print("[*] Total Google dorks retrieved: {}".format(len(self.dorks)))
+        print(f"[*] Total Google dorks retrieved: {len(self.dorks)}")
 
 
 def get_timestamp():
@@ -126,23 +127,23 @@ def get_timestamp():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="GHDB Scraper - Retrieve the Google Hacking Database dorks from exploit-db.com"
+        description="GHDB Scraper - Retrieve the Google Hacking Database dorks from https://www.exploit-db.com"
     )
     parser.add_argument(
         "-n",
         dest="min_dork_number",
         action="store",
         type=int,
-        default=5,
-        help="Minimum Google dork number to start at (Default: 5).",
+        default=1,
+        help="Minimum Google dork number to start at (Default: 1).",
     )
     parser.add_argument(
         "-x",
         dest="max_dork_number",
         action="store",
         type=int,
-        default=5000,
-        help="""Maximum Google dork number, not the total, to retrieve (Default: 5000).  It is currently around 4900.
+        default=5050,
+        help="""Maximum Google dork number, not the total, to retrieve (Default: 5050).  It is currently around 5050 as of 2018-12-05.
           There is no logic in this script to determine when it has reached the end.""",
     )
     parser.add_argument(
@@ -164,33 +165,39 @@ if __name__ == "__main__":
         dest="number_of_threads",
         action="store",
         type=int,
-        default=3,
+        default=2,
         help="Number of search threads (Default: 2)",
     )
 
     args = parser.parse_args()
 
     if args.save_directory:
-        print("[*] Dork file will be saved here: {}".format(args.save_directory))
+        print(f"[*] Dork file will be saved here: {args.save_directory}")
         if not os.path.exists(args.save_directory):
-            print("[+] Creating folder: " + args.save_directory)
+            print(f"[+] Creating folder: {args.save_directory}")
             os.mkdir(args.save_directory)
 
-    if args.min_dork_number < 5:
-        print("[!] Search Google Dork MIN must be 5 or greater (-n)")
+    if args.min_dork_number < 1:
+        print("[!] Search Google dork MIN must be 1 or greater (-n).")
         sys.exit(0)
 
-    if args.max_dork_number < 5:
-        print("[!] Search Google Dork MAX must be 5 or greater (-x)")
+    if args.max_dork_number < 1:
+        print("[!] Search Google dork MAX must be 1 or greater (-x).")
+        sys.exit(0)
+
+    if args.max_dork_number < args.min_dork_number:
+        print("[!] Search Google dork MAX must be greater than dork MIN.")
         sys.exit(0)
 
     if args.number_of_threads < 0:
-        print("[!] Number of threads (-n) must be greater than 0")
+        print("[!] Number of threads (-n) must be greater than 0.")
         sys.exit(0)
 
-    print("[*] Initiation timestamp: {}".format(get_timestamp()))
+    print(f"[*] Initiation timestamp: {get_timestamp()}")
+
     ghdb = GHDBCollector(**vars(args))
     ghdb.go()
-    print("[*] Completion timestamp: {}".format(get_timestamp()))
+
+    print(f"[*] Completion timestamp: {get_timestamp()}")
 
     print("[+] Done!")
