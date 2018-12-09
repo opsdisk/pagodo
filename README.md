@@ -13,7 +13,7 @@ The awesome folks at Offensive Security maintain the Google Hacking Database (GH
 Scripts are written for Python 3.6+.  Clone the git repository and install the requirements.
 
 ```bash
-git clone git@github.com:opsdisk/pagodo.git
+git clone https://github.com/opsdisk/pagodo.git
 cd pagodo
 virtualenv -p python3 .venv  # If using a virtual environment.
 source .venv/bin/activate  # If using a virtual environment.
