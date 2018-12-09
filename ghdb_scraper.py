@@ -17,6 +17,8 @@ def retrieve_google_dorks(save_json_response_to_file, save_dorks):
     Writes then entire json reponse to a file in addition to just the dorks.
     """
 
+    url = "https://www.exploit-db.com/google-hacking-database"
+
     headers = {
         "Accept": "application/json, text/javascript, */*; q=0.01",
         "Accept-Encoding": "deflate, gzip, br",
@@ -24,8 +26,6 @@ def retrieve_google_dorks(save_json_response_to_file, save_dorks):
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:60.0) Gecko/20100101 Firefox/60.0",
         "X-Requested-With": "XMLHttpRequest",
     }
-
-    url = "https://www.exploit-db.com/google-hacking-database"
 
     response = requests.get(url, headers=headers, verify=True)
 
@@ -36,7 +36,7 @@ def retrieve_google_dorks(save_json_response_to_file, save_dorks):
     # Extract json data.
     json_response = response.json()
 
-    # Extract values.
+    # Extract recordsTotal and data.
     total_records = json_response["recordsTotal"]
     json_dorks = json_response["data"]
 
@@ -48,6 +48,8 @@ def retrieve_google_dorks(save_json_response_to_file, save_dorks):
         google_dork_file = f"google_dorks_{get_timestamp()}.txt"
         with open(google_dork_file, "w") as fh:
             for dork in json_dorks:
+                # Extract dork from <a href> using BeautifulSoup.
+                # "<a href=\"/ghdb/5052\">inurl:_cpanel/forgotpwd</a>"
                 soup = BeautifulSoup(dork["url_title"], "html.parser")
                 extracted_dork = soup.find("a").contents[0]
                 fh.write(f"{extracted_dork}\n")
@@ -60,13 +62,14 @@ def get_timestamp():
 
     now = time.localtime()
     timestamp = time.strftime("%Y%m%d_%H%M%S", now)
+
     return timestamp
 
 
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(
-        description="GHDB Scraper - Retrieve the Google Hacking Database dorks from https://www.exploit-db.com"
+        description="GHDB Scraper - Retrieve the Google Hacking Database dorks from https://www.exploit-db.com/google-hacking-database"
     )
 
     parser.add_argument(
