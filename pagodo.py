@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-# GPL v 3.0 License
-# Opsdisk LLC | opsdisk.com
 
 # Standard Python libraries.
 import argparse
@@ -22,16 +20,7 @@ import googlesearch  # noqa
 class Pagodo:
     """pagodo class object"""
 
-    def __init__(
-        self,
-        domain,
-        google_dorks,
-        search_max,
-        save_links,
-        delay,
-        jitter,
-        randomize_user_agent,
-    ):
+    def __init__(self, domain, google_dorks, search_max, save_links, delay, jitter, randomize_user_agent):
         """Iniitialize Pagodo class object."""
 
         self.domain = domain
@@ -40,13 +29,11 @@ class Pagodo:
         self.search_max = search_max
         self.save_links = save_links
         if save_links:
-            self.log_file = "pagodo_results_{}.txt".format(get_timestamp())
+            self.log_file = f"pagodo_results_{get_timestamp()}.txt"
         self.delay = delay
 
         # Create an array of jitter values to add to delay, favoring longer search times.
-        self.jitter = numpy.random.uniform(
-            low=self.delay, high=jitter * self.delay, size=(50,)
-        )
+        self.jitter = numpy.random.uniform(low=self.delay, high=jitter * self.delay, size=(50,))
 
         self.randomize_user_agent = randomize_user_agent
 
@@ -58,7 +45,7 @@ class Pagodo:
         self.total_dorks = 0
 
     def go(self):
-        """Start pagodo Google dork scraping"""
+        """Start pagodo Google dork scraping."""
 
         # Initialize starting dork number.
         i = 1
@@ -73,7 +60,7 @@ class Pagodo:
                 # Search for the links to collect.
                 if self.domain:
                     # site: must be at the beginning of the query.
-                    query = "site:{} {}".format(self.domain, dork)
+                    query = f"site:{self.domain} {dork}"
                 else:
                     query = dork
 
@@ -85,19 +72,17 @@ class Pagodo:
                 if len(query.split(" ")) > 32:
                     ignored_string = " ".join(query.split(" ")[32:])
                     print(
-                        '[!] Google limits queries to 32 words (separated by spaces):  Removing from search query: "{}"'.format(
-                            ignored_string
-                        )
+                        f"[!] Google limits queries to 32 words (separated by spaces):  Removing from search query: '{ignored_string}'"
                     )
 
                     # Update query variable.
                     updated_query = " ".join(query.split(" ")[0:32])
 
-                    # If original query is in quotes, append a quote to new truncated updated_query.
+                    # If original query is in quotes, append a double quote to new truncated updated_query.
                     if query.endswith('"'):
-                        updated_query = '{}"'.format(updated_query)
+                        updated_query = f'{updated_query}"'
 
-                    print("[*] New search query: {}".format(updated_query))
+                    print(f"[*] New search query: {updated_query}")
 
                 pause_time = self.delay + random.choice(self.jitter)
 
@@ -108,9 +93,7 @@ class Pagodo:
                     user_agent = random.choice(self.random_user_agents).strip()
 
                 print(
-                    "[*] Search ( {} / {} ) for Google dork [ {} ] and waiting {} seconds between searches using User-Agent '{}'".format(
-                        i, len(self.google_dorks), query, pause_time, user_agent
-                    )
+                    f"[*] Search ( {i} / {len(self.google_dorks)} ) for Google dork [ {query} ] and waiting {pause_time} seconds between searches using User-Agent '{user_agent}'"
                 )
 
                 for url in googlesearch.search(
@@ -130,11 +113,8 @@ class Pagodo:
                 if len(self.links) > self.search_max:
                     self.links = self.links[: -(len(self.links) - self.search_max)]
 
-                print(
-                    "[*] Results: {} sites found for Google dork: {}".format(
-                        len(self.links), dork
-                    )
-                )
+                print(f"[*] Results: {len(self.links)} sites found for Google dork: {dork}")
+
                 for found_dork in self.links:
                     print(found_dork)
 
@@ -143,22 +123,23 @@ class Pagodo:
                 # Only save links with valid results to an output file.
                 if self.save_links and (self.links):
                     with open(self.log_file, "a") as fh:
-                        fh.write("#: " + dork + "\n")
+                        fh.write(f"#: {dork}\n")
                         for link in self.links:
-                            fh.write(link + "\n")
+                            fh.write(f"{link}\n")
                         fh.write("=" * 50 + "\n")
 
             except KeyboardInterrupt:
                 sys.exit(0)
 
             except Exception as e:
-                print("[-] ERROR with dork: {}".format(dork))
-                print("[-] EXCEPTION: {}".format(e))
+                print(f"[-] Error with dork: {dork}")
+                print(f"[-] EXCEPTION: {e}")
 
             i += 1
 
         self.fp.close
-        print("[*] Total dorks found: {}".format(self.total_dorks))
+
+        print(f"[*] Total dorks found: {self.total_dorks}")
 
 
 def get_timestamp():
@@ -166,6 +147,7 @@ def get_timestamp():
 
     now = time.localtime()
     timestamp = time.strftime("%Y%m%d_%H%M%S", now)
+
     return timestamp
 
 
@@ -173,18 +155,10 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="pagodo - Passive Google Dork")
     parser.add_argument(
-        "-d",
-        dest="domain",
-        action="store",
-        required=False,
-        help="Domain to search for Google dork hits.",
+        "-d", dest="domain", action="store", required=False, help="Domain to search for Google dork hits."
     )
     parser.add_argument(
-        "-g",
-        dest="google_dorks",
-        action="store",
-        required=True,
-        help="File containing Google dorks, 1 per line.",
+        "-g", dest="google_dorks", action="store", required=True, help="File containing Google dorks, 1 per line."
     )
     parser.add_argument(
         "-j",
@@ -195,12 +169,7 @@ if __name__ == "__main__":
         help="jitter factor (multipled against delay value) added to randomize lookups times.  Default: 1.60",
     )
     parser.add_argument(
-        "-l",
-        dest="search_max",
-        action="store",
-        type=int,
-        default=100,
-        help="Maximum results to search.  Default 100.",
+        "-l", dest="search_max", action="store", type=int, default=100, help="Maximum results to search.  Default 100."
     )
     parser.add_argument(
         "-s",
@@ -238,9 +207,9 @@ if __name__ == "__main__":
         print("[!] Delay must be greater than 0")
         sys.exit(0)
 
-    print("[*] Initiation timestamp: {}".format(get_timestamp()))
+    print(f"[*] Initiation timestamp: {get_timestamp()}")
     pgd = Pagodo(**vars(args))
     pgd.go()
-    print("[*] Completion timestamp: {}".format(get_timestamp()))
+    print(f"[*] Completion timestamp: {get_timestamp()}")
 
     print("[+] Done!")
