@@ -1,2 +1,4 @@
 beautifulsoup4==4.6.3
+google==2.0.1
+numpy==1.15.4
 requests==2.20.1
