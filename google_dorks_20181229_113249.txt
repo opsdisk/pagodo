@@ -4556,3 +4556,11 @@ index of /etc/certs/
 intitle:"Index of /private/"
 "login":
 inurl:_cpanel/forgotpwd
+inurl:LOG.txt X-System folder
+inurl:webman/index.cgi
+"Example: jane.citizen1"
+intext:"EQ1PCI"
+intext:password "Login Info" filetype:txt
+filetype:txt "Registration Code"
+intitle: "Nexus Repository Manager"
+inurl:admin.php inurl:admin ext:php
