@@ -1,4 +1,6 @@
 beautifulsoup4==4.6.3
-google==2.0.1
+#google==2.0.2
+# Using git repo until 2.0.2 package is in PyPI
+-e git://github.com/MarioVilas/googlesearch.git#egg=googlesearch
 numpy==1.15.4
-requests==2.20.1
+requests==2.21.0
