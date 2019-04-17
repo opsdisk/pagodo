@@ -20,6 +20,40 @@ source .venv/bin/activate  # If using a virtual environment.
 pip3 install -r requirements.txt
 ```
 
+## Google is blocking me!
+
+If you start getting HTTP 503 errors, Google has rightfully detected you as a bot and will block your IP for a set period of time.  The solution is to use proxychains and a bank of proxies to round robin the lookups.
+
+Install proxychains4
+
+```bash
+apt install proxychains4 -y
+```
+
+Edit the `/etc/proxychains4.conf` configuration file to round robin the look ups through different proxy servers.  In the example below, 2 different dynamic socks proxies have been set up with different local listening ports (9050 and 9051).  Don't know how to utilize SSH and dynamic socks proxies?  Do yourself a favor and pick up a copy of [The Cyber Plumber's Handbook](https://cph.opsdisk.com) to learn all about Secure Shell (SSH) tunneling, port redirection, and bending traffic like a boss.
+
+```bash
+vim /etc/proxychains4.conf
+```
+
+```bash
+round_robin
+chain_len = 1
+proxy_dns
+remote_dns_subnet 224
+tcp_read_time_out 15000
+tcp_connect_time_out 8000
+[ProxyList]
+socks4 127.0.0.1 9050
+socks4 127.0.0.1 9051
+```
+
+Throw `proxychains4` in front of the Python script and each lookup will go through a different proxy (and thus source from a different IP).  You could even tune down the `-e` delay time because you will be leveraging different proxy boxes.
+
+```bash
+proxychains python3 pagodo.py -g ALL_dorks.txt -s -e 35.0 -l 700 -j 1.1
+```
+
 ## ghdb_scraper.py
 
 To start off, `pagodo.py` needs a list of all the current Google dorks.  A datetimestamped file with the Google dorks is also provded in the repo.  Fortunately, the entire database can be pulled back with 1 GET request using `ghdb_scraper.py`.  You can dump the individual dorks to a text file, or the entire json blob if you want more contextual data about the dork.
