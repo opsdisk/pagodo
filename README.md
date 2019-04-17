@@ -51,7 +51,7 @@ socks4 127.0.0.1 9051
 Throw `proxychains4` in front of the Python script and each lookup will go through a different proxy (and thus source from a different IP).  You could even tune down the `-e` delay time because you will be leveraging different proxy boxes.
 
 ```bash
-proxychains python3 pagodo.py -g ALL_dorks.txt -s -e 35.0 -l 700 -j 1.1
+proxychains python3 pagodo.py -g ALL_dorks.txt -s -e 17.0 -l 700 -j 1.1
 ```
 
 ## ghdb_scraper.py
