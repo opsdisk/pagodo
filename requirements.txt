@@ -1,6 +1,6 @@
-beautifulsoup4==4.6.3
-google==2.0.2
+beautifulsoup4==4.9.0
+google==2.0.3
 # Uncomment if the google package maintainer doesn't update PyPI.
 # -e git://github.com/MarioVilas/googlesearch.git#egg=googlesearch
-numpy==1.15.4
-requests==2.21.0
+numpy==1.18.2
+requests==2.23.0
