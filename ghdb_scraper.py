@@ -82,7 +82,12 @@ def retrieve_google_dorks(save_json_response_to_file, save_all_dorks, save_indiv
 
         # Create an empty list for each category if it doesn't already exist.
         if numeric_category_id not in category_dict:
-            category_dict[numeric_category_id] = {"category_name": category_name, "dorks": []}
+            # fmt: off
+            category_dict[numeric_category_id] = {
+                "category_name": category_name,
+                "dorks": [],
+            }
+            # fmt: on
 
         category_dict[numeric_category_id]["dorks"].append(dork)
 
@@ -92,8 +97,9 @@ def retrieve_google_dorks(save_json_response_to_file, save_all_dorks, save_indiv
     # Break up dorks into individual files based off category.
     if save_individual_categories:
 
-        # Provide some category metrics.
         for key, value in category_dict.items():
+
+            # Provide some category metrics.
             print(f"[*] Category {key} ('{value['category_name']}') has {len(value['dorks'])} dorks")
 
             dork_file_name = value["category_name"].lower().replace(" ", "_")
