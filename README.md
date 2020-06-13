@@ -66,16 +66,44 @@ proxychains4 python3 pagodo.py -g ALL_dorks.txt -s -e 17.0 -l 700 -j 1.1
 
 ## ghdb_scraper.py
 
-To start off, `pagodo.py` needs a list of all the current Google dorks.  A datetimestamped file with the Google dorks is
-also provided in the repo.  Fortunately, the entire database can be pulled back with 1 GET request using
-`ghdb_scraper.py`.  You can dump the individual dorks to a text file, or the entire json blob if you want more
-contextual data about the dork.
+To start off, `pagodo.py` needs a list of all the current Google dorks.  A datetimestamped file with the Google dorks
+and the indididual dork category dorks are also provided in the repo.  Fortunately, the entire database can be pulled
+back with 1 GET request using `ghdb_scraper.py`.  You can dump all dorks to a file, the individual dork categories to
+separate dork files, or the entire json blob if you want more contextual data about the dork.
 
-To run it:
+To retrieve all dorks
 
 ```bash
 python3 ghdb_scraper.py -j -s
 ```
+
+To retrieve all dorks and write them to individual categories:
+
+```bash
+python3 ghdb_scraper.py -i
+```
+
+Dork categories:
+
+```json
+{
+    "1": "Footholds",
+    "2": "File_Containing_Usernames",
+    "3": "Sensitives_Directories",
+    "4": "Web_Server_Detection",
+    "5": "Vulnerable_Files",
+    "6": "Vulnerable_Servers",
+    "7": "Error_Messages",
+    "8": "File_Containing_Juicy_Info",
+    "9": "File_Containing_Passwords",
+    "10": "Sensitive_Online_Shopping_Info",
+    "11": "Network_or_Vulnerability_Data",
+    "12": "Pages_Containing_Login_Portals",
+    "13": "Various_Online_devices",
+    "14": "Advisories_and_Vulnerabilities"
+}
+```
+
 
 ## pagodo.py
 
