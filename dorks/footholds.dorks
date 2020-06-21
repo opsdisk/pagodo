@@ -98,3 +98,7 @@ intitle:("Index of") AND intext:("c99.txt" OR "c100.txt")
 site:linkedin.com employees target.com
 inurl:"customer.aspx"
 inurl:/servicedesk/customer/user/login
+Find Microsoft Lync Server AutoDiscover
+inurl:/download_file/ intext:"index of /"
+intitle:"index of" "admin/xml"
+inurl:logon/LogonPoint/index.html

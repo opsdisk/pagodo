@@ -843,3 +843,10 @@ intitle:index.of.?.db
 intext:"index of /" "config.json"
 index of .svn/text-base/index.php.svn-base
 intitle:"index of" admin.tar
+intext:"index of /" "*.yaml"
+"index of" "siri"
+intitle:"index of" secrets.yml
+intitle:"index of /" "*key.pem"
+index of /backend/prod/config
+"Index of" "/access"
+intext:"Not to be distributed" ext:doc OR ext:pdf OR ext:xls OR ext:xlsx

@@ -100,3 +100,4 @@ inurl:/+CSCOE+/logon.html
 intitle:"index of" "filemail.pl"
 intitle:"index of" "shell.php"
 site: target.com ext:action | ext:struts | ext:do
+intext:"Powered By Gila CMS"

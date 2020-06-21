@@ -951,3 +951,9 @@ inurl:.*org/login
 intitle:"index of" pass.php
 inurl:".Admin;-aspx }" "~Login"
 "login" intitle:"intext:"Welcome to Member" login"
+index of "jira" inurl:login
+inurl:adminlogin.jsp
+intext:"index of /" "customer.php" "~Login"
+intext:"Welcome to Intranet" "login"
+inurl:"index.php/user/password/" intext:Password Reset
+inurl:candidatelogin.aspx

@@ -364,3 +364,8 @@ intitle:"index of" "survey.cgi"
 index of logs.tar
 "Index of" "sass-cache"
 intitle:"index of" "admin/sql/"
+intext:"INTERNAL USE ONLY" ext:doc OR ext:pdf OR ext:xls OR ext:xlsx
+inurl:admin/data* intext:index of
+inurl:_vti_pvt/service.pwd
+intitle:"index of" "oauth-private.key"
+inurl:member filetype:xls

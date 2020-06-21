@@ -71,31 +71,31 @@ def retrieve_google_dorks(save_json_response_to_file, save_all_dorks, save_indiv
     total_records = json_response["recordsTotal"]
     json_dorks = json_response["data"]
 
-    # Initialize a new dictionary to organize the dorks by category.
-    category_dict = {}
-
-    for dork in json_dorks:
-
-        # Cast numeric_category_id as integer for sorting later.
-        numeric_category_id = int(dork["cat_id"][0])
-        category_name = dork["cat_id"][1]
-
-        # Create an empty list for each category if it doesn't already exist.
-        if numeric_category_id not in category_dict:
-            # fmt: off
-            category_dict[numeric_category_id] = {
-                "category_name": category_name,
-                "dorks": [],
-            }
-            # fmt: on
-
-        category_dict[numeric_category_id]["dorks"].append(dork)
-
-    # Sort category_dict based off the numeric keys.
-    category_dict = dict(sorted(category_dict.items()))
-
     # Break up dorks into individual files based off category.
     if save_individual_categories:
+
+        # Initialize a new dictionary to organize the dorks by category.
+        category_dict = {}
+
+        for dork in json_dorks:
+
+            # Cast numeric_category_id as integer for sorting later.
+            numeric_category_id = int(dork["category"]["cat_id"])
+            category_name = dork["category"]["cat_title"]
+
+            # Create an empty list for each category if it doesn't already exist.
+            if numeric_category_id not in category_dict:
+                # fmt: off
+                category_dict[numeric_category_id] = {
+                    "category_name": category_name,
+                    "dorks": [],
+                }
+                # fmt: on
+
+            category_dict[numeric_category_id]["dorks"].append(dork)
+
+        # Sort category_dict based off the numeric keys.
+        category_dict = dict(sorted(category_dict.items()))
 
         for key, value in category_dict.items():
 
@@ -103,9 +103,11 @@ def retrieve_google_dorks(save_json_response_to_file, save_all_dorks, save_indiv
             print(f"[*] Category {key} ('{value['category_name']}') has {len(value['dorks'])} dorks")
 
             dork_file_name = value["category_name"].lower().replace(" ", "_")
-            full_dork_file_name = f"{dork_file_name}.dorks"
+            full_dork_file_name = f"dorks/{dork_file_name}.dorks"
 
-            with open(f"dorks/{full_dork_file_name}", "w", encoding="utf-8") as fh:
+            print(f"[*] Writing dork category '{value['category_name']}' to file: {full_dork_file_name}")
+
+            with open(f"{full_dork_file_name}", "w", encoding="utf-8") as fh:
                 for dork in value["dorks"]:
                     # Extract dork from <a href> using BeautifulSoup.
                     # "<a href=\"/ghdb/5052\">inurl:_cpanel/forgotpwd</a>"
@@ -115,12 +117,14 @@ def retrieve_google_dorks(save_json_response_to_file, save_all_dorks, save_indiv
 
     # Save .json file containing dorks.
     if save_json_response_to_file:
+        print("[*] Writing all dorks to JSON file: dorks/google_dorks.json")
         with open("dorks/google_dorks.json", "w", encoding="utf-8") as json_file:
             json.dump(json_dorks, json_file)
 
     # Save all dorks to a file.
     if save_all_dorks:
         google_dork_file = f"all_google_dorks_{get_timestamp()}.txt"
+        print(f"[*] Writing all dorks to txt file: {google_dork_file}")
         with open(f"dorks/{google_dork_file}", "w", encoding="utf-8") as fh:
             for dork in json_dorks:
                 # Extract dork from <a href> using BeautifulSoup.
@@ -145,19 +149,19 @@ if __name__ == "__main__":
 
     categories = {
         1: "Footholds",
-        2: "File_Containing_Usernames",
-        3: "Sensitives_Directories",
-        4: "Web_Server_Detection",
-        5: "Vulnerable_Files",
-        6: "Vulnerable_Servers",
-        7: "Error_Messages",
-        8: "File_Containing_Juicy_Info",
-        9: "File_Containing_Passwords",
-        10: "Sensitive_Online_Shopping_Info",
-        11: "Network_or_Vulnerability_Data",
-        12: "Pages_Containing_Login_Portals",
-        13: "Various_Online_devices",
-        14: "Advisories_and_Vulnerabilities",
+        2: "File Containing Usernames",
+        3: "Sensitives Directories",
+        4: "Web Server Detection",
+        5: "Vulnerable Files",
+        6: "Vulnerable Servers",
+        7: "Error Messages",
+        8: "File Containing Juicy Info",
+        9: "File Containing Passwords",
+        10: "Sensitive Online Shopping Info",
+        11: "Network or Vulnerability Data",
+        12: "Pages Containing Login Portals",
+        13: "Various Online devices",
+        14: "Advisories and Vulnerabilities",
     }
 
     epilog = f"Dork categories:\n\n{json.dumps(categories, indent=4)}"

@@ -2108,3 +2108,10 @@ inurl:wp-content/plugins/sportspress
 inurl:"wp-contentpluginsphoto-gallery"
 index of /wp-content/uploads/backupbuddy
 inurl:wp-content/plugins/brizy
+"powered by Typo3"
+"index of" "plugins/wp-rocket"
+intext:powered by JoomSport - sport WordPress plugin
+inurl:wp-content/themes/newspaper
+inurl:wp-content/plugins/elementor
+inurl:wp-content/plugins/kingcomposer
+intext:"TopManage (R) 2002 - 2020"

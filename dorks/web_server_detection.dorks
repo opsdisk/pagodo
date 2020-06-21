@@ -146,3 +146,4 @@ intitle:"index of" "debug.log" OR "debug-log"
 intitle:"index of" "docker.yml"
 inurl:":8088/cluster/apps"
 "index of /private" -site:net -site:com -site:org
+inurl:"id=*" & intext:"warning mysql_fetch_array()"

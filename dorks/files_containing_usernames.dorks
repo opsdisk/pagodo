@@ -22,3 +22,4 @@ inurl:/profile.php?lookup=1
 intitle:index.of "users.db"
 intitle:"index of" service.grp
 allintext:username filetype:log
+intitle:"index of" "users.sql"
