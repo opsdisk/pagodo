@@ -5781,3 +5781,37 @@ intitle:"index of" "admin/sql/"
 intext:"index of /" "config.json"
 index of .svn/text-base/index.php.svn-base
 intitle:"index of" admin.tar
+intext:"index of /" "*.yaml"
+index of "jira" inurl:login
+"powered by Typo3"
+"index of" "siri"
+"index of" "plugins/wp-rocket"
+intitle:"index of" secrets.yml
+intitle:"index of /" "*key.pem"
+Find Microsoft Lync Server AutoDiscover
+inurl:adminlogin.jsp
+inurl:/download_file/ intext:"index of /"
+index of /backend/prod/config
+intext:"index of /" "customer.php" "~Login"
+intext:"INTERNAL USE ONLY" ext:doc OR ext:pdf OR ext:xls OR ext:xlsx
+intext:"Welcome to Intranet" "login"
+"Index of" "/access"
+inurl:admin/data* intext:index of
+intext:powered by JoomSport - sport WordPress plugin
+inurl:wp-content/themes/newspaper
+intitle:"index of" "users.sql"
+inurl:wp-content/plugins/elementor
+inurl:"id=*" & intext:"warning mysql_fetch_array()"
+intitle:"index of" "admin/xml"
+inurl:"index.php/user/password/" intext:Password Reset
+intext:"Powered By Gila CMS"
+inurl:_vti_pvt/service.pwd
+intext:"Not to be distributed" ext:doc OR ext:pdf OR ext:xls OR ext:xlsx
+intitle:"index of" "oauth-private.key"
+inurl:logon/LogonPoint/index.html
+inurl:wp-content/plugins/kingcomposer
+filetype:env "DB_PASSWORD"
+inurl:candidatelogin.aspx
+intext:"TopManage (R) 2002 - 2020"
+"MYSQL_ROOT_PASSWORD:" ext:env OR ext:yml -git
+inurl:member filetype:xls

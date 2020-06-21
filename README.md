@@ -86,21 +86,21 @@ python3 ghdb_scraper.py -i
 Dork categories:
 
 ```json
-{
-    "1": "Footholds",
-    "2": "File_Containing_Usernames",
-    "3": "Sensitives_Directories",
-    "4": "Web_Server_Detection",
-    "5": "Vulnerable_Files",
-    "6": "Vulnerable_Servers",
-    "7": "Error_Messages",
-    "8": "File_Containing_Juicy_Info",
-    "9": "File_Containing_Passwords",
-    "10": "Sensitive_Online_Shopping_Info",
-    "11": "Network_or_Vulnerability_Data",
-    "12": "Pages_Containing_Login_Portals",
-    "13": "Various_Online_devices",
-    "14": "Advisories_and_Vulnerabilities"
+categories = {
+    1: "Footholds",
+    2: "File Containing Usernames",
+    3: "Sensitives Directories",
+    4: "Web Server Detection",
+    5: "Vulnerable Files",
+    6: "Vulnerable Servers",
+    7: "Error Messages",
+    8: "File Containing Juicy Info",
+    9: "File Containing Passwords",
+    10: "Sensitive Online Shopping Info",
+    11: "Network or Vulnerability Data",
+    12: "Pages Containing Login Portals",
+    13: "Various Online devices",
+    14: "Advisories and Vulnerabilities",
 }
 ```
 
