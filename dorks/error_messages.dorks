@@ -1,0 +1,123 @@
+"ORA-00921: unexpected end of SQL command"
+intitle:"the page cannot be found" inetmgr
+intitle:"the page cannot be found" "2004 microsoft corporation"
+"Fatal error: Call to undefined function" -reply -the -next
+filetype:log "PHP Parse error" | "PHP Warning" | "PHP Error"
+"The script whose uid is " "is not allowed to access"
+intitle:Configuration.File inurl:softcart.exe
+"Warning: mysql_query()" "invalid query"
+"[SQL Server Driver][SQL Server]Line 1: Incorrect syntax near" -forum -thread -showthread
+"Parse error: parse error, unexpected T_VARIABLE" "on line" filetype:php
+"There seems to have been a problem with the" " Please try again by clicking the Refresh button in your web browser."
+"Warning:" "SAFE MODE Restriction in effect." "The script whose uid is" "is not allowed to access owned by uid 0 in" "on line"
+"Warning: Division by zero in" "on line" -forum
+"Warning: mysql_connect(): Access denied for user: '*@*" "on line" -help -forum
+"Warning:" "failed to open stream: HTTP request failed" "on line"
+"Warning: Bad arguments to (join|implode) () in" "on line" -help -forum
+"Unable to jump to row" "on MySQL result index" "on line"
+allintext:"fs-admin.php"
+inurl:"*.php?*=*.php" intext:"Warning: include" -inurl:.html -site:"php.net" -site:"stackoverflow.com" -inurl:"*forums*"
+"[function.getimagesize]: failed to open stream: No such file or directory in"
+intitle:Error Page pageWrapper.jsp?
+intitle:Content Server Error IdcService=DOC_INFO
+inurl:/SAML2/SOAP/ | inurl:/SAML2/POST
+inurl:/console-selfservice/common/scripts/calendar/ipopeng.htm
+inurl:/smpwservices.fcc | "/lm_private/CkeSetter.aspx"
+inurl:/siteminderagent/ | app:"Error 404: java.io.FileNotFoundException: SRVE0190E: File not found: /siteminderagent/"
+intitle:"DSM Terminator [ ABORT ]" | inurl:"./com.sap.portal.dsm.Terminator"
+"Below is a rendering of the page up to the first error." ext:xml
+"--- WebView Livescope Http Server Error ---" -git
+intitle:"CGIWrap Error"
+inurl:".php?id=" "You have an error in your SQL syntax"
+"Error Diagnostic Information" intitle:"Error Occurred While"
+"supplied argument is not a valid MySQL result resource"
+"Chatologica MetaSearch" "stack tracking:"
+inurl:sitebuildercontent
+inurl:sitebuilderfiles
+inurl:sitebuilderpictures
+intitle:"the page cannot be found" "internet information services"
+intitle:"500 Internal Server Error" "server at"
+"mySQL error with query"
+"You have an error in your SQL syntax near"
+"Supplied argument is not a valid MySQL result resource"
+"ORA-00936: missing expression"
+"ORA-00921: unexpected end of SQL command"
+"ORA-00933: SQL command not properly ended"
+"Unclosed quotation mark before the character string"
+"Incorrect syntax near"
+"Incorrect syntax near" -the
+"PostgreSQL query failed: ERROR: parser: parse error"
+"Supplied argument is not a valid PostgreSQL result"
+"Syntax error in query expression " -the
+"An illegal character has been found in the statement" -"previous message"
+"A syntax error has occurred" filetype:ihtml
+"detected an internal error [IBM][CLI Driver][DB2/6000]"
+An unexpected token "END-OF-STATEMENT" was found
+"Warning: pg_connect(): Unable to connect to PostgreSQL server: FATAL"
+"Warning: Cannot modify header information - headers already sent"
+"access denied for user" "using password"
+intitle:"Under construction" "does not currently have"
+"Can't connect to local" intitle:warning
+filetype:asp "Custom Error Message" Category Source
+warning "error on line" php sablotron
+intitle:"Error Occurred" "The error occurred in" filetype:cfm
+intitle:"Execution of this script not permitted"
+"error found handling the request" cocoon filetype:xml
+"Invision Power Board Database Error"
+intitle:"Error using Hypernews" "Server Software"
+intitle:"Error Occurred While Processing Request"
+intitle:"htsearch error" ht://Dig error
+intext:"Warning: Failed opening" "on line" "include_path"
+PHP application warnings failing "include_path"
+"Internal Server Error" "server at"
+filetype:php inurl:"logging.php" "Discuz" error
+"ORA-12541: TNS:no listener" intitle:"error occurred"
+"ASP.NET_SessionId" "data source="
+databasetype. Code : 80004005. Error Description :
+intext:"Error Message : Error loading required libraries."
+intitle:"404 SC_NOT_FOUND"
+intitle:"Default PLESK Page"
+"Warning: Supplied argument is not a valid File-Handle resource in"
+filetype:asp + "[ODBC SQL"
+intitle:"Apache Tomcat" "Error Report"
+"plugins/wp-db-backup/wp-db-backup.php"
+inurl:"index.php?m=content+c=rss+catid=10"
+"CHARACTER_SETS" "COLLATION_CHARACTER_SET_APPLICABILITY"
+intext:"Fatal error: Class 'Red_Action' not found in"
+inurl:advsearch.php?module= & intext:sql syntax
+intext:"Access denied for" intitle:"Shopping cart"
+intext:"Unexpected Problem Occurred!" ext:aspx
+intitle:Error-javax.el.ELException+error+xhtml
+intitle:"Whoops! There was an error."
+inurl:index.php?id= intext:"mysql_fetch_array"
+inurl:/uniquesig0/ or inurl:/uniquesig0/InternalSite/
+inurl:/nesp/app
+inurl:"id=" & intext:"MySQL Error: 1064" & "Session halted."
+intitle:"Struts Problem Report" intext:"development mode is enabled."
+intext:"expects parameter 1 to be resource, boolean given" filetype:php
+inurl:index of driver.php?id=
+"CakeRoutingException" -site:github.com -site:stackoverflow.com -site:cakephp.org"
+inurl:?wp-commentsrss2.php -git
+"syd_apply.cfm"
+"dispatch=debugger."
+inurl:/php-errors.log filetype:log
+site:com inurl:jboss filetype:log -github.com
+filetype:php "Notice: Undefined variable: data in" -forum
+site:*/404/404.html intitle:"404"
+site:*/Shibboleth.sso/SAML2/POST
+site:*/cgi-sys/suspendedpage.cgi intitle:"Account Suspended"
+site:*/cgi-sys/defaultwebpage.cgi intext:"SORRY!"
+site:*/wp-includes/Requests/php_errorlog
+site:*/wp-admin/maint/repair.php intext:"define(WP_ALLOW_REPAIR,true);"
+inurl:"/errors/report.php" intext:"There has been an error processing your request"
+inurl:elmah.axd ext:axd
+intitle:"Error log for /LM/"
+intext:"sf_app" + "frontend sf_app_base_cache_dir:"
+intext:"TCPDFtcpdf.php on line 17778" -stackoverflow -wordpress -github
+inurl:("/storage/logs/laravel.log") AND intext:("local.ERROR" | "NULL.ERROR" | "EMERGENCY:")
+inurl:"/WebResource.axd?d=" AND intext:Error
+inurl:"index.php?id=" intext:"Warning: mysql_num_rows()"
+intitle:"index of" errors.log
+intitle:"index of" "my-errors.log" OR "my-errors.logs"
+intitle:"index of" "stacktrace.log"
+intext:"Error Occurred While Processing Request"

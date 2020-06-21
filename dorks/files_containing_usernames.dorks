@@ -1,0 +1,25 @@
++intext:"webalizer" +intext:"Total Usernames" +intext:"Usage Statistics for"
+intext:"SteamUserPassphrase=" intext:"SteamAppUser=" -"username" -"user"
+inurl:"/root/etc/passwd" intext:"home/*:"
+intext:"root:x:0:0:root:/root:/bin/bash" inurl:*=/etc/passwd
+inurl:/_layouts/mobile/view.aspx?List=
+intitle:index.of .sh_history
+intitle:index.of .bash_history
+inurl:admin inurl:userlist
+inurl:admin filetype:asp inurl:userlist
+"index of" / lck
+index.of perform.ini
+inurl:php inurl:hlstats intext:"Server Username"
+filetype:reg reg HKEY_CURRENT_USER username
+filetype:reg reg +intext:"internet account manager"
+filetype:log username putty
+filetype:conf inurl:proftpd.conf -sample
+inurl:root.asp?acs=anon
+site:extremetracking.com inurl:"login="
+inurl:/profile.php?lookup=1
+"authentication failure; logname=" ext:log
+"username.xlsx" ext:xlsx
+intitle:index.of "users.db"
+intitle:"index of" service.grp
+allintext:username filetype:log
+intitle:"index of" "users.sql"

@@ -1,0 +1,67 @@
+"File Upload Manager v1.3" "rename to"
+filetype:pl -intext:"/usr/bin/perl" inurl:webcal (inurl:webcal | inurl:add | inurl:delete | inurl:config)
+inurl:cgi-bin inurl:bigate.cgi
+intitle:"SSHVnc Applet"OR intitle:"SSHTerm Applet"
+filetype:mdb "standard jet" (password | username | user | pass)
+inurl:updown.php | intext:"Powered by PHP Uploader Downloader"
+inurl:"simplenews/admin"
+TOO MANY
+intitle:"Index of /" modified php.exe
+filetype:php inurl:"viewfile" -"index.php" -"idfil
+filetype:cnf my.cnf -cvs -example
+filetype:wsdl wsdl
+filetype:inc inc intext:setcookie
+ext:cgi inurl:ubb6_test.cgi
+intitle:"PHP Explorer" ext:php (inurl:phpexplorer.php | inurl:list.php | inurl:browse.php)
+inurl:robpoll.cgi filetype:cgi
+inurl:"plog/register.php"
+link:http://www.toastforums.com/
+inurl:"nph-proxy.cgi" "Start browsing through this CGI-based proxy"
+intitle:gallery inurl:setup "Gallery configuration"
+"create the Super User" "now by clicking here"
+filetype:lit lit (books|ebooks)
+inurl:cgi.asx?StoreID
+inurl:" WWWADMIN.PL" intitle:"wwwadmin"
+inurl:changepassword.cgi -cvs
+intitle:"Directory Listing" "tree view"
+intitle:mywebftp "Please enter your password"
+ezBOO "Administrator Panel" -cvs
+intitle:"ASP FileMan" Resend -site:iisworks.com
+intitle:"phpremoteview" filetype:php "Name, Size,
+inurl:click.php intext:PHPClickLog
+"powered by YellDL"
+filetype:cgi inurl:cachemgr.cgi
+ext:asp inurl:DUgallery intitle:"3.0" -site:dugall
+ext:asp "powered by DUForum" inurl:(messages|details|login|default|register) -site:duware.com
+"Powered by Land Down Under 601"
+inurl:php.exe filetype:exe -example.com
+filetype:mdb inurl:"news/news"
+intitle:"PHPstat" intext:"Browser" intext:"PHPstat setup"
+"Powered by Gravity Board"
+"Powered by SilverNews"
+PHPFreeNews inurl:Admin.php
+inurl:nquser.php filetype:php
+"Powered By: Simplicity oF Upload" inurl:download.php | inurl:upload.php
+"Powered by FlexPHPNews" inurl:news | inurl:press
+"Powered by FunkBoard"
+"Powered by Xcomic"
+"Warning:" "Cannot execute a blank command in"
+"Mail-it Now!" intitle:"Contact form" | inurl:contact.php
+"maxwebportal" inurl:"default" "snitz forums" +"homepage" -intitle:maxwebportal
+"e107.org 2002/2003" inurl:forum_post.php?nt
+inurl:cartwiz/store/index.asp
+intitle:"Control panel" "Control Panel Login" ArticleLive inurl:admin -demo
+"powered by my little forum"
+"powered by mailgust"
+intitle:"CJ Link Out V1"
+inurl:guestbook/guestbooklist.asp "Post Date" From
+vBulletin Install Page Detection
+ionCube Loader Wizard information disclosure
+allinurl:forcedownload.php?file=
+-site:simplemachines.org "These are the paths and URLs to your SMF installation"
+inurl:demo.browse.php intitle:getid3
+index of admin/fckeditor/editor/filemanager/
+intitle:"index of" "nrpe.cfg"
+Dork: "Index of" "upload_image.php"
+Dork: "index of" "Production.json"
+index.of.?.frm

@@ -1,0 +1,103 @@
+intitle:"Samba Web Administration Tool" intext:"Help Workgroup"
+"ftp://" "www.eastgame.net"
+intitle:phpMyAdmin "Welcome to phpMyAdmin ***" "running on * as root@*"
+"you can now password" | "this is a special page only seen by you. your profile visitors" inurl:imchaos
+"Welcome to Administration" "General" "Local Domains" "SMTP Authentication" inurl:admin
+inurl:rpSys.html
+filetype:pl intitle:"Ultraboard Setup"
+intitle:"Horde :: My Portal" -"[Tickets"
+intitle:"Uploader - Uploader v6" -pixloads.com
+http://www.google.com/search?q=inurl%3Aindex.php%3Fpagedb%3Drss
+"[ phpinfo ] [ php.ini ] [ cpu ] [ mem ] [ users ] [ tmp ] [ delete ]"
+"r57shell 1.4"
+"r57shell"
+"safe_mode: * PHP version: * cURL: * MySQL: * MSSQL: * PostgreSQL: * Oracle: *"
+"www.*.com - c99shell" OR "www.*.net - c99shell" OR "www.*.org - c99shell"
+"CGI-Telnet Unit-x Team Connected to *.com" OR "CGI-Telnet Unit-x Team Connected to"
+inurl:/vb/install/upgrade.php
+intitle:cyber anarchy shell
+MySQL: ON MSSQL: OFF Oracle: OFF MSSQL: OFF PostgreSQL: OFF cURL: ON WGet: ON Fetch: OFF Perl: ON
+inurl:view.php?board1_sn=
+inurl:php intitle:"Cpanel , FTP CraCkeR"
+filetype:php inurl:tiki-index.php +sirius +1.9.*
+inurl:.php intitle:- BOFF 1.0 intext:[ Sec. Info ]
+intitle:"-N3t" filetype:php undetectable
+inurl:/wp-content/w3tc/dbcache/
+ext:cgi inurl:cgi-bin intext:#!/bin/bash
+inurl:/proc/self/cwd
+inurl:/elfinder/elfinder.html+intitle:"elFinder 2.0" 	
+inurl:shop "Hassan Consulting's Shopping Cart Version 1.18"
+"YaBB SE Dev Team"
+intitle:"Gallery in Configuration mode"
+intitle:osCommerce inurl:admin intext:"redistributable under the GNU"intext:"Online Catalog" -demo -site:oscommerce.com
+inurl:ManyServers.htm
+intitle:"Terminal Services Web Connection"
+intitle:"Remote Desktop Web Connection"
+"Welcome to Intranet"
+inurl:search.php vbulletin
+inurl:footer.inc.php
+inurl:info.inc.php
+"Welcome to PHP-Nuke" congratulations
+"Select a database to view" intitle:"filemaker pro"
+allinurl:intranet admin
+allinurl:install/install.php
+inurl:pls/admin_/gateway.htm
+intitle:"Gateway Configuration Menu"
+filetype:php inurl:vAuthenticate
+"Welcome to the Prestige Web-Based Configurator"
+("Indexed.By"|"Monitored.By") hAcxFtpScan
+filetype:cgi inurl:"Web_Store.cgi"
+filetype:cgi inurl:"fileman.cgi"
+inurl:"index.php?module=ew_filemanager"
+allinurl:"index.php" "site=sglinks"
+intext:"Warning: * am able * write ** configuration file" "includes/configure.php" -Forums
+intitle:phpMyAdmin "Welcome to phpMyAdmin ***" "running on * as root@*"
+natterchat inurl:home.asp -site:natterchat.co.uk
+inurl:aol*/_do/rss_popup?blogID=
+(inurl:/shop.cgi/page=) | (inurl:/shop.pl/page=)
+inurl:newsdesk.cgi? inurl:"t="
+intitle:"Mail Server CMailServer Webmail" "5.2"
+"There are no Administrators Accounts" inurl:admin.php -mysql_fetch_row
+inurl:servlet/webacc
+inurl:"/NSearch/AdminServlet"
+"Powered by: vBulletin Version 1.1.5"
+"html allowed" guestbook
+"set up the administrator user" inurl:pivot
+XOOPS Custom Installation
+intitle:"MvBlog powered"
+inurl:"read.php?datespan="
+intitle:"A Better ASP User Gallery"
+allinurl: In YoUr Dream Lamerz
+allinurl: op=viewslink&sid=
+"intitle:t3al shmeh"
+: inurll ', -font => '{Verdana} 8 bold') ->pack ( -side => "top" , -anchor => 'e' ) ;
+inurl:/vb/install/install.php
+intitle:"[EasyPHP] - Administration"
+intitle:Locus7shell intext:"Software:"
+intitle:m1n1 1.01
+intitle:#k4raeL - sh3LL
+filetype:php inanchor:c99 inurl:c99 intitle:c99shell -seeds -marijuana
+intitle:awen+intitle:asp.net
+intext: intext: intext: intext: intext:
+intext:SQL syntax & inurl:index.php?=id & inurl:gov & inurl:gov
+inurl:.php? intext:CHARACTER_SETS,COLLATIONS, ?intitle:phpmyadmin
+inurl:"struts" filetype:action
+inurl:"/reports/rwservlet" intext:"Oracle"
+"OpenSSL" AND "1.0.1 Server at" OR "1.0.1a Server at" OR "1.0.1b Server at" OR "1.0.1c Server at" OR "1.0.1d Server at" OR "1.0.1e Server at" OR "1.0.1f Server at"
+inurl:CHANGELOG.txt intext:drupal intext:"SA-CORE" -intext:7.32 -site:github.com -site:drupal.org
+inurl:robots.txt intext:CHANGELOG.txt intext:disallow ext:txt -site:github.com
+allinurl:moadmin.php -google -github
+allintext:Copyright Smart PHP Poll. All Rights Reserved. -exploit
+"dirLIST - PHP Directory Lister" "Banned files: php | php3 | php4 | php5 | htaccess | htpasswd | asp | aspx" "index of" ext:php
+inurl:"index.php?option=com_joomanager"
+inurl:"/user/register" "Powered by Drupal" -CAPTCHA -"Access denied"
+inurl:"q=user/password"
+"Powered by vBulletin Version 5.5.4"
+"Powered by Jira Service Desk"
+intitle:"index of" "AT-admin.cgi"
+intext:"(c) GUnet 2003-2007"
+inurl:/+CSCOE+/logon.html
+intitle:"index of" "filemail.pl"
+intitle:"index of" "shell.php"
+site: target.com ext:action | ext:struts | ext:do
+intext:"Powered By Gila CMS"

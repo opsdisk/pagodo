@@ -1,0 +1,11 @@
+site:ups.com intitle:"Ups Package tracking" intext:"1Z ### ### ## #### ### #"
+intext:"powered by Hosting Controller" intitle:Hosting.Controller
+intext:"Dumping data for table `orders`"
+POWERED BY HIT JAMMER 1.0!
+inurl:"shopadmin.asp" "Shop Administrators only"
+inurl:"/database/comersus.mdb"
+inurl:shopdbtest.asp
+"More Info about MetaCart Free"
+inurl:midicart.mdb
+intext:"Powered by X-Cart: shopping cart software" -site:x-cart.com
+dcid= bn= pin code=
