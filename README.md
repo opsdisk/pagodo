@@ -1,4 +1,4 @@
-# PaGoDo
+# PaGoDo - Passive Goolge Dork
 
 ## Introduction
 
@@ -85,7 +85,7 @@ python3 ghdb_scraper.py -i
 
 Dork categories:
 
-```json
+```none
 categories = {
     1: "Footholds",
     2: "File Containing Usernames",
