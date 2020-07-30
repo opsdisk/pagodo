@@ -1,4 +1,4 @@
-# PaGoDo - Passive Goolge Dork
+# PaGoDo - Passive Google Dork
 
 ## Introduction
 
