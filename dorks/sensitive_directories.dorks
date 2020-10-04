@@ -369,3 +369,31 @@ inurl:admin/data* intext:index of
 inurl:_vti_pvt/service.pwd
 intitle:"index of" "oauth-private.key"
 inurl:member filetype:xls
+Index of: /services/pancard/
+intitle:"index of" "ssh_host_ecdsa_key"
+Google Dork : Index of: /services/aadhar card/
+intitle:"index of" "app.log"
+"Index of" "/monitoring"
+intitle:"index of" "/home/ROOT_PATH/"
+intitle:"Index of c:xampp"
+intitle:"index of" "/root/etc/security/"
+intitle:"Index of /" +.htaccess.old
+intitle:"index of" /var/logs filetype:'"log | txt | csv"
+Index: /wp-includes/Text/Diff
+intitle:"index of" /lsass.exe
+"Share Link" inurl:/share.cgi?ssid=
+intitle:"index of" "/000~ROOT~000/"
+intitle:"index of" "firewall.log" | "firewall.logs"
+"-- Dump completed" ext:sql | ext:txt | ext:log
+"ws_ftp.log" ext:log
+"-- PostgreSQL database dump complete" ext:sql | ext:txt | ext:log | ext:env
+"index of" "users.ibd"
+"index of" "performance_schema"
+ext:reg [HKEY_CURRENT_USERSoftwareSimonTathamPuTTYSshHostKeys]
+GitLab ssh.log ext:log
+"-- Dumping data for table `users` | `people` | `member`" ext:sql | ext:txt | ext:log | ext:env
+"-- Dumping data for table * " ext:sql | ext:xls intext:db | intext:database | intext:password | username
+intitle:"index of" "/app.log" | "/app.logs"
+"index of" "email.ini"
+intitle:"Everything" inurl:C:Windows
+intitle:"index of" "/system.log" | "/system.logs"

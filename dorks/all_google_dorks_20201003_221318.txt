@@ -5815,3 +5815,282 @@ inurl:candidatelogin.aspx
 intext:"TopManage (R) 2002 - 2020"
 "MYSQL_ROOT_PASSWORD:" ext:env OR ext:yml -git
 inurl:member filetype:xls
+intext:Basato su IceWarp Server
+inurl:wp-content/plugins/testimonial-rotator
+intitle:qdPM 9.1. Copyright (c) 2020 qdpm.net
+Index of: /services/pancard/
+Index of /__MACOSX/System
+inurl:"/arcgis/rest/services"
+intext:"index of /" "Index of" access_log
+inurl:"/jmx-console/HtmlAdaptor?action"
+intext:Basato su Comunicazioni Integrate IceWarp
+intitle:"index of" and intext:"vendor" and intext:"phpunit"
+intitle:"index of" "id_rsa.pub"
+inurl:/webmail intext:Tecnologia fornecida por IceWarp Server
+inurl:wp-content/plugins/wp-pro-quiz
+inurl:wp-content/plugins/YITH-WooCommerce-Ajax-Product-Filter
+inurl:wp-content/plugins/ar-contactus
+intitle:"index of" "ssh_host_ecdsa_key"
+inurl:wp-content/plugins/wpDiscuz
+intext:"Centreon 2005-2019"
+inurl:wp-content/themes/citybook
+inurl:wp-content/themes/traveler
+intitle:"index of" /etc/openvpn/
+intext:Powered by 2Moons 2009-2013
+intitle:"index of" "*named.root.key"
+intitle:"index of" ./bash_history
+site:vpn.*.*/ intext:"login" intitle:"login"
+"-----BEGIN RSA PRIVATE KEY-----" inurl:id_rsa
+"Index of" "accounts.sql"
+inurl:"index.php/user/password/"
+intitle:"index of" "/master.passwd"
+Google Dork : Index of: /services/aadhar card/
+inurl:logs intext:GET https:// ext:txt intext:password intext:username
+allinurl:tsweb/default.htm
+inurl:/sws/index.html
+inurl:"backend/web/site/login"
+intitle:"index of" "bundle.pem"
+inurl:wp-content/plugins/form-maker
+intitle:"index of" "app.log"
+intitle:"IceWarp WebClient"
+inurl:wp-content/plugins/coming-soon
+allintext:password filetype:log
+inurl:/base/main_login.html intext:"Login"
+inurl:wp-content/themes/traveler
+inurl:wp-content/plugins/gift
+"Index of" "/monitoring"
+inurl:passwordvault intext:cyberark
+intitle:"index of" "/home/ROOT_PATH/"
+inurl:/jobq.htm AND intext:"ApeosPort-V"
+intext:piwik "Sign in"
+"Index of" "/yahoo_site_admin/credentials"
+inurl:8080/login.php
+"radius-server key" ext:cfg OR ext:log OR ext:txt
+site:gov.*.*/ intext:"login" intitle:"login"
+intitle:"index of" "nginx.log"
+inurl:/8080/admin.html
+intitle:"index of" "/ftpusers"
+intitle:"Index of c:xampp"
+inurl:wp-content/themes/nexos
+inurl:wp-content/themes/careerfy
+inurl:wp-content/plugins/security-malware-firewall
+inurl:wp-content/themes/careerup
+inurl:wp-content/plugins/testimonials-widget
+inurl:wp-content/plugins/wp-jobsearch
+inurl:wp-content/plugins/payment-form-for-paypal-pro
+intitle:"index of" "tomcat-users.xml"
+inurl:wp-content/plugins/wpforms-lite
+intitle:"Index of /" "joomla/database"
+"login" intitle:"*reports login"
+intitle:"report" ("qualys" | "acunetix" | "nessus" | "netsparker" | "nmap") filetype:html
+allintext:wp-content/plugins/acf-to-rest-api
+inurl:wp-content/themes/sparky
+intitle:"index of" "/root/etc/security/"
+"TOPdesk ApplicationServer" inurl:/index.jsp
+intitle:"Index of /" +.htaccess
+"big-ip logout page" ext:php3
+inurl:/opac/index.jsp
+intitle:"index of /" +.htdocs
+intitle:"report" ("OpenVAS" | "Nikto") ext:pdf OR ext:html
+intitle:"report" ("Fortify" | "Web Inspect") filetype:pdf
+intitle:"index of" exception.log
+inurl:client_password=
+intitle:"Index of /" +.htaccess.old
+inurl:wp-content/plugins/wp-live-chat-support
+inurl:wp-content/plugins/form-maker
+inurl:wp-content/plugins/newsletter
+allintext: wp-content/themes/injob
+inurl:wp-content/plugins/knight-lab-timelinejs
+inurl:wp-content/plugins/wise-chat
+inurl /view.shtml intext:"Airport"
+"login" intitle:"*payroll login"
+inurl:/seeyon/index.jsp
+inurl:wp-content/plugins/kingcomposer
+inurl:wp-content/plugins/knight-lab-timelinejs
+inurl:wp-content/plugins/gravityforms
+allintext:wp-content/plugins/angwp
+inurl:wp-content/plugins/angwp
+inurl:wp-content/themes/corona
+inurl:/wp-content/themes/realestate-7
+inurl:/wp-content/plugins/angwp
+inurl:wp-content/plugins/angwp
+intitle:"SFXAdmin - sfx_global" intext:"Login Form"
+allintext:username,password filetype:log
+inurl:wp-content/plugins/wd-google-maps
+inurl:wp-content/plugins/sendpress
+inurl:wp-content/plugins/wpjobboard
+inurl:wp-content/plugins/idx-broker-platinum
+inurl:wp-content/plugins/async-javascript
+inurl:wp-content/plugins/all-in-one-wp-migration
+intitle:"Wing FTP Server - Web"
+inurl:wp-content/plugins/lifterlms
+intitle:"index of" /var/logs filetype:'"log | txt | csv"
+inurl:index.php "Powered by PHP Server Monitor v3.1.1"
+inurl:/ViewerFrame? intitle:"Network Camera NetworkCamera"
+inurl:wp-content/plugins/arforms
+inurl:wp-content/plugins/safe-svg
+inurl:wp-content/plugins/sfwd-lms
+inurl:wp-content/plugins/iwp-client
+inurl:wp-content/plugins/email-subscribers
+Index: /wp-includes/Text/Diff
+intitle:"index.of" +jmx-console
+inurl:"/general/status.html"
+inurl:axis-cgi/jpg
+intext:"db_database" ext:env intext:"db_password"
+intext:ISUR_MACHINE IIS -log
+intitle:ePMP 1000 intext:Log In -site:*.com -site:com.*
+inurl:wp-content/plugins/redirection
+inurl:wp-content/plugins/updraftplus
+intitle:"index of" /lsass.exe
+inurl:wp-content/plugins/my-calendar
+intext:"Frame rate" inurl:/home/homej.html
+inurl:/+CSCOE+/logon.html?
+intext:"Device Name" | intext:"Host Name" inurl:mainFrame.cgi
+Index of : wp-content/plugins/wpmudev-updates/
+site:com "sap netweaver portal"
+inurl:/webconsole/webpages/login.jsp
+inurl:axis-cgi/mjpg/video swf
+inurl:/home/homej.html
+intitle:"index of" jboss-service.xml
+intitle:"SFXAdmin" intext:"Login Form"
+site:police.*.*/ intext:"login" intitle:"login"
+site:admin.*.*/ intext:"login" intitle:"login"
+inurl:"/vam/index_vam_op.php"
+"Share Link" inurl:/share.cgi?ssid=
+"Reflector Dashboard" inurl:/db/index.php/
+inurl:wp-content/plugins/easy-media-gallery-pro
+"You have accessed a private computer system" inurl:login
+inurl:8081/ "Pan, Tilt & Zoom"
+intitle:"Remote Desktop Web Connection" inurl:tsweb
+"HP LaserJet" inurl:"SSI/index.htm"
+inurl:wp-content/plugins/wpdiscuz
+intitle:"Microsoft Internet Information Services 8" -IIS
+allintext:"redis_password" ext:env
+intitle:"index of" "/000~ROOT~000/"
+intitle:"Login - OpenStack Dashboard" inurl:/dashboard/auth/login
+intitle:"webcam" inurl:login
+inurl:''com_gmapfp''
+"Camera Live Image" inurl:"guestimage.html"
+intitle:"UPS Status" "Status" inurl:/host
+intitle:"index of" "firewall.log" | "firewall.logs"
+allintext:"API_SECRET*" ext:env | ext:yml
+intitle:"OpenWrt - LuCI" "Authorization Required"
+site:.gov inurl:admin login
+intitle:"NETGEAR" inurl:"/base/main_login.html"
+inurl:client_login=
+intitle:"D-LINK SYSTEMS, INC. | WIRELESS AP : LOGIN"
+intitle:"DVR LOGIN" -com
+intitle:"Helpdesk Software Login" "login" "by Jitbit"
+allintitle:"MDVR Login"
+intitle:"D-LINK" inurl:Login.html
+intitle:"axigen webadmin"
+"EMAIL_HOST_PASSWORD" ext:yml | ext:env | ext:txt | ext:log
+inurl:.*eservices/login
+"index of" "user.MYD"
+inurl:"/login?csrfkey=" intitle:"cisco email security"
+ext:log intext:NetworkManager "systemd"
+intitle:"Tuxedo Connected Controller"
+inurl:/config/cam_portal.cgi "Panasonic"
+site:*/piwik "Sign in" "Matomo"
+inurl:"view.shtml" "Network Camera"
+intitle:"NVR LOGIN" -inurl:"nvr | com | www | net"
+intext:admin ext:sql inurl:admin
+inurl:"/rpAuth.html" "ZyWALL"
+inurl:device.rsp -com -www
+inurl:/login.asp "Configuration and Management"
+"Citrix Receiver" inurl:index.html "Gateway"
+inurl:"/portal/webclient" intitle:"VMware Horizon"
+inurl:CTCWebService
+allintitle:"Welcome to the Web-Based Configurator"
+inurl:/presentation/html/top/index.html
+intitle:"Miniweb Start Page"
+inurl:login_up.php "Plesk Onyx"
+site:ftp://ftp.*.* ext:sql
+inurl::/app/kibana "Kibana" -discuss -ipaddress -git
+intitle:"Wimax CPE Configuration"
+"-- Dump completed" ext:sql | ext:txt | ext:log
+inurl: login.rsp
+intitle:"GoAnywhere Web Client - Login"
+allintitle:"Welcome admin"
+intitle:"Monsta ftp" intext:"Lock session to IP"
+"/** MySQL database password */" ext:txt | ext:cfg | ext:env | ext:ini
+inurl:/Dashboard.xhtml intitle:"Dashboard"
+"index of" "callback.php"
+intitle:"login to webmin" "You must enter a username and password to login to the Webmin server"
+inurl:8080/view/viewer_index.shtml?id= -site:*.com
+intitle:"index of" "composer.lock"
+'AUTH_SALT' | 'SECURE_AUTH_SALT' | 'LOGGED_IN_SALT' | 'NONCE_SALT' ext:txt | ext:cfg | ext:env | ext:ini
+"ws_ftp.log" ext:log
+intitle:"Web Login" "For security reasons only authorized users are allowed access to this web server. "
+inurl:weblogin.cgi?mobile=0
+intitle:"Rockwell Automation" inurl:"index.html" "Device Name"
+inurl: authorlogin.php
+"SonicWALL - Authentication" inurl:/auth.html
+inurl:/userportal/webpages/myaccount/login.jsp
+Database:phpmyadmin intext:mysql ext:sql inurl:phpmyadmin
+"Retrieve Your Password" site:*/recoverpassword.aspx
+intitle:"Dell SonicWALL - Authentication" inurl:auth.html
+intitle:"index of" "phpmyadmin.sql"
+inurl:"/plugins/servlet/Wallboard/"
+intitle:"index of" "config.db"
+site:ftp.*.* "CrushFTP WebInterface"
+mail/u/0 filetype:pdf
+intitle:"index of" "httpd.pid"
+inurl:"/wp-content/plugins/wp-file-manager/lib/php/connector.minimal.php" - Wordpress File Manager
+inurl:webclient/Login.xhtml
+"index of" "users.frm"
+inurl:wsnavigator/jsps
+inurl:"/mifs/user"
+"-- PostgreSQL database dump complete" ext:sql | ext:txt | ext:log | ext:env
+intitle:"Lists Web Service"
+"index of" "users.ibd"
+"POSTGRES_PASSWORD=" ext:txt | ext:cfg | ext:env | ext:ini | ext:yml | ext:sql -git -gitlab
+inurl:/ mis login
+site:jira.*.* inurl:/customer/portal/
+inurl:device ext:rsp
+inurl:"/viewer/live/index.html"
+"index of" "performance_schema"
+allintitle:"Pi-hole Admin Console"
+inurl:/CgiStart?page
+"putty.log" ext:log | ext:cfg | ext:txt
+ext:reg [HKEY_CURRENT_USERSoftwareSimonTathamPuTTYSshHostKeys]
+inurl:"/viewer/live.html"
+ext:xls intext:@gmail.com intext:password
+inurl:/ ims login
+inurl:"rms login"
+inurl:"images/lists?cid=13"
+inurl:"sms login"
+intitle:"database.php" inurl:"database.php" intext:"db_password" -git -gitlab
+ext:txt intext:@yahoo.com intext:password
+inurl:"plc login"
+inurl:"live/cam.html"
+GitLab ssh.log ext:log
+inurl:VirtualEms/Login.aspx
+inurl:/ lms login
+"-- Dumping data for table `users` | `people` | `member`" ext:sql | ext:txt | ext:log | ext:env
+"'username' =>" + "'password' =>" ext:log
+"-- Dumping data for table * " ext:sql | ext:xls intext:db | intext:database | intext:password | username
+intitle:"index of" "/app.log" | "/app.logs"
+filetype:log intext:password after:2015 intext:@gmail.com | @yahoo.com | @hotmail.com
+intitle:"index of" "mysql.log" | "mysql.logs"
+intitle:Snoop Servlet
+"index of" "password.ini"
+inurl:idp/SSO.saml2
+intitle:"Environment Variables" inurl:/cgi-bin/
+inurl:/ Kms login
+"Pop-up" + "Live Image" inurl:index.html
+inurl:AIMS/PS
+"index of" "email.ini"
+inurl:"webArch/mainFrame.cgi" + "Web Image Monitor"
+intitle:"Everything" inurl:C:Windows
+inurl:/ usda login
+inurl:/ emis login
+"admin_password" ext:txt | ext:log | ext:cfg
+inurl:console-selfservice
+intitle:"Vulnerability Report" "Critical" ext:pdf
+inurl:/phpPgAdmin/browser.php intext:"Servers" | "PostgreSQL*"
+inurl:/8080 "windows" "live view"
+intext:"Powered by Piwigo"
+File contains Sensitive Information
+intext:"Powered by Typesetter"
+intitle:"index of" "/system.log" | "/system.logs"

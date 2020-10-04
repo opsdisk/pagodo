@@ -850,3 +850,34 @@ intitle:"index of /" "*key.pem"
 index of /backend/prod/config
 "Index of" "/access"
 intext:"Not to be distributed" ext:doc OR ext:pdf OR ext:xls OR ext:xlsx
+Index of /__MACOSX/System
+intitle:"index of" "id_rsa.pub"
+intitle:"index of" /etc/openvpn/
+intitle:"index of" "*named.root.key"
+intitle:"index of" ./bash_history
+"-----BEGIN RSA PRIVATE KEY-----" inurl:id_rsa
+"Index of" "accounts.sql"
+intitle:"index of" "bundle.pem"
+intitle:"Index of /" "joomla/database"
+intitle:"report" ("qualys" | "acunetix" | "nessus" | "netsparker" | "nmap") filetype:html
+intitle:"report" ("OpenVAS" | "Nikto") ext:pdf OR ext:html
+intitle:"report" ("Fortify" | "Web Inspect") filetype:pdf
+intitle:"index of" exception.log
+allintext:username,password filetype:log
+intext:ISUR_MACHINE IIS -log
+intitle:"index of" jboss-service.xml
+"Reflector Dashboard" inurl:/db/index.php/
+allintext:"API_SECRET*" ext:env | ext:yml
+"index of" "user.MYD"
+ext:log intext:NetworkManager "systemd"
+intext:admin ext:sql inurl:admin
+site:ftp://ftp.*.* ext:sql
+"index of" "callback.php"
+intitle:"index of" "composer.lock"
+'AUTH_SALT' | 'SECURE_AUTH_SALT' | 'LOGGED_IN_SALT' | 'NONCE_SALT' ext:txt | ext:cfg | ext:env | ext:ini
+Database:phpmyadmin intext:mysql ext:sql inurl:phpmyadmin
+intitle:"index of" "phpmyadmin.sql"
+intitle:"index of" "config.db"
+"putty.log" ext:log | ext:cfg | ext:txt
+intitle:"index of" "mysql.log" | "mysql.logs"
+intitle:"Environment Variables" inurl:/cgi-bin/

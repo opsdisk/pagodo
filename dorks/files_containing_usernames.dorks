@@ -23,3 +23,7 @@ intitle:index.of "users.db"
 intitle:"index of" service.grp
 allintext:username filetype:log
 intitle:"index of" "users.sql"
+intitle:"index of" "/ftpusers"
+intitle:"index of" "tomcat-users.xml"
+"index of" "users.frm"
+File contains Sensitive Information

@@ -102,3 +102,18 @@ Find Microsoft Lync Server AutoDiscover
 inurl:/download_file/ intext:"index of /"
 intitle:"index of" "admin/xml"
 inurl:logon/LogonPoint/index.html
+inurl:"/arcgis/rest/services"
+inurl:"/jmx-console/HtmlAdaptor?action"
+intitle:"index of" and intext:"vendor" and intext:"phpunit"
+"radius-server key" ext:cfg OR ext:log OR ext:txt
+intitle:"index of" "nginx.log"
+intitle:"Index of /" +.htaccess
+intitle:"index of /" +.htdocs
+intitle:"index.of" +jmx-console
+inurl:CTCWebService
+inurl::/app/kibana "Kibana" -discuss -ipaddress -git
+inurl:/Dashboard.xhtml intitle:"Dashboard"
+inurl:"/plugins/servlet/Wallboard/"
+mail/u/0 filetype:pdf
+intitle:"index of" "httpd.pid"
+inurl:wsnavigator/jsps

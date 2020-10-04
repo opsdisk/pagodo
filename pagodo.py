@@ -4,6 +4,7 @@
 import argparse
 import os
 import random
+import re
 import sys
 import time
 
@@ -21,7 +22,7 @@ class Pagodo:
     """pagodo class object"""
 
     def __init__(self, domain, google_dorks, search_max, save_links, delay, jitter, randomize_user_agent):
-        """Iniitialize Pagodo class object."""
+        """Initialize Pagodo class object."""
 
         self.domain = domain
         with open(google_dorks) as self.fp:
@@ -72,7 +73,8 @@ class Pagodo:
                 if len(query.split(" ")) > 32:
                     ignored_string = " ".join(query.split(" ")[32:])
                     print(
-                        f"[!] Google limits queries to 32 words (separated by spaces):  Removing from search query: '{ignored_string}'"
+                        "[!] Google limits queries to 32 words (separated by spaces):  Removing from search query: "
+                        f"'{ignored_string}'"
                     )
 
                     # Update query variable.
@@ -93,7 +95,8 @@ class Pagodo:
                     user_agent = random.choice(self.random_user_agents).strip()
 
                 print(
-                    f"[*] Search ( {i} / {len(self.google_dorks)} ) for Google dork [ {query} ] and waiting {pause_time} seconds between searches using User-Agent '{user_agent}'"
+                    f"[*] Search ( {i} / {len(self.google_dorks)} ) for Google dork [ {query} ] and waiting "
+                    f"{pause_time} seconds between searches using User-Agent '{user_agent}'"
                 )
 
                 for url in googlesearch.search(
@@ -106,9 +109,13 @@ class Pagodo:
                     user_agent=user_agent,
                     tbs="li:1",  # Verbatim mode.  Doesn't return suggested results with other domains.
                 ):
-                    self.links.append(url)
+                    # Ignore results from exploit-db.com hosting the actual dorks.  Keeping it simple with regex.
+                    if re.search("https://www.exploit-db.com/ghdb", url, re.IGNORECASE):
+                        continue
+                    else:
+                        self.links.append(url)
 
-                # Since googlesearch.search method retreives URLs in batches of 100, ensure the file list only contains
+                # Since googlesearch.search method retrieves URLs in batches of 100, ensure the file list only contains
                 # the requested amount.
                 if len(self.links) > self.search_max:
                     self.links = self.links[: -(len(self.links) - self.search_max)]
