@@ -147,3 +147,9 @@ intitle:"index of" "docker.yml"
 inurl:":8088/cluster/apps"
 "index of /private" -site:net -site:com -site:org
 inurl:"id=*" & intext:"warning mysql_fetch_array()"
+intext:"index of /" "Index of" access_log
+intitle:"Microsoft Internet Information Services 8" -IIS
+intitle:"Monsta ftp" intext:"Lock session to IP"
+intitle:"Lists Web Service"
+allintitle:"Pi-hole Admin Console"
+intitle:Snoop Servlet

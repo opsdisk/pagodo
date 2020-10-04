@@ -503,3 +503,36 @@ intitle:"WEBCAM 7 " -inurl:/admin.html
 intitle:"HP ALM" "Application Lifecycle Management" inurl:/qcbin/ -ext:PDF
 allinurl:top.htm?Currenttime
 inurl:index.shtml
+inurl:/sws/index.html
+inurl:/base/main_login.html intext:"Login"
+inurl:/jobq.htm AND intext:"ApeosPort-V"
+inurl /view.shtml intext:"Airport"
+intitle:"SFXAdmin - sfx_global" intext:"Login Form"
+inurl:/ViewerFrame? intitle:"Network Camera NetworkCamera"
+inurl:"/general/status.html"
+inurl:axis-cgi/jpg
+intext:"Frame rate" inurl:/home/homej.html
+intext:"Device Name" | intext:"Host Name" inurl:mainFrame.cgi
+inurl:axis-cgi/mjpg/video swf
+inurl:/home/homej.html
+inurl:8081/ "Pan, Tilt & Zoom"
+"HP LaserJet" inurl:"SSI/index.htm"
+intitle:"webcam" inurl:login
+"Camera Live Image" inurl:"guestimage.html"
+intitle:"UPS Status" "Status" inurl:/host
+inurl:.*eservices/login
+intitle:"Tuxedo Connected Controller"
+inurl:/config/cam_portal.cgi "Panasonic"
+inurl:"view.shtml" "Network Camera"
+allintitle:"Welcome to the Web-Based Configurator"
+inurl:/presentation/html/top/index.html
+intitle:"Miniweb Start Page"
+inurl:8080/view/viewer_index.shtml?id= -site:*.com
+intitle:"Rockwell Automation" inurl:"index.html" "Device Name"
+inurl:"/viewer/live/index.html"
+inurl:/CgiStart?page
+inurl:"/viewer/live.html"
+inurl:"live/cam.html"
+"Pop-up" + "Live Image" inurl:index.html
+inurl:"webArch/mainFrame.cgi" + "Web Image Monitor"
+inurl:/8080 "windows" "live view"

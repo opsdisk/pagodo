@@ -957,3 +957,76 @@ intext:"index of /" "customer.php" "~Login"
 intext:"Welcome to Intranet" "login"
 inurl:"index.php/user/password/" intext:Password Reset
 inurl:candidatelogin.aspx
+site:vpn.*.*/ intext:"login" intitle:"login"
+inurl:"index.php/user/password/"
+allinurl:tsweb/default.htm
+inurl:"backend/web/site/login"
+inurl:passwordvault intext:cyberark
+inurl:8080/login.php
+site:gov.*.*/ intext:"login" intitle:"login"
+inurl:/8080/admin.html
+"login" intitle:"*reports login"
+"TOPdesk ApplicationServer" inurl:/index.jsp
+"big-ip logout page" ext:php3
+inurl:/opac/index.jsp
+inurl:client_password=
+"login" intitle:"*payroll login"
+inurl:/seeyon/index.jsp
+inurl:index.php "Powered by PHP Server Monitor v3.1.1"
+inurl:/+CSCOE+/logon.html?
+site:com "sap netweaver portal"
+inurl:/webconsole/webpages/login.jsp
+intitle:"SFXAdmin" intext:"Login Form"
+site:police.*.*/ intext:"login" intitle:"login"
+site:admin.*.*/ intext:"login" intitle:"login"
+"You have accessed a private computer system" inurl:login
+intitle:"Remote Desktop Web Connection" inurl:tsweb
+intitle:"Login - OpenStack Dashboard" inurl:/dashboard/auth/login
+intitle:"OpenWrt - LuCI" "Authorization Required"
+site:.gov inurl:admin login
+intitle:"NETGEAR" inurl:"/base/main_login.html"
+inurl:client_login=
+intitle:"D-LINK SYSTEMS, INC. | WIRELESS AP : LOGIN"
+intitle:"DVR LOGIN" -com
+intitle:"Helpdesk Software Login" "login" "by Jitbit"
+allintitle:"MDVR Login"
+intitle:"D-LINK" inurl:Login.html
+intitle:"axigen webadmin"
+inurl:"/login?csrfkey=" intitle:"cisco email security"
+site:*/piwik "Sign in" "Matomo"
+intitle:"NVR LOGIN" -inurl:"nvr | com | www | net"
+inurl:"/rpAuth.html" "ZyWALL"
+inurl:device.rsp -com -www
+inurl:/login.asp "Configuration and Management"
+"Citrix Receiver" inurl:index.html "Gateway"
+inurl:"/portal/webclient" intitle:"VMware Horizon"
+inurl:login_up.php "Plesk Onyx"
+intitle:"Wimax CPE Configuration"
+intitle:"GoAnywhere Web Client - Login"
+allintitle:"Welcome admin"
+intitle:"login to webmin" "You must enter a username and password to login to the Webmin server"
+intitle:"Web Login" "For security reasons only authorized users are allowed access to this web server. "
+inurl:weblogin.cgi?mobile=0
+inurl: authorlogin.php
+"SonicWALL - Authentication" inurl:/auth.html
+inurl:/userportal/webpages/myaccount/login.jsp
+"Retrieve Your Password" site:*/recoverpassword.aspx
+intitle:"Dell SonicWALL - Authentication" inurl:auth.html
+site:ftp.*.* "CrushFTP WebInterface"
+inurl:webclient/Login.xhtml
+inurl:"/mifs/user"
+inurl:/ mis login
+site:jira.*.* inurl:/customer/portal/
+inurl:/ ims login
+inurl:"rms login"
+inurl:"sms login"
+inurl:"plc login"
+inurl:VirtualEms/Login.aspx
+inurl:/ lms login
+inurl:idp/SSO.saml2
+inurl:/ Kms login
+inurl:AIMS/PS
+inurl:/ usda login
+inurl:/ emis login
+inurl:console-selfservice
+inurl:/phpPgAdmin/browser.php intext:"Servers" | "PostgreSQL*"
