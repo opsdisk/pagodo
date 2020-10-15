@@ -881,3 +881,6 @@ intitle:"index of" "config.db"
 "putty.log" ext:log | ext:cfg | ext:txt
 intitle:"index of" "mysql.log" | "mysql.logs"
 intitle:"Environment Variables" inurl:/cgi-bin/
+inurl:node_modules/mqtt/test/helpers/
+"index" of /backend/prod/config 
+ext:php | intitle:phpinfo "published by the PHP Group"
