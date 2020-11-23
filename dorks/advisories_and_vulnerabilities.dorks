@@ -2186,3 +2186,10 @@ inurl:device ext:rsp
 inurl:"images/lists?cid=13"
 intext:"Powered by Piwigo"
 intext:"Powered by Typesetter"
+intext:"Published with Textpattern CMS"
+inurl:/wp-content/plugins/wp-file-manager/readme.txt
+intitle:"Sphider Admin Login"
+Server: Mida eFramework
+intitle:"Powered by Pro Chat Rooms"
+inurl:"woocommerce-exporter"
+inurl:opac_css

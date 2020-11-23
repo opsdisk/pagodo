@@ -397,3 +397,17 @@ intitle:"index of" "/app.log" | "/app.logs"
 "index of" "email.ini"
 intitle:"Everything" inurl:C:Windows
 intitle:"index of" "/system.log" | "/system.logs"
+intitle:"index of" "slapd.conf"
+"index of" "mysql.sh"
+intitle:"index of" "/CFIDE/" intext:"administrator"
+intitle: "Index of" inurl:admin/uploads
+intitle:"index of" "server.crt" | "server.csr"
+inurl:node_modules/mqtt/test/helpers/
+inurl:8080 + intext:"httpfileserver 2.3"
+inurl: /.git
+intitle:"index of" "WebServers.xml"
+"-- Dumping data for table `admin`" | "-- INSERT INTO `admin`" "VALUES" ext:sql | ext:txt | ext:log | ext:env
+intitle:index of .git/hooks/
+intitle:"index of" "*.cert.pem" | "*.key.pem"
+ssh_host_dsa_key.pub + ssh_host_key + ssh_config = "index of / "
+"index of" inurl:database ext:sql | xls | xml | json | csv

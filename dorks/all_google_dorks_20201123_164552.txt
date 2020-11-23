@@ -6094,3 +6094,98 @@ intext:"Powered by Piwigo"
 File contains Sensitive Information
 intext:"Powered by Typesetter"
 intitle:"index of" "/system.log" | "/system.logs"
+allintitle:"CrushFTP WebInterface"
+"UV9 Error (1.0)"
+intitle:"index of" "slapd.conf"
+"Powered by 123LogAnalyzer"
+rootpw --iscrypted ext:cfg
+"anaconda-ks.cfg" | "ks.cfg" ext:cfg -git -gitlab
+"server.cfg" ext:cfg intext:"rcon_password" -git -gitlab
+"index of" "mysql.sh"
+intitle:"index of" "/CFIDE/" intext:"administrator"
+ext:cfg "g_password" | "sv_privatepassword" | "rcon_password" -git -gitlab
+"CREATE ROLE" + "ENCRYPTED PASSWORD" ext:sql | ext:txt | ext:ini -git -gitlab
+intext:"Published with Textpattern CMS"
+intext:piwik "login"
+inurl:_vti_bin/Authentication.asmx
+inurl:weblogin.cgi?=1
+intitle: "Index of" inurl:admin/uploads
+intitle:"index of" "server.crt" | "server.csr"
+"db.username" + "db.password" ext:properties
+inurl:/wp-content/plugins/wp-file-manager/readme.txt
+"Vigor Login Page" + intext:"Group"
+site:pastebin.com intext:admin.password
+allintext:"index of" "oauth-private.key"
+allintext:"Index Of" "sftp-config.json"
+intitle:"PowerMTA" inurl:logs
+ext:php | intitle:phpinfo "published by the PHP Group"
+intitle:"InfoView" + "Log On to InfoView"
+inurl:node_modules/mqtt/test/helpers/
+inurl:/phpPgAdmin/browser.php
+intext:Please Login SSL VPN inurl:remote/login intext:FortiClient
+inurl:set_config_password.html
+intitle:"index of" "/parameters.yml*"
+ext:log password END_FILE
+inurl:8080 + intext:"httpfileserver 2.3"
+intitle:"SiteOmat Loader"
+jdbc:mysql://localhost:3306/ + username + password ext:yml | ext:java -git -gitlab
+intitle:"pi-hole Admin console" intext:"login"
+inurl:user intitle:index of ext:sql | xls | xml | json | csv
+filetype:csv intext:"Secret access key"
+intitle:"NetCamSC*" | intitle:"NetCamXL*" inurl:index.html
+inurl: /.git
+"spring.datasource.password=" + "spring.datasource.username=" ext:properties -git -gitlab
+inurl:weblogin.cgi?=0
+"index of" "/home/000~ROOT~000/etc"
+"DefaultPassword" ext:reg "[HKEY_LOCAL_MACHINESOFTWAREMicrosoftWindows NTCurrentVersionWinlogon]"
+allintext:"Index Of" "cookies.txt"
+ext:txt | ext:log | ext:cfg | ext:yml "administrator:500:"
+site:sftp.*.*/ intext:"login" intitle:"server login"
+allintext:"Copperfasten Technologies" "Login"
+inurl:/adfs/ls/?SAMLRequest
+inurl:/adfs/ls/idpinitiatedsignon
+intitle:"Sphider Admin Login"
+intitle:"index of" "/xampp/htdocs" | "C:/xampp/htdocs/"
+jdbc:mysql://localhost:3306/ + username + password ext:yml | ext:javascript -git -gitlab
+"* Authentication Unique Keys and Salts" ext:txt | ext:log
+"-- Server version" "-- MySQL Administrator dump 1.4" ext:sql
+site:*gov.* intitle:index.of db
+inurl:/index.html?size=2&mode=4
+intitle:"index of" "WebServers.xml"
+"-- Dumping data for table `admin`" | "-- INSERT INTO `admin`" "VALUES" ext:sql | ext:txt | ext:log | ext:env
+intitle:index of .git/hooks/
+inurl: 1051/viewer/live/index.html?lang=en
+inurl:/eftclient/account/login.htm
+Server: Mida eFramework
+inurl:/homej.html?
+intitle:"index of" "service-Account-Credentials.json" | "creds.json"
+intitle:"index of" "filezilla.xml"
+jdbc:postgresql://localhost: + username + password ext:yml | ext:java -git -gitlab
+jdbc:oracle://localhost: + username + password ext:yml | ext:java -git -gitlab
+intitle:"Powered by Pro Chat Rooms"
+intitle:"index of" "/.idea"
+inurl:"woocommerce-exporter"
+intitle:"index of" intext:credentials
+Index of /_vti_pvt +"*.pwd"
+intitle:"index of" "sitemanager.xml" | "recentservers.xml"
+site:gov ext:sql | ext:dbf | ext:mdb
+intitle:"index of" "Clientaccesspolicy.xml"
+inurl:"/?q=user/password/"
+intitle:"index of" "config.exs" | "dev.exs" | "test.exs" | "prod.secret.exs"
+inurl:/?op=register
+intitle:"index of" "password.yml
+inurl:RichWidgets/Popup_Upload.aspx
+intitle:"index of" "*.cert.pem" | "*.key.pem"
+inurl:"servicedesk/customer/user/login"
+ssh_host_dsa_key.pub + ssh_host_key + ssh_config = "index of / "
+intitle:"Xenmobile Console Logon"
+inurl:login.seam
+jdbc:sqlserver://localhost:1433 + username + password ext:yml | ext:java
+inurl:opac_css
+inurl:/Jview.htm + "View Video - Java Mode"
+"'dsn: mysql:host=localhost;dbname=" ext:yml | ext:txt "password:"
+inurl:/adfs/oauth2/authorize
+"index of" inurl:database ext:sql | xls | xml | json | csv
+"secret_key_base:" ext:exs | ext:txt | ext:env | ext:cfg
+ext:sql | ext:txt intext:"-- phpMyAdmin SQL Dump --" + intext:"admin"
+intitle:"index of" "credentials.xml" | "credentials.inc" | "credentials.txt"
