@@ -145,7 +145,7 @@ class Pagodo:
                     print(
                         "[*] Google is blocking you, looks like you need to spread out the Google searches.  Don't know "
                         "how to utilize SSH and dynamic socks proxies?  Do yourself a favor and pick up a copy of The "
-                        "Cyber Plumber's Handbook and Interactive lab (https://gumroad.com/l/cph_book_and_lab) to "
+                        "Cyber Plumber's Handbook and interactive lab (https://gumroad.com/l/cph_book_and_lab) to "
                         "learn all about Secure Shell (SSH) tunneling, port redirection, and bending traffic like a boss."
                     )
 
