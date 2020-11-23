@@ -881,3 +881,21 @@ intitle:"index of" "config.db"
 "putty.log" ext:log | ext:cfg | ext:txt
 intitle:"index of" "mysql.log" | "mysql.logs"
 intitle:"Environment Variables" inurl:/cgi-bin/
+"UV9 Error (1.0)"
+allintext:"index of" "oauth-private.key"
+intitle:"PowerMTA" inurl:logs
+"index of" "/home/000~ROOT~000/etc"
+allintext:"Index Of" "cookies.txt"
+ext:txt | ext:log | ext:cfg | ext:yml "administrator:500:"
+intitle:"index of" "/xampp/htdocs" | "C:/xampp/htdocs/"
+"* Authentication Unique Keys and Salts" ext:txt | ext:log
+"-- Server version" "-- MySQL Administrator dump 1.4" ext:sql
+site:*gov.* intitle:index.of db
+intitle:"index of" "service-Account-Credentials.json" | "creds.json"
+intitle:"index of" "/.idea"
+intitle:"index of" intext:credentials
+Index of /_vti_pvt +"*.pwd"
+site:gov ext:sql | ext:dbf | ext:mdb
+intitle:"index of" "Clientaccesspolicy.xml"
+"secret_key_base:" ext:exs | ext:txt | ext:env | ext:cfg
+ext:sql | ext:txt intext:"-- phpMyAdmin SQL Dump --" + intext:"admin"

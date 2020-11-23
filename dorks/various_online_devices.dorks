@@ -536,3 +536,9 @@ inurl:"live/cam.html"
 "Pop-up" + "Live Image" inurl:index.html
 inurl:"webArch/mainFrame.cgi" + "Web Image Monitor"
 inurl:/8080 "windows" "live view"
+inurl:set_config_password.html
+intitle:"NetCamSC*" | intitle:"NetCamXL*" inurl:index.html
+inurl:/index.html?size=2&mode=4
+inurl: 1051/viewer/live/index.html?lang=en
+inurl:/homej.html?
+inurl:/Jview.htm + "View Video - Java Mode"

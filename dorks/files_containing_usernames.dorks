@@ -27,3 +27,15 @@ intitle:"index of" "/ftpusers"
 intitle:"index of" "tomcat-users.xml"
 "index of" "users.frm"
 File contains Sensitive Information
+"CREATE ROLE" + "ENCRYPTED PASSWORD" ext:sql | ext:txt | ext:ini -git -gitlab
+intitle:"index of" "/parameters.yml*"
+jdbc:mysql://localhost:3306/ + username + password ext:yml | ext:java -git -gitlab
+inurl:user intitle:index of ext:sql | xls | xml | json | csv
+filetype:csv intext:"Secret access key"
+"DefaultPassword" ext:reg "[HKEY_LOCAL_MACHINESOFTWAREMicrosoftWindows NTCurrentVersionWinlogon]"
+intitle:"index of" "filezilla.xml"
+intitle:"index of" "sitemanager.xml" | "recentservers.xml"
+intitle:"index of" "password.yml
+jdbc:sqlserver://localhost:1433 + username + password ext:yml | ext:java
+"'dsn: mysql:host=localhost;dbname=" ext:yml | ext:txt "password:"
+intitle:"index of" "credentials.xml" | "credentials.inc" | "credentials.txt"

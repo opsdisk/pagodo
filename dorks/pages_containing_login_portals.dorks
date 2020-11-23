@@ -1030,3 +1030,23 @@ inurl:/ usda login
 inurl:/ emis login
 inurl:console-selfservice
 inurl:/phpPgAdmin/browser.php intext:"Servers" | "PostgreSQL*"
+allintitle:"CrushFTP WebInterface"
+intext:piwik "login"
+inurl:weblogin.cgi?=1
+"Vigor Login Page" + intext:"Group"
+intitle:"InfoView" + "Log On to InfoView"
+intext:Please Login SSL VPN inurl:remote/login intext:FortiClient
+intitle:"SiteOmat Loader"
+intitle:"pi-hole Admin console" intext:"login"
+inurl:weblogin.cgi?=0
+site:sftp.*.*/ intext:"login" intitle:"server login"
+allintext:"Copperfasten Technologies" "Login"
+inurl:/adfs/ls/?SAMLRequest
+inurl:/adfs/ls/idpinitiatedsignon
+inurl:/eftclient/account/login.htm
+inurl:"/?q=user/password/"
+inurl:/?op=register
+inurl:"servicedesk/customer/user/login"
+intitle:"Xenmobile Console Logon"
+inurl:login.seam
+inurl:/adfs/oauth2/authorize

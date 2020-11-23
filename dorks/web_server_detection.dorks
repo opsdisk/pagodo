@@ -153,3 +153,8 @@ intitle:"Monsta ftp" intext:"Lock session to IP"
 intitle:"Lists Web Service"
 allintitle:"Pi-hole Admin Console"
 intitle:Snoop Servlet
+"Powered by 123LogAnalyzer"
+inurl:_vti_bin/Authentication.asmx
+allintext:"Index Of" "sftp-config.json"
+ext:php | intitle:phpinfo "published by the PHP Group"
+inurl:/phpPgAdmin/browser.php
