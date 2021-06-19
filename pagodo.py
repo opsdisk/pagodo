@@ -17,6 +17,8 @@ import googlesearch  # noqa
 
 # Custom Python libraries.
 
+__version__ = "1.0.0"
+
 
 class Pagodo:
     """pagodo class object"""
@@ -34,7 +36,7 @@ class Pagodo:
         self.delay = delay
 
         # Create an array of jitter values to add to delay, favoring longer search times.
-        self.jitter = numpy.random.uniform(low=self.delay, high=jitter * self.delay, size=(50,))
+        self.jitter = numpy.random.uniform(low=self.delay, high=(jitter * self.delay), size=(50,))
 
         self.randomize_user_agent = randomize_user_agent
 
@@ -167,7 +169,7 @@ def get_timestamp():
 
 if __name__ == "__main__":
 
-    parser = argparse.ArgumentParser(description="pagodo - Passive Google Dork")
+    parser = argparse.ArgumentParser(description="pagodo - Passive Google Dork v{__version__}")
     parser.add_argument(
         "-d", dest="domain", action="store", required=False, help="Domain to search for Google dork hits."
     )

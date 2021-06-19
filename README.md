@@ -6,6 +6,9 @@ The goal of this project was to develop a passive Google dork script to collect 
 applications on the Internet.  There are 2 parts.  The first is `ghdb_scraper.py` that retrieves Google Dorks and the
 second portion is `pagodo.py` that leverages the information gathered by `ghdb_scraper.py`.
 
+HakByte created a video tutorial on using pagodo.  It starts around 8 minutes in and you can find it here
+<https://www.youtube.com/watch?v=lESeJ3EViCo&t=481s>
+
 ## What are Google Dorks?
 
 The awesome folks at Offensive Security maintain the Google Hacking Database (GHDB) found here:
