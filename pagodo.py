@@ -9,6 +9,7 @@ import sys
 import time
 
 # Third party Python libraries.
+import colorama
 import numpy
 
 # google == 2.0.1, module author changed import name to googlesearch
@@ -17,13 +18,22 @@ import googlesearch  # noqa
 
 # Custom Python libraries.
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 
 
 class Pagodo:
     """pagodo class object"""
 
-    def __init__(self, domain, google_dorks, search_max, save_links, delay, jitter, randomize_user_agent):
+    def __init__(
+        self,
+        google_dorks,
+        domain="",
+        search_max=100,
+        save_links=False,
+        delay=37.0,
+        jitter=1.6,
+        randomize_user_agent=True,
+    ):
         """Initialize Pagodo class object."""
 
         self.domain = domain
@@ -88,7 +98,7 @@ class Pagodo:
 
                     print(f"[*] New search query: {updated_query}")
 
-                pause_time = self.delay + random.choice(self.jitter)
+                pause_time = round(self.delay + random.choice(self.jitter), 2)
 
                 # Determine User-Agent based off user preference.
                 if self.randomize_user_agent is False:
@@ -117,35 +127,43 @@ class Pagodo:
                     else:
                         self.links.append(url)
 
-                # Since googlesearch.search method retrieves URLs in batches of 100, ensure the file list only contains
-                # the requested amount.
-                if len(self.links) > self.search_max:
-                    self.links = self.links[: -(len(self.links) - self.search_max)]
+                # Google dork results found.
+                if self.links:
 
-                print(f"[*] Results: {len(self.links)} sites found for Google dork: {dork}")
+                    # Since googlesearch.search method retrieves URLs in batches of 100, ensure the file list only
+                    # contains the requested amount.
+                    if len(self.links) > self.search_max:
+                        self.links = self.links[: -(len(self.links) - self.search_max)]
 
-                for found_dork in self.links:
-                    print(found_dork)
+                    print(colorama.Fore.GREEN + f"[*] Results: {len(self.links)} sites found for Google dork: {dork}")
 
-                self.total_dorks += len(self.links)
+                    for found_dork in self.links:
+                        print(found_dork)
 
-                # Only save links with valid results to an output file.
-                if self.save_links and (self.links):
-                    with open(self.log_file, "a") as fh:
-                        fh.write(f"#: {dork}\n")
-                        for link in self.links:
-                            fh.write(f"{link}\n")
-                        fh.write("=" * 50 + "\n")
+                    self.total_dorks += len(self.links)
+
+                    # Only save links with valid results to an output file.
+                    if self.save_links:
+                        with open(self.log_file, "a") as fh:
+                            fh.write(f"#: {dork}\n")
+                            for link in self.links:
+                                fh.write(f"{link}\n")
+                            fh.write("=" * 50 + "\n")
+
+                # No Google dork results found.
+                else:
+                    print(f"[*] Results: {len(self.links)} sites found for Google dork: {dork}")
 
             except KeyboardInterrupt:
                 sys.exit(0)
 
             except Exception as e:
-                print(f"[-] Error with dork: {dork}")
-                print(f"[-] EXCEPTION: {e}")
+                print(colorama.Fore.YELLOW + f"[-] Error with dork: {dork}")
+                print(colorama.Fore.YELLOW + f"[-] EXCEPTION: {e}")
                 if e.code == 429:
                     print(
-                        "[*] Google is blocking you, looks like you need to spread out the Google searches.  Don't know "
+                        colorama.Fore.YELLOW
+                        + "[*] Google is blocking you, looks like you need to spread out the Google searches.  Don't know "
                         "how to utilize SSH and dynamic socks proxies?  Do yourself a favor and pick up a copy of The "
                         "Cyber Plumber's Handbook and interactive lab (https://gumroad.com/l/cph_book_and_lab) to "
                         "learn all about Secure Shell (SSH) tunneling, port redirection, and bending traffic like a boss."
@@ -169,9 +187,13 @@ def get_timestamp():
 
 if __name__ == "__main__":
 
-    parser = argparse.ArgumentParser(description="pagodo - Passive Google Dork v{__version__}")
+    parser = argparse.ArgumentParser(description=f"pagodo - Passive Google Dork v{__version__}")
     parser.add_argument(
-        "-d", dest="domain", action="store", required=False, help="Domain to search for Google dork hits."
+        "-d",
+        dest="domain",
+        action="store",
+        required=False,
+        help="Domain to scope the Google dork searches.  Not required.",
     )
     parser.add_argument(
         "-g", dest="google_dorks", action="store", required=True, help="File containing Google dorks, 1 per line."
@@ -215,17 +237,27 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
+    colorama.init(autoreset=True)
+
     if not os.path.exists(args.google_dorks):
-        print("[!] Specify a valid file containing Google dorks with -g")
+        print(colorama.Fore.YELLOW + "[!] Specify a valid file containing Google dorks with -g")
         sys.exit(0)
 
     if args.delay < 0:
-        print("[!] Delay must be greater than 0")
+        print(colorama.Fore.YELLOW + "[!] Delay must be greater than 0")
+        sys.exit(0)
+
+    if args.jitter < 0:
+        print(colorama.Fore.YELLOW + "[!] jitter must be greater than 0")
+        sys.exit(0)
+
+    if args.search_max < 0:
+        print(colorama.Fore.YELLOW + "[!] search_max must be greater than 0")
         sys.exit(0)
 
     print(f"[*] Initiation timestamp: {get_timestamp()}")
-    pgd = Pagodo(**vars(args))
-    pgd.go()
+    pagodo = Pagodo(**vars(args))
+    pagodo.go()
     print(f"[*] Completion timestamp: {get_timestamp()}")
 
     print("[+] Done!")
