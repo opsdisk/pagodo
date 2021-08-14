@@ -158,3 +158,28 @@ inurl:_vti_bin/Authentication.asmx
 allintext:"Index Of" "sftp-config.json"
 ext:php | intitle:phpinfo "published by the PHP Group"
 inurl:/phpPgAdmin/browser.php
+intext:"Healthy" + "Product model" + " Client IP" + "Ethernet"
+intext:"SonarQube" + "by SonarSource SA." + "LGPL v3"
+inurl:/xprober ext:php
+inurl:"/phpmyadmin/user_password.php
+inurl:/config/device/wcd
+inurl:?XDEBUG_SESSION_START=phpstorm
+inurl:/uploads/affwp-debug.log
+inurl:CFIDE/adminapi
+inurl:/javax.faces.resource/
+intitle:"GlassFish Server - Server Running"
+intitle:"Accueil WAMPSERVER" intext:"Configuration Serveur"
+inurl:"/domcfg.nsf" " Web Server Configuration"
+intitle:"Miniweb Start Page" | "/CSS/Miniweb.css"
+inurl:/Portal0000.htm
+intitle:"Current Network Status" "Nagios"
+filetype:axd inurl:/elmah.axd
+"Cisco Systems, Inc. All Rights Reserved." -cisco.com filetype:jsp
+intitle:"SOGo" site:webmail.*
+intitle:"Server Backup Manager SE"
+inurl:"web/database/selector"
+intitle:"Test Page for the HTTP Server on Fedora"
+intitle:"Icecast Streaming Media Server"
+intitle:"Welcome to WildFly" intext:"Administration Console"
+intitle:"Index of" site:.gov intext:"Server at"
+intitle:"Welcome" intext:"LiteSpeed Technologies, Inc. All Rights Reserved."

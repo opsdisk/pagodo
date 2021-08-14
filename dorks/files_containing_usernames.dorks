@@ -39,3 +39,6 @@ intitle:"index of" "password.yml
 jdbc:sqlserver://localhost:1433 + username + password ext:yml | ext:java
 "'dsn: mysql:host=localhost;dbname=" ext:yml | ext:txt "password:"
 intitle:"index of" "credentials.xml" | "credentials.inc" | "credentials.txt"
+intitle:"index of" "db.properties" | "db.properties.BAK"
+intitle:"index of" "contacts.txt"
+intext:"-----BEGIN CERTIFICATE-----" ext:txt

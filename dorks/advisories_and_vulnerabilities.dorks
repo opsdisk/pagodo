@@ -2193,3 +2193,24 @@ Server: Mida eFramework
 intitle:"Powered by Pro Chat Rooms"
 inurl:"woocommerce-exporter"
 inurl:opac_css
+intitle:"Please Login" "Use FTM Push"
+"Powered by vBulletin(R) Version 5.6.3"
+inurl:/wp-content/themes/altair/
+inurl:/pro_users/login
+inurl:/cgi-bin/manlist?section
+intext:"Incom CMS 2.0"
+"machform" inurl:"view.php"
+inurl:"/console/login/LoginForm.jsp"
+inurl:uno.php
+inurl:"/wp-content/plugins/super-forms/"
+"Powered By Best Support System"
+inurl:/calendar/calendar_form.php
+inurl:/ics?tool=search
+inurl:"telerik.web.ui.webresource.axd?type=rau"
+inurl:"/lib/editor/atto/plugins/managefiles/" | inurl:"calendar/view.php?view=month"
+"citsmart.local"
+inurl:"wp-content/plugins/wp-super-edit/superedit/" | inurl:"wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/upload/"
+inurl:wp-content/plugins/1-flash-gallery
+inurl:"/wp-content/plugins/123ContactForm
+inurl:wp-content/plugins/Ultimate-member
+inurl:/wp-content/plugins/wpdiscuz/

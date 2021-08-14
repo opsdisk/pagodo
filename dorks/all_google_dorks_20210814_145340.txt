@@ -6189,3 +6189,367 @@ inurl:/adfs/oauth2/authorize
 "secret_key_base:" ext:exs | ext:txt | ext:env | ext:cfg
 ext:sql | ext:txt intext:"-- phpMyAdmin SQL Dump --" + intext:"admin"
 intitle:"index of" "credentials.xml" | "credentials.inc" | "credentials.txt"
+intext:"Healthy" + "Product model" + " Client IP" + "Ethernet"
+"putty.log" ext:log | ext:cfg | ext:txt | ext:sql | ext:env
+inurl:"view.shtml" "Network"
+"define('DB_USER'," + "define('DB_PASSWORD'," ext:txt
+inurl:"view.shtml" "camera"
+intitle:"irz" "router" intext:login gsm info -site:*.com -site:*.net
+ext:php intitle:phpinfo "published by the PHP Group"
+intitle:"index of" "anaconda-ks.cfg" | "anaconda-ks-new.cfg"
+intitle:"index of" intext:"web.xml"
+inurl:"/cgi-bin/guestimage.html" "Menu"
+ext:txt | ext:log | ext:cfg "Building configuration..."
+site:portal.*.* intitle:"login"
+intitle:"index of" "dump.sql"
+intitle:"Insurance Admin Login" | "(c) Copyright 2020 Cityline Websites. All Rights Reserved." | "http://www.citylinewebsites.com"
+site:user.*.* intitle:"login"
+intitle:"index of" inurl:admin/download
+intitle:"Please Login" "Use FTM Push"
+"change the Administrator Password." intitle:"HP LaserJet" -pdf
+"define('SECURE_AUTH_KEY'" + "define('LOGGED_IN_KEY'" + "define('NONCE_KEY'" ext:txt | ext:cfg | ext:env | ext:ini
+inurl: inurl:"view.shtml" ext:shtml
+site:password.*.* intitle:"login"
+/etc/certs + "index of /" */*
+intext:"Connection" AND "Network name" AND " Cisco Meraki cloud" AND "Security Appliance details"
+inurl:/Jview.htm + intext:"Zoom :"
+site:checkin.*.* intitle:"login"
+intitle:"index of" "db.properties" | "db.properties.BAK"
+"keystorePass=" ext:xml | ext:txt -git -gitlab
+intitle:"Agent web client: Phone Login"
+"Powered by vBulletin(R) Version 5.6.3"
+/etc/config + "index of /" /
+intitle:"web client: login"
+"System" + "Toner" + "Input Tray" + "Output Tray" inurl:cgi
+ext:yml | ext:txt | ext:env "Database Connection Information Database server ="
+"The SQL command completed successfully." ext:txt | ext:log
+intitle:"NetCamXL*"
+intitle:"NetCamSC*"
+inurl:Sitefinity/Authenticate/SWT
+intext:construct('mysql:host
+inurl:idp/prp.wsf
+inurl:nidp/idff/sso
+"-- Dumped from database version" + "-- Dumped by pg_dump version" ext:txt | ext:sql | ext:env | ext:log
+"mailer_password:" + "mailer_host:" + "mailer_user:" + "secret:" ext:yml
+intext:"user name" intext:"orion core" -solarwinds.com
+intitle:("Index of" AND "wp-content/plugins/boldgrid-backup/=")
+intext:"SonarQube" + "by SonarSource SA." + "LGPL v3"
+inurl:"/php/info.php" "PHP Version"
+intitle:"index of" "*Maildir/new"
+inurl:/wp-content/themes/altair/
+inurl:idp/Authn/UserPassword
+inurl:/xprober ext:php
+inurl:adfs inurl:wctx inurl:wtrealm -microsoft.com
+site:ftp.*.*.* "ComputerName=" + "[Unattended] UnattendMode"
+intitle:"Humatrix 8"
+intitle:"Exchange Log In"
+inurl:/pro_users/login
+inurl:/cgi-bin/manlist?section
+AXIS Camera exploit
+inurl:oidc/authorize
+inurl:"/phpmyadmin/user_password.php
+allintext:@gmail.com filetype:log
+inurl:https://trello.com AND intext:@gmail.com AND intext:password
+intext:"Incom CMS 2.0"
+inurl:authorization.ping
+intitle:"index of" intext:"apikey.txt
+intitle:Login intext:HIKVISION inurl:login.asp?
+inurl:weblogin intitle:("USG20-VPN"|"USG20W-VPN"|USG40|USG40W|USG60|USG60W|USG110|USG210|USG310|USG1100|USG1900|USG2200|"ZyWALL110"|"ZyWALL310"|"ZyWALL1100"|ATP100|ATP100W|ATP200|ATP500|ATP700|ATP800|VPN50|VPN100|VPN300|VPN000|"FLEX")
+site:p2.*.* intitle:"login"
+inurl:/Jview "zoom"
+inurl:/config/device/wcd
+filetype:log inurl:paypal
+intitle:final.attendee.list | inurl:final.attendee.list
+ext:xlsx inurl:database
+intitle:"index of" "idx_config"
+inurl:/jsps/testoperation.jsp "Test Operation"
+"password 7" ext:txt | ext:log | ext:cfg
+"machform" inurl:"view.php"
+ext:(doc | pdf | xls | txt |) (intext:confidential salary) inurl:confidential
+inurl:?XDEBUG_SESSION_START=phpstorm
+inurl:jasperserver-pro/login.html
+"insert into users" "VALUES" ext:sql | ext:txt | ext:log | ext:env
+intitle:"index of" "application.properties"
+site:*/dyn_sensors.htm "ID"
+inurl:/certs/server.key
+"cpanel username" "cpanel password" ext:txt
+intitle:"phpLDAPadmin" inurl:cmd.php
+inurl:dtm.html intitle:1747-L551
+inurl:"/console/login/LoginForm.jsp"
+intitle:"iLO: localhost" + "Firmware Version"
+inurl:print.htm intext:"Domain Name:" + "Open printable report"
+inurl:uno.php
+inurl:"/wp-content/plugins/super-forms/"
+inurl:login.html intitle:"Archer C7"
+inurl:/uploads/affwp-debug.log
+intitle:"Cisco Email Security Virtual Appliance" inurl:csrfkey=
+intitle:"IP Webcam" inurl:"/greet.html"
+"Account" "Password" "All rights reserved" intitle:"HG8245"
+inurl:tcpconfig.html
+intitle:"D-LINK SYSTEMS, INC. | Web File Access : Login"
+intitle:"D-LINK SYSTEMS, INC. | WIRELESS ROUTER | HOME" inurl:"status.php"
+inurl:index.php?s=/Admin/Public/login.html
+inurl:login.html intitle:"GPON Home Gateway"
+inurl:ext/pwdreset
+"-----BEGIN PGP PRIVATE KEY BLOCK-----" ext:pem | ext:key | ext:txt -git
+"-----BEGIN EC PRIVATE KEY-----" | " -----BEGIN EC PARAMETERS-----" ext:pem | ext:key | ext:txt
+intitle:"Radius Manager" intext:"Control Panel"
+inurl:"portal.mwsl" "Status"
+inurl:simplesaml/module
+inurl:ushell/shells/abap
+intitle:"Intelbras" inurl:cgi-bin/firmware.cgi?formNumber=200
+"Username" "Password" "Please login to continue" intitle:"F660"
+intitle:"oracle business intelligence sign in"
+inurl:ui/login intitle:jfrog
+intitle:"ZXHN H108N" intext:"Welcome to ZXHN H108N"
+inurl:ejbexplorer
+intitle:"WEB LCT" intext:"Web local craft terminal"
+Copyright Huawei Technologies co. Ltd "Account" "Password" -site:huawei.com
+"Username" "Password" "Please login to continue" intitle:"F670"
+inurl:"dcwp_twitter.php"
+site:*.com inurl:axis2-admin
+"Powered By Best Support System"
+intitle:("WebRTU z2" | "WebRTU z1") -pdf
+intitle:("OnCell Web Console" | "Series Web Console" | "-HSPA Series Web" | "-HSDPA Series Web") "MOXA OnCell" "Username :" "Password :" -pdf
+intitle:"index of" "application-users.properties" | "mgmt-users.properties" | "*standalone.xml"
+"public $user =" | "public $password = " | "public $secret =" | "public $db =" ext:txt | ext:log -git
+intitle:"PowerLogic ION" + "Control" + "Diagnostic" + "Home" + "Maintenance" + "Monitoring"
+intitle:"Total Web Solutions" + "Meter Name"
+inurl:/calendar/calendar_form.php
+"Copyright(C) CONTEC CO.LTD"
+intitle:"Blue Iris Login"
+intitle:"Remote UI: Login:" "System Manager ID:"
+intitle:"Nordex Control" + "Wind Farm Total Summary"
+intitle:"Keenetic Web"
+inurl:/main/main.html "Administrator Settings"
+intitle:"Advanced Setup - Security - Admin User Name & Password"
+site:*.*/level/15/exec/-/ "Exec Configure"
+intitle:"index of" "secret.yaml"
+inurl:/dana-na/auth/url_default/welcome.cgi "VPN"
+site:*.herokuapp.com intitle:login
+intitle:"Sign in to Cisco Finesse"
+site:*.blob.core.windows.net ext:xls | ext:xlsx (login | password | username)
+intitle:"ePMP 2000" "notifications" "Menu" -pdf
+inurl:pandora_console intitle:"Pandora FMS"
+intext:"helpdesk software provided by deskpro"
+inurl:/ics?tool=search
+inurl:ftp -inurl:(http|https) intext:"@gmail.com" intext:subject fwd|confidential|important|CARD|cvv
+intitle:"ContaCam" "Snapshot Image"
+inurl:"login.rsp" "Language" -.com
+site:*/tcpipv4.htm
+intitle:"HD IP Camera" "Remember me" "User name" -.com -pdf
+inurl:set_config_security.htm
+intitle:"webcamxp 5" intext: "live stream"
+inurl:"userimage.html" "Live" "Open"
+inurl:webdynpro/dispatcher
+intext:cv OR intext:curriculum vitae AND intext:"SSN" ext:doc
+intitle:"NUUO Network Video Recorder Login" "Language"
+inurl:template.gch "ZTE Corporation."
+inurl:Main_Login.asp AND intext:"Sign in with your ASUS router account"
+inurl:/view/viewer_index.shtml
+"Parent Directory" AND "Index of" AND "config.php_old"
+inurl:set_config_networkIP.html
+intitle:"Component Browser Login"
+site:*/tcpipv6.htm
+inurl:/guestimage.html
+inurl:CFIDE/adminapi
+inurl:"telerik.web.ui.webresource.axd?type=rau"
+inurl:plc/webvisu.htm intitle:"CoDeSys WebVisualization"
+inurl:"/lib/editor/atto/plugins/managefiles/" | inurl:"calendar/view.php?view=month"
+inurl:/javax.faces.resource/
+intitle:"openHAB" intext:"Welcome to openHAB" "Basic UI" "Paper UI"
+intext:"Inserire il proprio codice per accedere al sistema" "Inserire codice"
+inurl:m_login.htm "Somfy"
+inurl:"/intouch-base/rest/nlogin" intitle:"InTouch"
+inurl:"/deltaweb/hmi_login.asp" intext:"login"
+inurl:"/index.html" intitle:"Unitronics PLC"
+intitle:"Vodafone Vox UI" | intitle:"Residential Gateway Login"
+intitle:"Properties - Xerox WorkCentre" "Machine Model:" "Machine Name" -.com
+inurl:/wp-content/uploads/wp-file-manager-pro
+intitle:"Polycom Login" -.com
+inurl:"/login.htm" "Hitron Technologies"
+intitle:"Saia PCD Web-Server"
+intitle:"UniFi Video" "login" "NVR"
+intitle:"NETSuveillance WEB"
+intext:"Your client connection" + "Network name" + "Hardware address"
+inurl:pas_set_menu.html
+intitle:"Sys Name" System Summary Sensors
+"# -FrontPage-" ext:pwd inurl:(service | authors | administrators | users) "# -FrontPage-" inurl:service.pwd
+intitle:"Login" intext:"Herospeed Technology"
+intitle:"Epson Web Control" "OSD Control Pad"
+intitle:"login" "Are you a patient" " eRAD"
+inurl:wp-content/uploads/ intitle:logs
+intitle:"GlassFish Server - Server Running"
+intitle:"Frontier e-HR Login Page"
+inurl:/wp-content/uploads/wp-file-manager-pro/fm_backup
+inurl:b2b/init.do
+intitle:"Web user login"
+inurl:/wp-content/uploads/ ext:txt "username" AND "password" | "pwd" | "pw"
+intitle:"DIAM4 Login"
+intitle:"Sauter moduWeb - Login"
+intitle:"Greentree eHR" "Employee Code"
+intitle:"Payvand PACS"
+intitle:"index of" "google-services.json"
+intitle:"Index of" ws_ftp.ini
+"citsmart.local"
+site:*/net/net/protocol.html
+intitle:"HD-Network Real Time Monitoring System" inurl:"/login.asp"
+intitle:"Accueil WAMPSERVER" intext:"Configuration Serveur"
+intext:"Please select your account" intext:"SSL Login"
+intitle:"iLo" "Hewlett Packard Enterprise Development" "Firmware Version" " Local user name:"
+intitle:"Milesight Network Camera" intext:"Language"
+inurl:"/domcfg.nsf" " Web Server Configuration"
+inurl:ip_snmp.htm
+intitle:"Bosch Security Systems" "LIVEPAGE" + "SETTINGS" -.net -.com
+intitle:"NetScaler AAA" inurl:logon/LogonPoint/tmindex.html
+intitle:"DD-WRT (build 21061) - Info"
+inurl:ip_password.htm
+intitle:"DSM mobile" intext:"Loading..."
+intitle:"Miniweb Start Page" | "/CSS/Miniweb.css"
+intitle:"Web Client" inurl:"webcamera.html"
+inurl:/Portal0000.htm
+inurl:/DeviceInformation/View "Device Name"
+intitle:"NodeCore PoW Mining Pool" "NETWORK" "TYPE" "POOL ADDRESS" "FEE"
+intitle:"Login" inurl:"/simple/view/login.html"
+intitle:"Please Login" inurl:"/remote/login?lang=en"
+intitle:"index of" intext:"client.key.pem"
+intitle:"LK IHC controller" intext:"LK IHC"
+intitle:"Gophish - Login"
+inurl:sslvpn_logon.shtml
+intitle:"Openstage IP Phone User" "IPv4" "DNS"
+intitle:"ReACT Self-serve"
+inurl:glpi intitle:"GLPI" site:.br
+intext:"Cisco Webui - Login" -www -cisco.com
+intitle:"TOTOLINK" inurl:"/login.htm"
+intitle:"Current Network Status" "Nagios"
+intitle:"grafana" inurl:"/grafana/login" "Forgot your password"
+"USB Port 1 (Public Data)" + "USB Port 2 (Public Data)" "Status" -pdf
+inurl:/PRESENTATION/HTML/TOP/PRTINFO.HTML
+inurl:/PRESENTATION/EPSONCONNECT
+intext:@print.epsonconnect.com intitle:series
+Google Dork: inurl:"/zm/index.php"
+Google Dork: intitle:"ZM - Console"
+Google Dork: intitle:"ZM - System Log"
+inurl:/login/?referer=/admin/ intext:cradlepoint
+allintext:"Copyright CANON INC" "iR-ADV"
+inurl:"/cgi-bin/luci" intext:"Authorization Required" intitle:"LuCI"
+"Name" "Password" intitle:"LANCOM 1790VA"
+intitle:"Login" intext:"(Moka pot)" inurl:"login.php"
+intitle:series "Note: It is recommended to communicate via HTTPS for entering an administrator password."
+intitle:"GLPI - Authentication"
+intext:clave inurl:admin.php
+inurl:/PRESENTATION/PSWD
+intitle:"Teampass" intext:"Server Time"
+inurl:/PRESENTATION/BONJOUR intitle:Series
+intitle:"Gargoyle Router Management Utility" intext:"Enter Admin Password"
+intitle:"Yealink" inurl:"servlet?m="
+intitle:HP LASERJET PRO MFP inurl:/SSI/index.htm
+"Saferoads VMS" "login"
+intitle:"OpenWrt - LuCI" intext:"Powered by LuCI | OpenWrt"
+filetype:axd inurl:/elmah.axd
+intitle:"Device(" intext:"ActiveX Mode (For IE Browser)"
+"Cisco Systems, Inc. All Rights Reserved." -cisco.com filetype:jsp
+intext:"LANCOM 1781VA (over ISDN)"
+intitle:"Web Client for DVR"
+intitle:"SOGo" site:webmail.*
+intitle:"Server Backup Manager SE"
+intitle:"Intelbras" site:*/index.html
+intitle:"Plesk Obsidian" inurl:login_up.php
+"Name" "Password" intitle:"Business LAN"
+inurl:/portal/indicate intitle:Remote UI
+inurl:"web/database/selector"
+intitle:LANCOM intitle:login "LANCOM Systems GmbH"
+intitle:"Test Page for the HTTP Server on Fedora"
+inurl:mobile.html intitle:webcamXP
+intitle:"index of" "/.vscode"
+inurl:"wp-content/plugins/wp-super-edit/superedit/" | inurl:"wp-content/plugins/wp-super-edit/superedit/tinymce_plugins/mse/fckeditor/editor/filemanager/upload/"
+intitle:"supra IPC"
+Zenario CMS Login Page
+inurl:/index.php/admin/authentication/ intext:clave
+intitle:"index of" intext:"senha"
+intitle:"Dell OpenManage Switch Administrator" intext:"Type in Username and Password, then click OK"
+intext:"Powered by Synnefo"
+inurl:EMSWebClient/Login.aspx
+intitle:"ONU" intext:"Please login to continue..."
+allintext:"*.@gmail.com" OR "password" OR "username" filetype:xlsx
+intitle:"Alarm Panel" intext:"Climax Tech. Co., Ltd."
+intitle:"webcamxp" "Flash JPEG Stream"
+"Username" "Password" "ZTE Corporation. All rights reserved."
+intitle:"WF Series" inurl:PRTINFO.html
+"NETGEAR, Inc. All rights reserved" intitle:"Netgear Prosafe Plus Switch"
+intitle:"Remote UI" intext:"Printer status"
+intitle:"::: ACEmanager :::"
+intext:"CAD Media Log"
+intitle:"Camera Status" inurl:/control/
+inurl:wp-content/plugins/1-flash-gallery
+inurl:"/wp-content/plugins/123ContactForm
+intitle:"Scalance web management" "Switch to insecure HTTP"
+intitle:"Solar-Log™" intext:"Build Revision"
+intitle:"3CX Phone System Management Console"
+site:.gov.co intitle:Index of
+intitle:"Login" inurl:web/frame/login.html?ssl=
+inurl:"/web/guest/en/websys/webArch/mainFrame.cgi"
+site:*/phpmyadmin/server_sql.php
+intitle:"Huawei Inner Web"
+intitle:"Viewer for Samsung NVR"
+intitle:"myhome" intext:"Tilgin. All rights reserved. Copyright and Trademark."
+intitle:"Icecast Streaming Media Server"
+"Yeastar Information Technology Co., Ltd. All Rights Reserved." -yeastar.com
+intitle:LANCOM "A webbrowser with active JavaScript support is required."
+intitle:"Ubiquiti" intext:"Please login to manage your wireless device."
+intitle:("Canon" + "series Network Configuration" "Basic Information") + "JavaScript is not enabled"
+intitle:"Welcome to WildFly" intext:"Administration Console"
+site:*/phpmyadmin/server_privileges.php
+inurl:phpmyadmin/sql.php?server=1
+inurl:wp-content/plugins/Ultimate-member
+inurl:ALFA_DATA intitle:"index of"
+inurl:/wp-content/plugins/wpdiscuz/
+intitle:"Webmodule" inurl:"/webmodule-ee/login.seam" "Version"
+intitle:"GLPI - Аутентификация" intext:"GLPI Copyright"
+inurl:/wp-content/uploads/ "phpMyAdmin SQL Dump"
+inurl:/wp-content/uploads/wpdm-cache
+intitle:"Schneider Electric Telecontrol - Industrial Web Control" intext:"Xflow "
+site:*/phpmyadmin/server_databases.php
+intitle:"login - otrs" "Login" "Powered by OTRS"
+inurl:"/sslvpn_logon.shtml" intitle:"User Authentication" "WatchGuard Technologies"
+intitle:"Plesk" inurl:"/login_up.php3" "Parallels IP Holdings GmbH"
+inurl /editor/filemanager/connectors/uploadtest.html
+intitle:"ISPConfig" "Powered by ISPConfig" "login"
+intitle:"ZAP Scanning Report" + "Alert Detail"
+inurl:/web-ftp.cgi
+intitle:"index of" "/configs"
+intitle:"XVR LOGIN" inurl:"/login.rsp"
+intitle:"iMana 200 login"
+inurl:"serverpush.htm" "IP Camera" intext:"Foscam"
+intitle:"WebMO Login" inurl:/~webmo/cgi-bin/login.cgi
+intitle:"CPU-Modul TROVIS 6610"
+inurl:/psp/ intext:"ORACLE PEOPLESOFT"
+intitle:"Nutanix Web Console"
+intitle:"Identity Services Engine" inurl:login.jsp
+site:*.zendesk.com/auth/v2/login/registration
+intext:"Switch Administrator" inurl:config/log_off_page
+index of storage/oauth-private.key
+intitle:"Cambium" inurl:top.cgi
+inurl:top.cgi intitle:"Motorola ptp"
+intitle:"vood Residential gateway" inurl:vood/cgi-bin/
+intitle:"routeros" "sophia"
+intitle:"index of" "db.sqlite3"
+inurl:"pages/sdcall/Login.jsp"
+intext:"Egardia & WoonVeilig" -site:"linkedin.*" -"data-lead.com" -"getemail.io" -"holaconnect.com" -"kzhead.info"
+intext:Paessler AG - The Network Monitoring Company inurl:/index.htm intitle:"Welcome | PRTG Network Monitor" -"User Manual"
+intitle:"Index of" site:.gov intext:"Server at"
+intitle:"index of" "/sql"
+intext:"Lancom" intitle:"Router - Login" -.com
+"FM Monitoring Receiver" intitle:"login" "welcome!"
+inurl:/UserLogin intitle:"::PayTV SMS::" "Aplomb Technology"
+intitle:"index of" "ssh_host_rsa_key" + "ssh_host_rsa_key.pub"
+inurl:/wp-content/uploads/data.txt
+intext:"SGP" inurl:/accounts/login?next=/admin/
+intitle:"Welcome" intext:"LiteSpeed Technologies, Inc. All Rights Reserved."
+intext:"Live View" inurl:ui3.htm
+inurl:"/tips/tipsLogin.action"
+"Not for Public Release" + "Confidential" ext:pdf | ext:doc | ext:xlsx
+intitle:"Grandstream Device Configuration" (intext:password & intext:"Grandstream Device Configuration" & intext:"Grandstream Networks" | inurl:cgi-bin) -.com|org
+intitle:"index of" "contacts.txt"
+inurl:/inicis/ ext:log
+intext:"-----BEGIN CERTIFICATE-----" ext:txt
