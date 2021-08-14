@@ -104,3 +104,5 @@ intext:"Powered By Gila CMS"
 intitle:"Wing FTP Server - Web"
 intitle:"Vulnerability Report" "Critical" ext:pdf
 inurl:RichWidgets/Popup_Upload.aspx
+intext:"user name" intext:"orion core" -solarwinds.com
+inurl /editor/filemanager/connectors/uploadtest.html

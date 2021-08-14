@@ -899,3 +899,42 @@ site:gov ext:sql | ext:dbf | ext:mdb
 intitle:"index of" "Clientaccesspolicy.xml"
 "secret_key_base:" ext:exs | ext:txt | ext:env | ext:cfg
 ext:sql | ext:txt intext:"-- phpMyAdmin SQL Dump --" + intext:"admin"
+"putty.log" ext:log | ext:cfg | ext:txt | ext:sql | ext:env
+ext:php intitle:phpinfo "published by the PHP Group"
+intitle:"index of" intext:"web.xml"
+ext:txt | ext:log | ext:cfg "Building configuration..."
+ext:yml | ext:txt | ext:env "Database Connection Information Database server ="
+"The SQL command completed successfully." ext:txt | ext:log
+inurl:"/php/info.php" "PHP Version"
+site:ftp.*.*.* "ComputerName=" + "[Unattended] UnattendMode"
+allintext:@gmail.com filetype:log
+inurl:https://trello.com AND intext:@gmail.com AND intext:password
+intitle:"index of" intext:"apikey.txt
+filetype:log inurl:paypal
+intitle:final.attendee.list | inurl:final.attendee.list
+ext:xlsx inurl:database
+ext:(doc | pdf | xls | txt |) (intext:confidential salary) inurl:confidential
+intitle:"index of" "application.properties"
+inurl:"dcwp_twitter.php"
+intitle:"index of" "secret.yaml"
+inurl:ftp -inurl:(http|https) intext:"@gmail.com" intext:subject fwd|confidential|important|CARD|cvv
+intext:cv OR intext:curriculum vitae AND intext:"SSN" ext:doc
+"Parent Directory" AND "Index of" AND "config.php_old"
+intext:"Your client connection" + "Network name" + "Hardware address"
+intitle:"index of" "google-services.json"
+intitle:"Index of" ws_ftp.ini
+intitle:"index of" intext:"senha"
+site:.gov.co intitle:Index of
+site:*/phpmyadmin/server_sql.php
+site:*/phpmyadmin/server_privileges.php
+inurl:phpmyadmin/sql.php?server=1
+inurl:ALFA_DATA intitle:"index of"
+inurl:/wp-content/uploads/ "phpMyAdmin SQL Dump"
+inurl:/wp-content/uploads/wpdm-cache
+site:*/phpmyadmin/server_databases.php
+index of storage/oauth-private.key
+intitle:"index of" "db.sqlite3"
+intitle:"index of" "/sql"
+intitle:"index of" "ssh_host_rsa_key" + "ssh_host_rsa_key.pub"
+"Not for Public Release" + "Confidential" ext:pdf | ext:doc | ext:xlsx
+inurl:/inicis/ ext:log

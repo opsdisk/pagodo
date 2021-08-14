@@ -542,3 +542,119 @@ inurl:/index.html?size=2&mode=4
 inurl: 1051/viewer/live/index.html?lang=en
 inurl:/homej.html?
 inurl:/Jview.htm + "View Video - Java Mode"
+inurl:"view.shtml" "Network"
+inurl:"view.shtml" "camera"
+inurl:"/cgi-bin/guestimage.html" "Menu"
+"change the Administrator Password." intitle:"HP LaserJet" -pdf
+inurl: inurl:"view.shtml" ext:shtml
+intext:"Connection" AND "Network name" AND " Cisco Meraki cloud" AND "Security Appliance details"
+inurl:/Jview.htm + intext:"Zoom :"
+intitle:"Agent web client: Phone Login"
+"System" + "Toner" + "Input Tray" + "Output Tray" inurl:cgi
+intitle:"NetCamXL*"
+intitle:"NetCamSC*"
+AXIS Camera exploit
+inurl:/Jview "zoom"
+site:*/dyn_sensors.htm "ID"
+inurl:dtm.html intitle:1747-L551
+inurl:login.html intitle:"Archer C7"
+intitle:"IP Webcam" inurl:"/greet.html"
+"Account" "Password" "All rights reserved" intitle:"HG8245"
+intitle:"D-LINK SYSTEMS, INC. | Web File Access : Login"
+inurl:login.html intitle:"GPON Home Gateway"
+inurl:"portal.mwsl" "Status"
+intitle:"Intelbras" inurl:cgi-bin/firmware.cgi?formNumber=200
+intitle:("WebRTU z2" | "WebRTU z1") -pdf
+intitle:("OnCell Web Console" | "Series Web Console" | "-HSPA Series Web" | "-HSDPA Series Web") "MOXA OnCell" "Username :" "Password :" -pdf
+intitle:"PowerLogic ION" + "Control" + "Diagnostic" + "Home" + "Maintenance" + "Monitoring"
+intitle:"Total Web Solutions" + "Meter Name"
+"Copyright(C) CONTEC CO.LTD"
+intitle:"Remote UI: Login:" "System Manager ID:"
+intitle:"Nordex Control" + "Wind Farm Total Summary"
+intitle:"Keenetic Web"
+inurl:/main/main.html "Administrator Settings"
+intitle:"Advanced Setup - Security - Admin User Name & Password"
+site:*.*/level/15/exec/-/ "Exec Configure"
+intitle:"ePMP 2000" "notifications" "Menu" -pdf
+intitle:"ContaCam" "Snapshot Image"
+site:*/tcpipv4.htm
+intitle:"HD IP Camera" "Remember me" "User name" -.com -pdf
+inurl:set_config_security.htm
+intitle:"webcamxp 5" intext: "live stream"
+inurl:"userimage.html" "Live" "Open"
+inurl:/view/viewer_index.shtml
+inurl:set_config_networkIP.html
+site:*/tcpipv6.htm
+inurl:/guestimage.html
+inurl:plc/webvisu.htm intitle:"CoDeSys WebVisualization"
+intitle:"openHAB" intext:"Welcome to openHAB" "Basic UI" "Paper UI"
+intext:"Inserire il proprio codice per accedere al sistema" "Inserire codice"
+inurl:m_login.htm "Somfy"
+inurl:"/intouch-base/rest/nlogin" intitle:"InTouch"
+inurl:"/index.html" intitle:"Unitronics PLC"
+intitle:"Vodafone Vox UI" | intitle:"Residential Gateway Login"
+intitle:"Properties - Xerox WorkCentre" "Machine Model:" "Machine Name" -.com
+intitle:"Polycom Login" -.com
+intitle:"Saia PCD Web-Server"
+intitle:"NETSuveillance WEB"
+inurl:pas_set_menu.html
+intitle:"Sys Name" System Summary Sensors
+intitle:"Epson Web Control" "OSD Control Pad"
+site:*/net/net/protocol.html
+intitle:"HD-Network Real Time Monitoring System" inurl:"/login.asp"
+intitle:"Milesight Network Camera" intext:"Language"
+inurl:ip_snmp.htm
+intitle:"Bosch Security Systems" "LIVEPAGE" + "SETTINGS" -.net -.com
+intitle:"DD-WRT (build 21061) - Info"
+inurl:ip_password.htm
+intitle:"DSM mobile" intext:"Loading..."
+intitle:"Web Client" inurl:"webcamera.html"
+inurl:/DeviceInformation/View "Device Name"
+intitle:"NodeCore PoW Mining Pool" "NETWORK" "TYPE" "POOL ADDRESS" "FEE"
+intitle:"Login" inurl:"/simple/view/login.html"
+intitle:"LK IHC controller" intext:"LK IHC"
+intitle:"Openstage IP Phone User" "IPv4" "DNS"
+"USB Port 1 (Public Data)" + "USB Port 2 (Public Data)" "Status" -pdf
+inurl:/PRESENTATION/HTML/TOP/PRTINFO.HTML
+inurl:/PRESENTATION/EPSONCONNECT
+intext:@print.epsonconnect.com intitle:series
+Google Dork: intitle:"ZM - Console"
+Google Dork: intitle:"ZM - System Log"
+inurl:/login/?referer=/admin/ intext:cradlepoint
+allintext:"Copyright CANON INC" "iR-ADV"
+inurl:"/cgi-bin/luci" intext:"Authorization Required" intitle:"LuCI"
+"Name" "Password" intitle:"LANCOM 1790VA"
+intitle:series "Note: It is recommended to communicate via HTTPS for entering an administrator password."
+inurl:/PRESENTATION/PSWD
+inurl:/PRESENTATION/BONJOUR intitle:Series
+intitle:"Yealink" inurl:"servlet?m="
+intitle:HP LASERJET PRO MFP inurl:/SSI/index.htm
+intitle:"Device(" intext:"ActiveX Mode (For IE Browser)"
+intext:"LANCOM 1781VA (over ISDN)"
+intitle:"Web Client for DVR"
+intitle:"Intelbras" site:*/index.html
+inurl:/portal/indicate intitle:Remote UI
+inurl:mobile.html intitle:webcamXP
+intitle:"supra IPC"
+intitle:"Dell OpenManage Switch Administrator" intext:"Type in Username and Password, then click OK"
+intitle:"Alarm Panel" intext:"Climax Tech. Co., Ltd."
+intitle:"webcamxp" "Flash JPEG Stream"
+"Username" "Password" "ZTE Corporation. All rights reserved."
+intitle:"WF Series" inurl:PRTINFO.html
+"NETGEAR, Inc. All rights reserved" intitle:"Netgear Prosafe Plus Switch"
+intitle:"Remote UI" intext:"Printer status"
+intitle:"::: ACEmanager :::"
+intitle:"Camera Status" inurl:/control/
+intitle:"Solar-Log™" intext:"Build Revision"
+intitle:"3CX Phone System Management Console"
+inurl:"/web/guest/en/websys/webArch/mainFrame.cgi"
+intitle:"myhome" intext:"Tilgin. All rights reserved. Copyright and Trademark."
+intitle:LANCOM "A webbrowser with active JavaScript support is required."
+intitle:("Canon" + "series Network Configuration" "Basic Information") + "JavaScript is not enabled"
+inurl:"serverpush.htm" "IP Camera" intext:"Foscam"
+intitle:"CPU-Modul TROVIS 6610"
+intitle:"Cambium" inurl:top.cgi
+inurl:top.cgi intitle:"Motorola ptp"
+intitle:"vood Residential gateway" inurl:vood/cgi-bin/
+intext:"Egardia & WoonVeilig" -site:"linkedin.*" -"data-lead.com" -"getemail.io" -"holaconnect.com" -"kzhead.info"
+intext:"Live View" inurl:ui3.htm

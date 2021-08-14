@@ -1050,3 +1050,122 @@ inurl:"servicedesk/customer/user/login"
 intitle:"Xenmobile Console Logon"
 inurl:login.seam
 inurl:/adfs/oauth2/authorize
+intitle:"irz" "router" intext:login gsm info -site:*.com -site:*.net
+site:portal.*.* intitle:"login"
+intitle:"Insurance Admin Login" | "(c) Copyright 2020 Cityline Websites. All Rights Reserved." | "http://www.citylinewebsites.com"
+site:user.*.* intitle:"login"
+site:password.*.* intitle:"login"
+site:checkin.*.* intitle:"login"
+intitle:"web client: login"
+inurl:Sitefinity/Authenticate/SWT
+inurl:idp/prp.wsf
+inurl:nidp/idff/sso
+inurl:idp/Authn/UserPassword
+inurl:adfs inurl:wctx inurl:wtrealm -microsoft.com
+intitle:"Humatrix 8"
+intitle:"Exchange Log In"
+inurl:oidc/authorize
+inurl:authorization.ping
+intitle:Login intext:HIKVISION inurl:login.asp?
+inurl:weblogin intitle:("USG20-VPN"|"USG20W-VPN"|USG40|USG40W|USG60|USG60W|USG110|USG210|USG310|USG1100|USG1900|USG2200|"ZyWALL110"|"ZyWALL310"|"ZyWALL1100"|ATP100|ATP100W|ATP200|ATP500|ATP700|ATP800|VPN50|VPN100|VPN300|VPN000|"FLEX")
+site:p2.*.* intitle:"login"
+inurl:jasperserver-pro/login.html
+intitle:"phpLDAPadmin" inurl:cmd.php
+intitle:"iLO: localhost" + "Firmware Version"
+intitle:"Cisco Email Security Virtual Appliance" inurl:csrfkey=
+intitle:"D-LINK SYSTEMS, INC. | WIRELESS ROUTER | HOME" inurl:"status.php"
+inurl:index.php?s=/Admin/Public/login.html
+inurl:ext/pwdreset
+intitle:"Radius Manager" intext:"Control Panel"
+inurl:simplesaml/module
+inurl:ushell/shells/abap
+"Username" "Password" "Please login to continue" intitle:"F660"
+intitle:"oracle business intelligence sign in"
+inurl:ui/login intitle:jfrog
+intitle:"ZXHN H108N" intext:"Welcome to ZXHN H108N"
+inurl:ejbexplorer
+intitle:"WEB LCT" intext:"Web local craft terminal"
+Copyright Huawei Technologies co. Ltd "Account" "Password" -site:huawei.com
+"Username" "Password" "Please login to continue" intitle:"F670"
+site:*.com inurl:axis2-admin
+intitle:"Blue Iris Login"
+inurl:/dana-na/auth/url_default/welcome.cgi "VPN"
+site:*.herokuapp.com intitle:login
+intitle:"Sign in to Cisco Finesse"
+inurl:pandora_console intitle:"Pandora FMS"
+intext:"helpdesk software provided by deskpro"
+inurl:"login.rsp" "Language" -.com
+inurl:webdynpro/dispatcher
+intitle:"NUUO Network Video Recorder Login" "Language"
+inurl:template.gch "ZTE Corporation."
+inurl:Main_Login.asp AND intext:"Sign in with your ASUS router account"
+intitle:"Component Browser Login"
+inurl:"/deltaweb/hmi_login.asp" intext:"login"
+inurl:"/login.htm" "Hitron Technologies"
+intitle:"UniFi Video" "login" "NVR"
+intitle:"Login" intext:"Herospeed Technology"
+intitle:"login" "Are you a patient" " eRAD"
+intitle:"Frontier e-HR Login Page"
+inurl:b2b/init.do
+intitle:"Web user login"
+intitle:"DIAM4 Login"
+intitle:"Sauter moduWeb - Login"
+intitle:"Greentree eHR" "Employee Code"
+intitle:"Payvand PACS"
+intext:"Please select your account" intext:"SSL Login"
+intitle:"iLo" "Hewlett Packard Enterprise Development" "Firmware Version" " Local user name:"
+intitle:"NetScaler AAA" inurl:logon/LogonPoint/tmindex.html
+intitle:"Please Login" inurl:"/remote/login?lang=en"
+intitle:"Gophish - Login"
+inurl:sslvpn_logon.shtml
+intitle:"ReACT Self-serve"
+inurl:glpi intitle:"GLPI" site:.br
+intext:"Cisco Webui - Login" -www -cisco.com
+intitle:"TOTOLINK" inurl:"/login.htm"
+intitle:"grafana" inurl:"/grafana/login" "Forgot your password"
+Google Dork: inurl:"/zm/index.php"
+intitle:"Login" intext:"(Moka pot)" inurl:"login.php"
+intitle:"GLPI - Authentication"
+intext:clave inurl:admin.php
+intitle:"Teampass" intext:"Server Time"
+intitle:"Gargoyle Router Management Utility" intext:"Enter Admin Password"
+"Saferoads VMS" "login"
+intitle:"OpenWrt - LuCI" intext:"Powered by LuCI | OpenWrt"
+intitle:"Plesk Obsidian" inurl:login_up.php
+"Name" "Password" intitle:"Business LAN"
+intitle:LANCOM intitle:login "LANCOM Systems GmbH"
+Zenario CMS Login Page
+inurl:/index.php/admin/authentication/ intext:clave
+intext:"Powered by Synnefo"
+inurl:EMSWebClient/Login.aspx
+intitle:"ONU" intext:"Please login to continue..."
+intitle:"Scalance web management" "Switch to insecure HTTP"
+intitle:"Login" inurl:web/frame/login.html?ssl=
+intitle:"Huawei Inner Web"
+intitle:"Viewer for Samsung NVR"
+"Yeastar Information Technology Co., Ltd. All Rights Reserved." -yeastar.com
+intitle:"Ubiquiti" intext:"Please login to manage your wireless device."
+intitle:"Webmodule" inurl:"/webmodule-ee/login.seam" "Version"
+intitle:"GLPI - Аутентификация" intext:"GLPI Copyright"
+intitle:"Schneider Electric Telecontrol - Industrial Web Control" intext:"Xflow "
+intitle:"login - otrs" "Login" "Powered by OTRS"
+inurl:"/sslvpn_logon.shtml" intitle:"User Authentication" "WatchGuard Technologies"
+intitle:"Plesk" inurl:"/login_up.php3" "Parallels IP Holdings GmbH"
+intitle:"ISPConfig" "Powered by ISPConfig" "login"
+inurl:/web-ftp.cgi
+intitle:"XVR LOGIN" inurl:"/login.rsp"
+intitle:"iMana 200 login"
+intitle:"WebMO Login" inurl:/~webmo/cgi-bin/login.cgi
+inurl:/psp/ intext:"ORACLE PEOPLESOFT"
+intitle:"Nutanix Web Console"
+intitle:"Identity Services Engine" inurl:login.jsp
+site:*.zendesk.com/auth/v2/login/registration
+intext:"Switch Administrator" inurl:config/log_off_page
+inurl:"pages/sdcall/Login.jsp"
+intext:Paessler AG - The Network Monitoring Company inurl:/index.htm intitle:"Welcome | PRTG Network Monitor" -"User Manual"
+intext:"Lancom" intitle:"Router - Login" -.com
+"FM Monitoring Receiver" intitle:"login" "welcome!"
+inurl:/UserLogin intitle:"::PayTV SMS::" "Aplomb Technology"
+intext:"SGP" inurl:/accounts/login?next=/admin/
+inurl:"/tips/tipsLogin.action"
+intitle:"Grandstream Device Configuration" (intext:password & intext:"Grandstream Device Configuration" & intext:"Grandstream Networks" | inurl:cgi-bin) -.com|org

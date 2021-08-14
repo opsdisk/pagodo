@@ -411,3 +411,23 @@ intitle:index of .git/hooks/
 intitle:"index of" "*.cert.pem" | "*.key.pem"
 ssh_host_dsa_key.pub + ssh_host_key + ssh_config = "index of / "
 "index of" inurl:database ext:sql | xls | xml | json | csv
+intitle:"index of" "dump.sql"
+intitle:"index of" inurl:admin/download
+/etc/certs + "index of /" */*
+/etc/config + "index of /" /
+"-- Dumped from database version" + "-- Dumped by pg_dump version" ext:txt | ext:sql | ext:env | ext:log
+intitle:("Index of" AND "wp-content/plugins/boldgrid-backup/=")
+intitle:"index of" "*Maildir/new"
+inurl:/jsps/testoperation.jsp "Test Operation"
+inurl:/certs/server.key
+inurl:print.htm intext:"Domain Name:" + "Open printable report"
+inurl:tcpconfig.html
+"-----BEGIN PGP PRIVATE KEY BLOCK-----" ext:pem | ext:key | ext:txt -git
+"-----BEGIN EC PRIVATE KEY-----" | " -----BEGIN EC PARAMETERS-----" ext:pem | ext:key | ext:txt
+inurl:/wp-content/uploads/wp-file-manager-pro
+inurl:wp-content/uploads/ intitle:logs
+inurl:/wp-content/uploads/wp-file-manager-pro/fm_backup
+intitle:"index of" intext:"client.key.pem"
+intitle:"index of" "/.vscode"
+intext:"CAD Media Log"
+intitle:"index of" "/configs"
