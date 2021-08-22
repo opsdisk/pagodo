@@ -658,3 +658,7 @@ inurl:top.cgi intitle:"Motorola ptp"
 intitle:"vood Residential gateway" inurl:vood/cgi-bin/
 intext:"Egardia & WoonVeilig" -site:"linkedin.*" -"data-lead.com" -"getemail.io" -"holaconnect.com" -"kzhead.info"
 intext:"Live View" inurl:ui3.htm
+intitle:"lg smart ip device" -.com
+intitle:"7100 login" "lancom"
+inurl:/multi.html intitle:webcam
+inurl:/hp/device/SignIn/

@@ -1169,3 +1169,21 @@ inurl:/UserLogin intitle:"::PayTV SMS::" "Aplomb Technology"
 intext:"SGP" inurl:/accounts/login?next=/admin/
 inurl:"/tips/tipsLogin.action"
 intitle:"Grandstream Device Configuration" (intext:password & intext:"Grandstream Device Configuration" & intext:"Grandstream Networks" | inurl:cgi-bin) -.com|org
+intitle:"3G wireless gateway" "login" intext:"huawei technologies"
+intitle:"ADB Broadband" login intext:"ADB Broadband S.p.A" -.com
+intitle:"MediaAccess Gateway - Login" "access your MediaAccess Gateway"
+intitle:"ADMINISTRATOR LOGIN" inurl:adminlogin
+intitle:"geovision inc." inurl:login.htm
+intitle:"KNX-IP-Gateway Login"
+intitle:"DGS-3100 Login"
+allintext:Welcome to the LabTech Web Portal
+intitle:"Vue Element Admin" intext:"Username : admin" OR intext:"Username : editor" OR intext:"Password : any"
+intitle:"web admin login" "Huawei Technologies"
+intitle:"Login - Hitron technologies"
+intitle:"Video web server" "login"
+intitle:"vigor login page"
+inurl:prweb/PRAuth
+intext:"developed and maintained by Netgate" intitle:login
+intitle:"system login" "Drake Holdings"
+inurl:mailscanner intitle:"mailwatch login page"
+inurl:device_status.html "login"
