@@ -6553,3 +6553,26 @@ intitle:"Grandstream Device Configuration" (intext:password & intext:"Grandstrea
 intitle:"index of" "contacts.txt"
 inurl:/inicis/ ext:log
 intext:"-----BEGIN CERTIFICATE-----" ext:txt
+intitle:"3G wireless gateway" "login" intext:"huawei technologies"
+intitle:"lg smart ip device" -.com
+intitle:"7100 login" "lancom"
+intitle:"ADB Broadband" login intext:"ADB Broadband S.p.A" -.com
+intitle:"MediaAccess Gateway - Login" "access your MediaAccess Gateway"
+intitle:"ADMINISTRATOR LOGIN" inurl:adminlogin
+intitle:"geovision inc." inurl:login.htm
+intitle:"KNX-IP-Gateway Login"
+intitle:"DGS-3100 Login"
+allintext:Welcome to the LabTech Web Portal
+intitle:"Vue Element Admin" intext:"Username : admin" OR intext:"Username : editor" OR intext:"Password : any"
+intitle:"web admin login" "Huawei Technologies"
+intitle:"Login - Hitron technologies"
+intitle:"Video web server" "login"
+intitle:"vigor login page"
+inurl:prweb/PRAuth
+inurl:/multi.html intitle:webcam
+intext:"developed and maintained by Netgate" intitle:login
+intitle:"web server login" intext:"site ip"
+intitle:"system login" "Drake Holdings"
+inurl:mailscanner intitle:"mailwatch login page"
+inurl:device_status.html "login"
+inurl:/hp/device/SignIn/

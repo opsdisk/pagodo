@@ -2,16 +2,18 @@
 
 ## Introduction
 
-The goal of this project was to develop a passive Google dork script to collect potentially vulnerable web pages and
-applications on the Internet.  There are 2 parts.  The first is `ghdb_scraper.py` that retrieves Google Dorks and the
-second portion is `pagodo.py` that leverages the information gathered by `ghdb_scraper.py`.
+pagodo automates Google searching for potentially vulnerable web pages and applications on the Internet.  It replaces
+manually performing Google dork searches with a web GUI browser.
+
+There are 2 parts.  The first is `ghdb_scraper.py` that retrieves the latest Google dorks and the second portion is
+`pagodo.py` that leverages the information gathered by `ghdb_scraper.py`.
 
 HakByte created a video tutorial on using pagodo.  It starts around 8 minutes in and you can find it here
 <https://www.youtube.com/watch?v=lESeJ3EViCo&t=481s>
 
-## What are Google Dorks?
+## What are Google dorks?
 
-The awesome folks at Offensive Security maintain the Google Hacking Database (GHDB) found here:
+Offensive Security maintains the Google Hacking Database (GHDB) found here:
 <https://www.exploit-db.com/google-hacking-database>.  It is a collection of Google searches, called dorks, that can be
 used to find potentially vulnerable boxes or other juicy info that is picked up by Google's search bots.  
 
@@ -27,64 +29,14 @@ source .venv/bin/activate  # If using a virtual environment.
 pip install -r requirements.txt
 ```
 
-## Google is blocking me!
-
-If you start getting HTTP 429 errors, Google has rightfully detected you as a bot and will block your IP for a set
-period of time.  The solution is to use proxychains and a bank of proxies to round robin the lookups.
-
-Install proxychains4
-
-```bash
-apt install proxychains4 -y
-```
-
-Edit the `/etc/proxychains4.conf` configuration file to round robin the look ups through different proxy servers.  In
-the example below, 2 different dynamic socks proxies have been set up with different local listening ports
-(9050 and 9051).  Don't know how to utilize SSH and dynamic socks proxies?  Do yourself a favor and pick up a copy of
-[Cyber Plumber's Handbook and interactive lab](https://gumroad.com/l/cph_book_and_lab) to learn all about Secure Shell
-(SSH) tunneling, port redirection, and bending traffic like a boss.
-
-```bash
-vim /etc/proxychains4.conf
-```
-
-```bash
-round_robin
-chain_len = 1
-proxy_dns
-remote_dns_subnet 224
-tcp_read_time_out 15000
-tcp_connect_time_out 8000
-[ProxyList]
-socks4 127.0.0.1 9050
-socks4 127.0.0.1 9051
-```
-
-Throw `proxychains4` in front of the Python script and each lookup will go through a different proxy (and thus source
-from a different IP).  You could even tune down the `-e` delay time because you will be leveraging different proxy boxes.
-
-```bash
-proxychains4 python3 pagodo.py -g ALL_dorks.txt -s -e 17.0 -l 700 -j 1.1
-```
-
 ## ghdb_scraper.py
 
-To start off, `pagodo.py` needs a list of all the current Google dorks.  A datetimestamped file with the Google dorks
-and the indididual dork category dorks are also provided in the repo.  Fortunately, the entire database can be pulled
-back with 1 GET request using `ghdb_scraper.py`.  You can dump all dorks to a file, the individual dork categories to
-separate dork files, or the entire json blob if you want more contextual data about the dork.
+To start off, `pagodo.py` needs a list of all the current Google dorks.  The repo contains a `dorks/` directory with
+the current dorks when the `ghdb_scraper.py` was last run. It's advised to run `ghdb_scraper.py` to get the freshest
+data before running `pagodo.py`.  The `dorks/` directory contains:
 
-To retrieve all dorks
-
-```bash
-python3 ghdb_scraper.py -j -s
-```
-
-To retrieve all dorks and write them to individual categories:
-
-```bash
-python3 ghdb_scraper.py -i
-```
+* the `all_google_dorks.txt` file which contains all the Google dorks
+* Individual dork category dorks
 
 Dork categories:
 
@@ -107,6 +59,51 @@ categories = {
 }
 ```
 
+Fortunately, the entire database can be pulled back with 1 HTTP GET request using `ghdb_scraper.py`.  You can dump all
+dorks to a file, the individual dork categories to separate dork files, or the entire json blob if you want more
+contextual data about each dork.
+
+### Using ghdb_scraper.py as a script
+
+To retrieve all dorks:
+
+```bash
+python ghdb_scraper.py -j -s
+```
+
+To retrieve all dorks and write them to individual categories:
+
+```bash
+python ghdb_scraper.py -i
+```
+
+### Using ghdb_scraper as a module
+
+The `ghdb_scraper.retrieve_google_dorks()` returns a dictionary with the following data structure:
+
+```python
+ghdb_dict = {
+    "total_records": total_records,
+    "extracted_dorks": extracted_dorks,
+    "category_dict": category_dict,
+}
+```
+
+Using a Python shell (like `python` or `ipython`) to explore the data:
+
+```python
+import ghdb_scraper
+
+dorks = ghdb_scraper.retrieve_google_dorks(save_all_dorks_to_file=True)
+dorks.keys()
+dorks["total_records"]
+
+dorks["extracted_dorks"]
+
+dorks["category_dict"].keys()
+
+dorks["category_dict"][1]["category_name"]
+```
 
 ## pagodo.py
 
@@ -153,6 +150,46 @@ To run it:
 
 ```bash
 python3 pagodo.py -d example.com -g dorks.txt -l 50 -s -e 35.0 -j 1.1
+```
+
+## Google is blocking me!
+
+If you start getting HTTP 429 errors, Google has rightfully detected you as a bot and will block your IP for a set
+period of time.  The solution is to use proxychains and a bank of proxies to round robin the lookups.
+
+Install proxychains4
+
+```bash
+apt install proxychains4 -y
+```
+
+Edit the `/etc/proxychains4.conf` configuration file to round robin the look ups through different proxy servers.  In
+the example below, 2 different dynamic socks proxies have been set up with different local listening ports
+(9050 and 9051).  Don't know how to utilize SSH and dynamic socks proxies?  Do yourself a favor and pick up a copy of
+[Cyber Plumber's Handbook and interactive lab](https://gumroad.com/l/cph_book_and_lab) to learn all about Secure Shell
+(SSH) tunneling, port redirection, and bending traffic like a boss.
+
+```bash
+vim /etc/proxychains4.conf
+```
+
+```bash
+round_robin
+chain_len = 1
+proxy_dns
+remote_dns_subnet 224
+tcp_read_time_out 15000
+tcp_connect_time_out 8000
+[ProxyList]
+socks4 127.0.0.1 9050
+socks4 127.0.0.1 9051
+```
+
+Throw `proxychains4` in front of the Python script and each lookup will go through a different proxy (and thus source
+from a different IP).  You could even tune down the `-e` delay time because you will be leveraging different proxy boxes.
+
+```bash
+proxychains4 python3 pagodo.py -g ALL_dorks.txt -s -e 17.0 -l 700 -j 1.1
 ```
 
 ## Conclusion
