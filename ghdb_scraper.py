@@ -46,7 +46,7 @@ def retrieve_google_dorks(
 ):
     """Retrieves all google dorks from https://www.exploit-db.com/google-hacking-database and optionally, writes the
     entire json response to a .json file, all the dorks to a file, and/or the individual dork categories to a file.  A
-    dictionary is returned containing the total_records, a list of extracteddorks, and a category dictionary.
+    dictionary is returned containing the total_dorks, a list of extracteddorks, and a category dictionary.
     """
 
     url = "https://www.exploit-db.com/google-hacking-database"
@@ -70,7 +70,7 @@ def retrieve_google_dorks(
     json_response = response.json()
 
     # Extract recordsTotal and data.
-    total_records = json_response["recordsTotal"]
+    total_dorks = json_response["recordsTotal"]
     json_dorks = json_response["data"]
 
     # List to track all the dorks.
@@ -139,12 +139,12 @@ def retrieve_google_dorks(
             for dork in extracted_dorks:
                 fh.write(f"{dork}\n")
 
-    print(f"[*] Total Google dorks retrieved: {total_records}")
+    print(f"[*] Total Google dorks retrieved: {total_dorks}")
 
     # Package up a nice dictionary to return.
     # fmt: off
     ghdb_dict = {
-        "total_records": total_records,
+        "total_dorks": total_dorks,
         "extracted_dorks": extracted_dorks,
         "category_dict": category_dict,
     }
