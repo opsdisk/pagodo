@@ -83,7 +83,7 @@ The `ghdb_scraper.retrieve_google_dorks()` returns a dictionary with the followi
 
 ```python
 ghdb_dict = {
-    "total_records": total_records,
+    "total_dorks": total_dorks,
     "extracted_dorks": extracted_dorks,
     "category_dict": category_dict,
 }
@@ -96,7 +96,7 @@ import ghdb_scraper
 
 dorks = ghdb_scraper.retrieve_google_dorks(save_all_dorks_to_file=True)
 dorks.keys()
-dorks["total_records"]
+dorks["total_dorks"]
 
 dorks["extracted_dorks"]
 
