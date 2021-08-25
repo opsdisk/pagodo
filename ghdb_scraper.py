@@ -10,6 +10,9 @@ import requests
 
 # Custom Python libraries.
 
+
+__version__ = "1.0.0"
+
 """
 Dork dictionary example:
 
@@ -85,7 +88,8 @@ def retrieve_google_dorks(
         # Extract dork from <a href> using BeautifulSoup.
         # "<a href=\"/ghdb/5052\">inurl:_cpanel/forgotpwd</a>"
         soup = BeautifulSoup(dork["url_title"], "html.parser")
-        extracted_dork = soup.find("a").contents[0]
+        # Some of the URL titles have trailing tabs, remove them.
+        extracted_dork = soup.find("a").contents[0].strip()
         extracted_dorks.append(extracted_dork)
 
         # For individual categories.
@@ -98,6 +102,10 @@ def retrieve_google_dorks(
 
             category_dict[numeric_category_id] = {"category_name": category_name, "dorks": []}
 
+        # Some of the URL titles have trailing tabs, use replace() to remove it in place.  The strip() method cannot be
+        # used because the tab is not at the end of the string, but between the <a> tags instead:
+        # <a href="/ghdb/2696">"Powered by Rock Band CMS 0.10"    </a>
+        dork["url_title"] = dork["url_title"].replace("\t", "")
         category_dict[numeric_category_id]["dorks"].append(dork)
 
     # If requested, break up dorks into individual files based off category.
@@ -121,7 +129,8 @@ def retrieve_google_dorks(
                     # Extract dork from <a href> using BeautifulSoup.
                     # "<a href=\"/ghdb/5052\">inurl:_cpanel/forgotpwd</a>"
                     soup = BeautifulSoup(dork["url_title"], "html.parser")
-                    extracted_dork = soup.find("a").contents[0]
+                    # Some of the URL titles have trailing tabs, remove them.
+                    extracted_dork = soup.find("a").contents[0].strip()
                     fh.write(f"{extracted_dork}\n")
 
     # Save GHDB json object to all_google_dorks.json.
@@ -177,7 +186,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         formatter_class=argparse.RawDescriptionHelpFormatter,
         description=(
-            "GHDB Scraper - Retrieve the Google Hacking Database dorks from "
+            f"GHDB Scraper v{__version__} - Retrieve Google Hacking Database dorks from "
             "https://www.exploit-db.com/google-hacking-database."
         ),
         epilog=epilog,
