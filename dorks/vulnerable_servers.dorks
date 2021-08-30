@@ -25,7 +25,7 @@ intitle:"-N3t" filetype:php undetectable
 inurl:/wp-content/w3tc/dbcache/
 ext:cgi inurl:cgi-bin intext:#!/bin/bash
 inurl:/proc/self/cwd
-inurl:/elfinder/elfinder.html+intitle:"elFinder 2.0" 	
+inurl:/elfinder/elfinder.html+intitle:"elFinder 2.0"
 inurl:shop "Hassan Consulting's Shopping Cart Version 1.18"
 "YaBB SE Dev Team"
 intitle:"Gallery in Configuration mode"

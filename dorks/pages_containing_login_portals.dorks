@@ -1187,3 +1187,51 @@ intext:"developed and maintained by Netgate" intitle:login
 intitle:"system login" "Drake Holdings"
 inurl:mailscanner intitle:"mailwatch login page"
 inurl:device_status.html "login"
+intitle:"DEVICE" "Real-time IP Camera Monitoring System"
+inurl:openam/XUI
+intitle:"Mail2000 Message System" "Openfind Information"
+inurl:"serverpush.htm" intext:"Foscam"
+inurl:auth/login?returnUrl
+intitle:"Login" intext:"IP Surveillance for Your Life"
+intitle:"R WebServer"
+intitle:"login" inurl:"idp/profile/login"
+inurl:ui3.htm
+inurl:oauth2/v2.0/authorize
+"Network State: Network Ready. Network Channel:" intitle:ACEManager
+inurl:"admin/public/login"
+inurl:"pis/login.aspx"
+intext:"Login to Frappe" +"Forgot Password?" +"Reset Password" inurl:login -intitle:"My utm"
+intitle:"weblogic" login intext:"footer powered by"
+intitle:"Webmail Login" intext:"cPanel, L.L.C. " +"Change locale"
+intitle:"Powered by Deepija Telecom"
+intitle:"idrac7 - Login" inurl:login.html
+intitle:"ovislink" inurl:login intext:"My Resource"
+intitle:"Web Viewer for Samsung DVR"
+intitle:"Web Viewer" inurl:auth_index.htm
+intitle:"Asus Login" inurl:Main_Login.asp
+intitle:"Wireless router" inurl:login.htm -.com|ca
+intitle:"Synology Disk Station" intext:"System administrator" "login"
+intitle:"SonicWall Network Security Login"
+intitle:"Seagate NAS -" "login" intext:"Language." -.com
+intitle:"Prolink" inurl:login.htm -.com
+intitle:"prestige" intext:"Enter Password and click Login" -.com
+intitle:"PBX Login" -inurl:pbx|pbxlogin -.com
+intitle:"Mitel Standard Linux: Login Page"
+intitle:"ManageEngine ServiceDesk Plus" "domain" intext:"ManageEngine ServiceDesk Plus" -.com
+intitle:"WEB SERVICE" "Modify Admin Password"
+intitle:"Lantronix" intext:"Lantronix, Inc" "login to" -.com
+intitle:"LaCie" "login" intext:"Remember me" "Connect to"
+intitle:"Login - Ipswitch WhatsUp Professional"
+intitle:"Login" inurl:"view/login.html" "Huawei Technologies"
+inurl:Login.aspx intitle:":::Login:::" "RM"
+intitle:"IBM iNotes Login" "Ultralite Login Screen"
+Jira login intext:v8.3.2
+intitle:"Web Admin login" intext:"Huawei Technologies"
+intitle:"Log In - Seafile Server"
+inurl:"webconsole/webpages/login.jsp" +intitle:"Sophos"
+intitle:"WHM Login" intext:"cPanel, L.L.C. " +"Change locale"
+intitle:"Honeywell XL Web Controller" intext:"systemadmin"
+intext:"powered by enboard" "portal"
+inurl:users/password/new
+intitle:"BoardPAC - Board Paper and Credit Proposal Management System"
+intitle:"Polycom Login" inurl:"/login.html"

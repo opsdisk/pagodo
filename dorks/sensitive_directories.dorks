@@ -431,3 +431,6 @@ intitle:"index of" intext:"client.key.pem"
 intitle:"index of" "/.vscode"
 intext:"CAD Media Log"
 intitle:"index of" "/configs"
+inurl:filemanager/upload/asp/ "index of"
+intitle:"index of" "contacts.vcf"
+intitle:index.of (inurl:admin | intitle:admin)

@@ -662,3 +662,14 @@ intitle:"lg smart ip device" -.com
 intitle:"7100 login" "lancom"
 inurl:/multi.html intitle:webcam
 inurl:/hp/device/SignIn/
+inurl:/view.htm?mode=l
+intitle:"Blue Iris Remote View"
+inurl:"jpegpush.htm"
+intitle:"xerox" inurl:i_index
+intitle:"Cisco ASDM" inurl:"admin/public/index.html"
+"IPECS" inurl:a_index.html
+intitle:"Welcome to" intext:"configuration interface"
+intext:"2009 PLANET Technology Corporation"
+intitle:"PRTG Network Monitor" inurl:index.htm intext:"Password" -inurl:prtg
+intitle:"Netgear System Login" intext:"system name"
+intitle:"Hello! Welcome to Synology Web Station!"
