@@ -1,7 +1,4 @@
 beautifulsoup4==4.9.3
 colorama==0.4.4
-google==3.0.0
-# Uncomment if the google package maintainer doesn't update PyPI.
-# -e git://github.com/MarioVilas/googlesearch.git#egg=googlesearch
-numpy==1.19.5
+yagooglesearch==1.1.0
 requests==2.26.0

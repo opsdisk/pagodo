@@ -1,21 +1,43 @@
-# PaGoDo - Passive Google Dork
+# pagodo - Passive Google Dork
 
 ## Introduction
 
-pagodo automates Google searching for potentially vulnerable web pages and applications on the Internet.  It replaces
+`pagodo` automates Google searching for potentially vulnerable web pages and applications on the Internet.  It replaces
 manually performing Google dork searches with a web GUI browser.
 
 There are 2 parts.  The first is `ghdb_scraper.py` that retrieves the latest Google dorks and the second portion is
 `pagodo.py` that leverages the information gathered by `ghdb_scraper.py`.
 
-HakByte created a video tutorial on using pagodo.  It starts around 8 minutes in and you can find it here
-<https://www.youtube.com/watch?v=lESeJ3EViCo&t=481s>
+The core Google search library now uses the more flexible [yagooglesearch](https://github.com/opsdisk/yagooglesearch)
+instead of [googlesearch](https://github.com/MarioVilas/googlesearch).  Check out the
+[yagooglesearch README](https://github.com/opsdisk/yagooglesearch/blob/master/README.md) for a more in-depth explanation
+of the library differences and capabilities.
+
+This version of `pagodo` also supports native HTTP(S) and SOCKS5 application support, so no more wrapping it in a tool
+like `proxychains4` if you need proxy support.  You can specify multiple proxies to use in a round-robin fashion by
+providing a comma separated string of proxies using the `-p` switch.
 
 ## What are Google dorks?
 
 Offensive Security maintains the Google Hacking Database (GHDB) found here:
 <https://www.exploit-db.com/google-hacking-database>.  It is a collection of Google searches, called dorks, that can be
-used to find potentially vulnerable boxes or other juicy info that is picked up by Google's search bots.  
+used to find potentially vulnerable boxes or other juicy info that is picked up by Google's search bots.
+
+## Terms and Conditions
+
+The terms and conditions for `pagodo` are the same terms and conditions found in
+[yagooglesearch](https://github.com/opsdisk/yagooglesearch#terms-and-conditions).
+
+This code is supplied as-is and you are fully responsible for how it is used.  Scraping Google Search results may
+violate their [Terms of Service](https://policies.google.com/terms).  Another Python Google search library had some
+interesting information/discussion on it:
+
+* [Original issue](https://github.com/aviaryan/python-gsearch/issues/1)
+* [A response](https://github.com/aviaryan/python-gsearch/issues/1#issuecomment-365581431>)
+* Author created a separate [Terms and Conditions](https://github.com/aviaryan/python-gsearch/blob/master/T_AND_C.md)
+* ...that contained link to this [blog](https://benbernardblog.com/web-scraping-and-crawling-are-perfectly-legal-right/)
+
+Google's preferred method is to use their [API](https://developers.google.com/custom-search/v1/overview).
 
 ## Installation
 
@@ -24,7 +46,7 @@ Scripts are written for Python 3.6+.  Clone the git repository and install the r
 ```bash
 git clone https://github.com/opsdisk/pagodo.git
 cd pagodo
-virtualenv -p python3 .venv  # If using a virtual environment.
+virtualenv -p python3.7 .venv  # If using a virtual environment.
 source .venv/bin/activate  # If using a virtual environment.
 pip install -r requirements.txt
 ```
@@ -35,12 +57,13 @@ To start off, `pagodo.py` needs a list of all the current Google dorks.  The rep
 the current dorks when the `ghdb_scraper.py` was last run. It's advised to run `ghdb_scraper.py` to get the freshest
 data before running `pagodo.py`.  The `dorks/` directory contains:
 
-* the `all_google_dorks.txt` file which contains all the Google dorks
-* Individual dork category dorks
+* the `all_google_dorks.txt` file which contains all the Google dorks, one per line
+* the `all_google_dorks.json` file which is the JSON response from GHDB
+* Individual category dorks
 
 Dork categories:
 
-```none
+```python
 categories = {
     1: "Footholds",
     2: "File Containing Usernames",
@@ -59,27 +82,18 @@ categories = {
 }
 ```
 
-Fortunately, the entire database can be pulled back with 1 HTTP GET request using `ghdb_scraper.py`.  You can dump all
-dorks to a file, the individual dork categories to separate dork files, or the entire json blob if you want more
-contextual data about each dork.
-
 ### Using ghdb_scraper.py as a script
 
-To retrieve all dorks:
+Write all dorks to `all_google_dorks.txt`, `all_google_dorks.json`, and individual categories if you want more
+contextual data about each dork.
 
 ```bash
-python ghdb_scraper.py -j -s
-```
-
-To retrieve all dorks and write them to individual categories:
-
-```bash
-python ghdb_scraper.py -i
+python ghdb_scraper.py -s -j -i
 ```
 
 ### Using ghdb_scraper as a module
 
-The `ghdb_scraper.retrieve_google_dorks()` returns a dictionary with the following data structure:
+The `ghdb_scraper.retrieve_google_dorks()` function returns a dictionary with the following data structure:
 
 ```python
 ghdb_dict = {
@@ -105,75 +119,132 @@ dorks["category_dict"].keys()
 dorks["category_dict"][1]["category_name"]
 ```
 
-## pagodo.py
+## <span>pagodo.py</span>
 
-Now that a file with the most recent Google dorks exists, it can be fed into `pagodo.py` using the `-g` switch to start
-collecting potentially vulnerable public applications.  `pagodo.py` leverages the `google` python library to search
-Google for sites with the Google dork, such as:
-
-```none
-intitle:"ListMail Login" admin -demo
-```
-
-The `-d` switch can be used to specify a domain and functions as the Google search operator:
-
-```none
-site:example.com
-```
-
-Performing ~4600 search requests to Google as fast as possible will simply not work.  Google will rightfully detect it
-as a bot and block your IP for a set period of time.  In order to make the search queries appear more human, a couple of
-enhancements have been made.  A pull request was made and accepted by the maintainer of the Python `google` module to
-allow for User-Agent randomization in the Google search queries.  This feature is available in
-[1.9.3](https://pypi.python.org/pypi/google) and allows you to randomize the different user agents used for each search.
-This emulates the different browsers used in a large corporate environment.
-
-The second enhancement focuses on randomizing the time between search queries.  A minimum delay is specified using the
-`-e` option and a jitter factor is used to add time on to the minimum delay number. A list of 50 jitter times is created
-and one is randomly appended to the minimum delay time for each Google dork search.
-
-```python
-# Create an array of jitter values to add to delay, favoring longer search times.
-self.jitter = numpy.random.uniform(low=self.delay, high=jitter * self.delay, size=(50,))
-```
-
-Latter in the script, a random time is selected from the jitter array and added to the delay.
-
-```python
-pause_time = self.delay + random.choice(self.jitter)
-```
-
-Experiment with the values, but the defaults successfully worked without Google blocking my IP.  Note that it could take
-a few days (3 on average) to run so be sure you have the time.
-
-To run it:
+### Using <span>pagodo.py</span> as a script
 
 ```bash
-python3 pagodo.py -d example.com -g dorks.txt -l 50 -s -e 35.0 -j 1.1
+python pagodo.py -d example.com -g dorks.txt 
 ```
+
+### Using pagodo as a module
+
+The `pagodo.Pagodo.go()` function returns a dictionary with the data structure below (dorks used are made up examples):
+
+```python
+{
+    "dorks": {
+        "inurl:admin": {
+            "urls_size": 3,
+            "urls": [
+                "https://github.com/marmelab/ng-admin",
+                "https://github.com/settings/admin",
+                "https://github.com/akveo/ngx-admin",
+            ],
+        },
+        "inurl:gist": {
+            "urls_size": 3,
+            "urls": [
+                "https://gist.github.com/",
+                "https://gist.github.com/index",
+                "https://github.com/defunkt/gist",
+            ],
+        },
+    },
+    "initiation_timestamp": "2021-08-27T11:35:30.638705",
+    "completion_timestamp": "2021-08-27T11:36:42.349035",
+}
+```
+
+Using a Python shell (like `python` or `ipython`) to explore the data:
+
+```python
+import pagodo
+
+pg = pagodo.Pagodo(
+    google_dorks_file="dorks.txt",
+    domain="github.com",
+    max_search_result_urls_to_return_per_dork=3,
+    save_pagodo_results_to_json_file=True,
+    save_urls_to_file=True,
+    verbosity=5,
+)
+pagodo_results_dict = pg.go()
+
+pagodo_results_dict.keys()
+
+pagodo_results_dict["initiation_timestamp"]
+
+pagodo_results_dict["completion_timestamp"]
+
+for key,value in pagodo_results_dict["dorks"].items():
+    print(f"dork: {key}")
+    for url in value["urls"]:
+        print(url)
+```
+
+## Tuning Results
+
+## Scope to a specific domain
+
+The `-d` switch can be used to scope the results to a specific domain and functions as the Google search operator:
+
+```none
+site:github.com
+```
+
+### Wait time between Google dork searchers
+
+* `-i` - Specify the **minimum** delay between dork searches, in seconds.  Don't make this too small, or your IP will
+get HTTP 429'd quickly.
+* `-x` - Specify the **maximum** delay between dork searches, in seconds.  Don't make this too big or the searches will
+take a long time.
+
+The values provided by `-i` and `-x` are used to generate a list of 20 randomly wait times, that are randomly selected
+between each different Google dork search.
+
+### Number of results to return
+
+`-m` - The total max search results to return per Google dork.  Each Google search request can pull back at most 100
+results at a time, so if you pick `-m 500`, 5 separate search queries will have to be made for each Google dork search,
+which will increase the amount of time to complete.
 
 ## Google is blocking me!
 
-If you start getting HTTP 429 errors, Google has rightfully detected you as a bot and will block your IP for a set
-period of time.  The solution is to use proxychains and a bank of proxies to round robin the lookups.
+Performing 6500+ search requests to Google as fast as possible will simply not work.  Google will rightfully detect it
+as a bot and block your IP for a set period of time.  One solution is to use a bank of HTTP(S)/SOCKS proxies and pass
+them to `pagodo`
 
-Install proxychains4
+### Native proxy support
+
+Pass a comma separated string of proxies to `pagodo` using the `-p` switch.
+
+```bash
+python pagodo.py -g dorks.txt -p https://myproxy:8080,socks5h://127.0.0.1:9050,socks5h://127.0.0.1:9051
+```
+
+You could even decrease the `-i` and `-x` values because you will be leveraging different proxy IPs.  The proxies passed
+to `pagodo` are selected by round robin.
+
+### proxychains4 support
+
+Another solution is to use `proxychains4` to round robin the lookups.
+
+Install `proxychains4`
 
 ```bash
 apt install proxychains4 -y
 ```
 
 Edit the `/etc/proxychains4.conf` configuration file to round robin the look ups through different proxy servers.  In
-the example below, 2 different dynamic socks proxies have been set up with different local listening ports
-(9050 and 9051).  Don't know how to utilize SSH and dynamic socks proxies?  Do yourself a favor and pick up a copy of
-[Cyber Plumber's Handbook and interactive lab](https://gumroad.com/l/cph_book_and_lab) to learn all about Secure Shell
-(SSH) tunneling, port redirection, and bending traffic like a boss.
+the example below, 2 different dynamic socks proxies have been set up with different local listening ports (9050 and
+9051).
 
 ```bash
 vim /etc/proxychains4.conf
 ```
 
-```bash
+```ini
 round_robin
 chain_len = 1
 proxy_dns
@@ -185,14 +256,30 @@ socks4 127.0.0.1 9050
 socks4 127.0.0.1 9051
 ```
 
-Throw `proxychains4` in front of the Python script and each lookup will go through a different proxy (and thus source
-from a different IP).  You could even tune down the `-e` delay time because you will be leveraging different proxy boxes.
+Throw `proxychains4` in front of the `pagodo.py` script and each *request* lookup will go through a different proxy (and
+thus source from a different IP).
 
 ```bash
-proxychains4 python3 pagodo.py -g ALL_dorks.txt -s -e 17.0 -l 700 -j 1.1
+proxychains4 python pagodo.py -g dorks/all_google_dorks.txt -o -s
 ```
 
-## Conclusion
+Note that this may not appear natural to Google if you:
 
-Comments, suggestions, and improvements are always welcome.  Be sure to follow [@opsdisk](https://twitter.com/opsdisk)
-on Twitter for the latest updates.
+1) Simulate "browsing" to `google.com` from IP #1
+2) Make the first search query from IP #2
+3) Simulate clicking "Next" to make the second search query from IP #3
+4) Simulate clicking "Next to make the third search query from IP #1
+
+For that reason, using the built in `-p` proxy support is preferred because, as stated in the `yagooglesearch`
+documentation, the "provided proxy is used for the entire life cycle of the search to make it look more human, instead
+of rotating through various proxies for different portions of the search."
+
+## License
+
+Distributed under the GNU General Public License v3.0. See [LICENSE](./LICENSE) for more information.
+
+## Contact
+
+[@opsdisk](https://twitter.com/opsdisk)
+
+Project Link: [https://github.com/opsdisk/pagodo](https://github.com/opsdisk/pagodo)
