@@ -194,7 +194,7 @@ class Pagodo:
                     query,
                     tbs="li:1",  # Verbatim search.
                     num=100,  # Retrieve up to 100 Google search results at time.
-                    # Max desired valid URLs per dork.
+                    # Max desired valid URLs to collect per dork.
                     max_search_result_urls_to_return=self.max_search_result_urls_to_return_per_dork,
                     proxy=proxy,
                     verbosity=self.verbosity,
@@ -212,8 +212,8 @@ class Pagodo:
 
                 # Remove any exploit-db.com URLs.
                 for url in dork_urls_list:
-                    # Ignore results from specific URLs like exploit-db.com, cert.org, and GHDB's twitter account
-                    # that may just be providing information about the vulnerability.  Keeping it simple with regex.
+                    # Ignore results from specific URLs like exploit-db.com, cert.org, and GHDB's Twitter account that
+                    # may just be providing information about the vulnerability.  Keeping it simple with regex.
                     ignore_url_list = [
                         "https://www.kb.cert.org",
                         "https://www.exploit-db.com/",
@@ -307,7 +307,7 @@ if __name__ == "__main__":
         required=False,
         type=int,
         default=37,
-        help=("Minimum delay (in seconds) between a Google dork search.  Default: 37"),
+        help="Minimum delay (in seconds) between a Google dork search.  Default: 37",
     )
     parser.add_argument(
         "-x",
@@ -316,7 +316,7 @@ if __name__ == "__main__":
         required=False,
         type=int,
         default=60,
-        help=("Maximum delay (in seconds) between a Google dork search.  Default: 60"),
+        help="Maximum delay (in seconds) between a Google dork search.  Default: 60",
     )
     parser.add_argument(
         "-m",
@@ -336,7 +336,7 @@ if __name__ == "__main__":
         default="",
         help=(
             "Comma separated string of proxies to round-robin through.  Example: "
-            "https://myproxy:8080,socks5h://127.0.0.1:9050,socks5h://127.0.0.1:9051.  The proxy scheme must confrom "
+            "https://myproxy:8080,socks5h://127.0.0.1:9050,socks5h://127.0.0.1:9051 - The proxy scheme must confrom "
             "per the Python requests library: https://docs.python-requests.org/en/master/user/advanced/#proxies  See "
             "https://github.com/opsdisk/yagooglesearch for more information."
         ),

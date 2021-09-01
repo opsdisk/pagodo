@@ -21,11 +21,11 @@ providing a comma separated string of proxies using the `-p` switch.
 
 Offensive Security maintains the Google Hacking Database (GHDB) found here:
 <https://www.exploit-db.com/google-hacking-database>.  It is a collection of Google searches, called dorks, that can be
-used to find potentially vulnerable boxes or other juicy info that is picked up by Google's search bots.  
+used to find potentially vulnerable boxes or other juicy info that is picked up by Google's search bots.
 
 ## Terms and Conditions
 
-These are the same terms and conditions found in
+The terms and conditions for `pagodo` are the same terms and conditions found in
 [yagooglesearch](https://github.com/opsdisk/yagooglesearch#terms-and-conditions).
 
 This code is supplied as-is and you are fully responsible for how it is used.  Scraping Google Search results may
@@ -57,7 +57,7 @@ To start off, `pagodo.py` needs a list of all the current Google dorks.  The rep
 the current dorks when the `ghdb_scraper.py` was last run. It's advised to run `ghdb_scraper.py` to get the freshest
 data before running `pagodo.py`.  The `dorks/` directory contains:
 
-* the `all_google_dorks.txt` file which contains all the Google dorks
+* the `all_google_dorks.txt` file which contains all the Google dorks, one per line
 * the `all_google_dorks.json` file which is the JSON response from GHDB
 * Individual category dorks
 
@@ -82,12 +82,10 @@ categories = {
 }
 ```
 
-You can dump all dorks to a file, the individual dork categories to separate dork files, or the entire json blob if you
-want more contextual data about each dork.
-
 ### Using ghdb_scraper.py as a script
 
-Write dorks to `all_google_dorks.txt`, `all_google_dorks.json`, and individual categories.
+Write all dorks to `all_google_dorks.txt`, `all_google_dorks.json`, and individual categories if you want more
+contextual data about each dork.
 
 ```bash
 python ghdb_scraper.py -s -j -i
@@ -131,7 +129,7 @@ python pagodo.py -d example.com -g dorks.txt
 
 ### Using pagodo as a module
 
-The `pagodo.Pagodo.go()` function returns a dictionary with the following data structure:
+The `pagodo.Pagodo.go()` function returns a dictionary with the data structure below (dorks used are made up examples):
 
 ```python
 {
@@ -187,7 +185,7 @@ for key,value in pagodo_results_dict["dorks"].items():
 
 ## Tuning Results
 
-## Scope to specific domain
+## Scope to a specific domain
 
 The `-d` switch can be used to scope the results to a specific domain and functions as the Google search operator:
 
@@ -197,13 +195,13 @@ site:github.com
 
 ### Wait time between Google dork searchers
 
-* `-i` - Specify the minimum delay between dork searches, in seconds.  Don't make this too small, or your IP will get
-* HTTP 429'd quickly.
-* `-x` - Specify the minimum delay between dork searches, in seconds.  Don't make this too big or the searches will take
-a long time.
+* `-i` - Specify the **minimum** delay between dork searches, in seconds.  Don't make this too small, or your IP will
+get HTTP 429'd quickly.
+* `-x` - Specify the **maximum** delay between dork searches, in seconds.  Don't make this too big or the searches will
+take a long time.
 
-Using the values provided by `-i` and `-x`, a list of 20 randomly generate wait times is created and a random wait time
-is selected between each different Google dork search.
+The values provided by `-i` and `-x` are used to generate a list of 20 randomly wait times, that are randomly selected
+between each different Google dork search.
 
 ### Number of results to return
 
@@ -241,7 +239,7 @@ the example below, 2 different dynamic socks proxies have been set up with diffe
 vim /etc/proxychains4.conf
 ```
 
-```bash
+```ini
 round_robin
 chain_len = 1
 proxy_dns
@@ -254,20 +252,22 @@ socks4 127.0.0.1 9051
 ```
 
 Throw `proxychains4` in front of the `pagodo.py` script and each *request* lookup will go through a different proxy (and
-thus source from a different IP).  Note that this may not appear natural to Google if you:
-
-1) Simulate "browsing" to `google.com` from IP #1
-2) Make the first search query from IP #2
-3) Simulate hitting "Next Page" to make the second search query from IP #3
-4) Simulate hitting "Next Page" to make the third search query from IP #1
-
-For that reason, using the built in `-p` proxy support is preferred because, as stated in the `yagooglesearch`
-documentation, the "provided proxy is used for the entire life cycle of the search to make it look more human, instead
-of rotating through various proxies for different portions of the search."
+thus source from a different IP).
 
 ```bash
 proxychains4 python pagodo.py -g dorks/all_google_dorks.txt -o -s
 ```
+
+Note that this may not appear natural to Google if you:
+
+1) Simulate "browsing" to `google.com` from IP #1
+2) Make the first search query from IP #2
+3) Simulate clicking "Next" to make the second search query from IP #3
+4) Simulate clicking "Next to make the third search query from IP #1
+
+For that reason, using the built in `-p` proxy support is preferred because, as stated in the `yagooglesearch`
+documentation, the "provided proxy is used for the entire life cycle of the search to make it look more human, instead
+of rotating through various proxies for different portions of the search."
 
 ## License
 
