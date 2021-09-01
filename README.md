@@ -212,14 +212,19 @@ which will increase the amount of time to complete.
 ## Google is blocking me!
 
 Performing 6500+ search requests to Google as fast as possible will simply not work.  Google will rightfully detect it
-as a bot and block your IP for a set period of time.  In order to make the search queries appear more human, a couple of
-enhancements have been made.
+as a bot and block your IP for a set period of time.  One solution is to use a bank of HTTP(S)/SOCKS proxies and pass
+them to `pagodo`
 
 ### Native proxy support
 
-One solution is to use a bank of HTTP(S)/SOCKS proxies and pass them to `pagodo` using the `-p` switch.  You could even
-decrease the `-i` and `-x` values because you will be leveraging different proxy IPs.  The proxies passed to `pagodo`
-are selected by round robin.
+Pass a comma separated string of proxies to `pagodo` using the `-p` switch.
+
+```bash
+python pagodo.py -g dorks.txt -p https://myproxy:8080,socks5h://127.0.0.1:9050,socks5h://127.0.0.1:9051
+```
+
+You could even decrease the `-i` and `-x` values because you will be leveraging different proxy IPs.  The proxies passed
+to `pagodo` are selected by round robin.
 
 ### proxychains4 support
 
