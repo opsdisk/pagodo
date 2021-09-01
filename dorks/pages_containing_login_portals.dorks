@@ -1239,3 +1239,5 @@ intext:"amcrest" "Invalid login credentials"
 intext:"Powered by Bitnami Redmine Stack" inurl:/login
 Dork:- intitle:*admin (inurl:login)
 site:*/JIRA/login
+site:gov.in intitle: admin login
+inurl:login.php site:.nl

@@ -939,3 +939,4 @@ intitle:"index of" "ssh_host_rsa_key" + "ssh_host_rsa_key.pub"
 "Not for Public Release" + "Confidential" ext:pdf | ext:doc | ext:xlsx
 inurl:/inicis/ ext:log
 inurl:wp-content/plugins/modern-events-calendar-lite
+intitle:untitled filetype:xls intext:password

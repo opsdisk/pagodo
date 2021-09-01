@@ -6644,3 +6644,7 @@ intext:"Powered by Bitnami Redmine Stack" inurl:/login
 inurl:/nphMotionJpeg?Resolution=
 Dork:- intitle:*admin (inurl:login)
 site:*/JIRA/login
+site:pastebin.com intitle:"password" 2021
+intitle:untitled filetype:xls intext:password
+site:gov.in intitle: admin login
+inurl:login.php site:.nl
