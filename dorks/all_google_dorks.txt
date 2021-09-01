@@ -6639,3 +6639,8 @@ inurl:users/password/new
 intitle:index.of (inurl:admin | intitle:admin)
 intitle:"BoardPAC - Board Paper and Credit Proposal Management System"
 intitle:"Polycom Login" inurl:"/login.html"
+intext:"amcrest" "Invalid login credentials"
+intext:"Powered by Bitnami Redmine Stack" inurl:/login
+inurl:/nphMotionJpeg?Resolution=
+Dork:- intitle:*admin (inurl:login)
+site:*/JIRA/login

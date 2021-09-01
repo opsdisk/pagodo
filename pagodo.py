@@ -4,6 +4,7 @@
 import argparse
 import datetime
 import json
+import logging
 import os
 import random
 import re
@@ -11,14 +12,26 @@ import sys
 import time
 
 # Third party Python libraries.
-import colorama
+import yagooglesearch
 
 # Custom Python libraries.
-import yagooglesearch
 
 __version__ = "2.0.0"
 
-colorama.init(autoreset=True)
+# Logging
+ROOT_LOGGER = logging.getLogger("pagodo")
+# ISO 8601 datetime format by default.
+LOG_FORMATTER = logging.Formatter("%(asctime)s [%(threadName)-12.12s] [%(levelname)s] %(message)s")
+
+# Setup file logging.
+log_file_handler = logging.FileHandler("pagodo.py.log")
+log_file_handler.setFormatter(LOG_FORMATTER)
+ROOT_LOGGER.addHandler(log_file_handler)
+
+# Setup console logging.
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(LOG_FORMATTER)
+ROOT_LOGGER.addHandler(console_handler)
 
 
 class Pagodo:
@@ -38,6 +51,31 @@ class Pagodo:
     ):
         """Initialize Pagodo class object."""
 
+        # Run parameter checks.
+        if not os.path.exists(google_dorks_file):
+            print("Specify a valid file containing Google dorks with -g")
+            sys.exit(0)
+
+        if minimum_delay_between_dork_searches_in_seconds < 0:
+            print("Minimum delay between dork searches (-i) must be greater than 0")
+            sys.exit(0)
+
+        if maximum_delay_between_dork_searches_in_seconds < 0:
+            print("maximum_delay_between_dork_searches_in_seconds (-x) must be greater than 0")
+            sys.exit(0)
+
+        if maximum_delay_between_dork_searches_in_seconds <= minimum_delay_between_dork_searches_in_seconds:
+            print(
+                "maximum_delay_between_dork_searches_in_seconds (-x) must be greater than "
+                "minimum_delay_between_dork_searches_in_seconds (-i)"
+            )
+            sys.exit(0)
+
+        if max_search_result_urls_to_return_per_dork < 0:
+            print("max_search_result_urls_to_return_per_dork (-m) must be greater than 0")
+            sys.exit(0)
+
+        # All passed paramters look good, assign to the class object.
         self.google_dorks_file = google_dorks_file
         self.google_dorks = []
         with open(google_dorks_file, "r") as fh:
@@ -47,7 +85,7 @@ class Pagodo:
         self.domain = domain
         self.max_search_result_urls_to_return_per_dork = max_search_result_urls_to_return_per_dork
         self.save_pagodo_results_to_json_file = save_pagodo_results_to_json_file
-        self.proxies = proxies.split(",")
+        self.proxies = proxies.strip().strip(",").split(",")
         self.save_urls_to_file = save_urls_to_file
         self.minimum_delay_between_dork_searches_in_seconds = minimum_delay_between_dork_searches_in_seconds
         self.maximum_delay_between_dork_searches_in_seconds = maximum_delay_between_dork_searches_in_seconds
@@ -82,12 +120,15 @@ class Pagodo:
         self.total_urls_found = 0
         self.proxy_rotation_index = 0
 
+        # Assign log level.
+        ROOT_LOGGER.setLevel((6 - self.verbosity) * 10)
+
     def go(self):
         """Start pagodo Google dork search."""
 
         initiation_timestamp = datetime.datetime.now().isoformat()
 
-        print(f"[*] Initiation timestamp: {initiation_timestamp}")
+        ROOT_LOGGER.info(f"Initiation timestamp: {initiation_timestamp}")
 
         # Initialize starting dork number.
         dork_counter = 1
@@ -127,9 +168,8 @@ class Pagodo:
                 # Search string is longer than 32 words.
                 if len(query.split(" ")) > 32:
                     ignored_string = " ".join(query.split(" ")[32:])
-                    print(
-                        colorama.Fore.YELLOW
-                        + "[!] Google limits queries to 32 words (separated by spaces):  Removing from search query: "
+                    ROOT_LOGGER.warning(
+                        "Google limits queries to 32 words (separated by spaces):  Removing from search query: "
                         f"'{ignored_string}'"
                     )
 
@@ -140,7 +180,7 @@ class Pagodo:
                     if query.endswith('"'):
                         updated_query = f'{updated_query}"'
 
-                    print(f"[*] New search query: {updated_query}")
+                    ROOT_LOGGER.info(f"New search query: {updated_query}")
 
                     query = updated_query
 
@@ -163,8 +203,8 @@ class Pagodo:
                 # Randomize the user agent for best results.
                 client.assign_random_user_agent()
 
-                print(
-                    f"[*] Search ( {dork_counter} / {total_dorks_to_search} ) for Google dork [ {query} ] using "
+                ROOT_LOGGER.info(
+                    f"Search ( {dork_counter} / {total_dorks_to_search} ) for Google dork [ {query} ] using "
                     f"User-Agent '{client.user_agent}' through proxy '{proxy}'"
                 )
 
@@ -181,7 +221,7 @@ class Pagodo:
                     ]
                     for ignore_url in ignore_url_list:
                         if re.search(ignore_url, url, re.IGNORECASE):
-                            print(colorama.Fore.YELLOW + f"[*] Removing {ignore_url} URL: {url}")
+                            ROOT_LOGGER.warning(f"Removing {ignore_url} URL: {url}")
                             dork_urls_list.remove(url)
 
                 dork_urls_list_size = len(dork_urls_list)
@@ -189,12 +229,10 @@ class Pagodo:
                 # Google dork results found.
                 if dork_urls_list:
 
-                    print(
-                        colorama.Fore.GREEN + f"[*] Results: {dork_urls_list_size} URLs found for Google dork: {dork}"
-                    )
+                    ROOT_LOGGER.info(f"Results: {dork_urls_list_size} URLs found for Google dork: {dork}")
 
-                    for url in dork_urls_list:
-                        print(url)
+                    dork_urls_list_as_string = "\n".join(dork_urls_list)
+                    ROOT_LOGGER.info(f"dork_urls_list:\n{dork_urls_list_as_string}")
 
                     self.total_urls_found += dork_urls_list_size
 
@@ -215,28 +253,30 @@ class Pagodo:
 
                 # No Google dork results found.
                 else:
-                    print(f"[*] Results: {dork_urls_list_size} URLs found for Google dork: {dork}")
+                    ROOT_LOGGER.info(f"Results: {dork_urls_list_size} URLs found for Google dork: {dork}")
 
             except KeyboardInterrupt:
                 sys.exit(0)
 
             except Exception as e:
-                print(colorama.Fore.YELLOW + f"[-] Error with dork: {dork}")
-                print(colorama.Fore.YELLOW + f"[-] EXCEPTION: {e}")
+                ROOT_LOGGER.error(f"Error with dork: {dork}")
+                ROOT_LOGGER.error(f"EXCEPTION: {e}")
 
             dork_counter += 1
 
             # Only sleep if there are more dorks to search.
             if dork != self.google_dorks[-1]:
                 pause_time = random.choice(self.delay_between_dork_searches_list)
-                print(f"[*] Sleeping {pause_time} seconds before executing the next dork search...")
+                ROOT_LOGGER.info(f"Sleeping {pause_time} seconds before executing the next dork search...")
                 time.sleep(pause_time)
 
-        print(f"[*] Total URLs found for the {total_dorks_to_search} total dorks searched: {self.total_urls_found}")
+        ROOT_LOGGER.info(
+            f"Total URLs found for the {total_dorks_to_search} total dorks searched: {self.total_urls_found}"
+        )
 
         completion_timestamp = datetime.datetime.now().isoformat()
 
-        print(f"[*] Completion timestamp: {completion_timestamp}")
+        ROOT_LOGGER.info(f"Completion timestamp: {completion_timestamp}")
         self.pagodo_results_dict["completion_timestamp"] = completion_timestamp
 
         # Save pagodo_results_dict to a .json file.
@@ -285,7 +325,7 @@ if __name__ == "__main__":
         required=False,
         type=int,
         default=100,
-        help="Maximum results to search per dork.  Default 100.",
+        help="Maximum results to return per dork.  Default 100.",
     )
     parser.add_argument(
         "-p",
@@ -330,29 +370,6 @@ if __name__ == "__main__":
     )
 
     args = parser.parse_args()
-
-    if not os.path.exists(args.google_dorks_file):
-        print(colorama.Fore.YELLOW + "[!] Specify a valid file containing Google dorks with -g")
-        sys.exit(0)
-
-    if args.minimum_delay_between_dork_searches_in_seconds < 0:
-        print(colorama.Fore.YELLOW + "[!] Minimum delay between dork searches must be greater than 0")
-        sys.exit(0)
-
-    if args.maximum_delay_between_dork_searches_in_seconds < 0:
-        print(colorama.Fore.YELLOW + "[!] maximum_delay_between_dork_searches_in_seconds must be greater than 0")
-        sys.exit(0)
-
-    if args.maximum_delay_between_dork_searches_in_seconds <= args.minimum_delay_between_dork_searches_in_seconds:
-        print(
-            colorama.Fore.YELLOW + "[!] maximum_delay_between_dork_searches_in_seconds must be greater than "
-            "minimum_delay_between_dork_searches_in_seconds"
-        )
-        sys.exit(0)
-
-    if args.max_search_result_urls_to_return_per_dork < 0:
-        print(colorama.Fore.YELLOW + "[!] max_search_result_urls_to_return_per_dork must be greater than 0")
-        sys.exit(0)
 
     pagodo = Pagodo(**vars(args))
     pagodo.go()

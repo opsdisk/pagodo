@@ -1,4 +1,4 @@
 beautifulsoup4==4.9.3
 colorama==0.4.4
-yagooglesearch==1.0.0
+yagooglesearch==1.1.0
 requests==2.26.0

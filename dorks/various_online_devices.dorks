@@ -673,3 +673,4 @@ intext:"2009 PLANET Technology Corporation"
 intitle:"PRTG Network Monitor" inurl:index.htm intext:"Password" -inurl:prtg
 intitle:"Netgear System Login" intext:"system name"
 intitle:"Hello! Welcome to Synology Web Station!"
+inurl:/nphMotionJpeg?Resolution=
