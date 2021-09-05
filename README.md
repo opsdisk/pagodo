@@ -220,7 +220,7 @@ them to `pagodo`
 Pass a comma separated string of proxies to `pagodo` using the `-p` switch.
 
 ```bash
-python pagodo.py -g dorks.txt -p https://myproxy:8080,socks5h://127.0.0.1:9050,socks5h://127.0.0.1:9051
+python pagodo.py -g dorks.txt -p http://myproxy:8080,socks5h://127.0.0.1:9050,socks5h://127.0.0.1:9051
 ```
 
 You could even decrease the `-i` and `-x` values because you will be leveraging different proxy IPs.  The proxies passed

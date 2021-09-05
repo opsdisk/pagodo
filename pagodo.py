@@ -16,7 +16,7 @@ import yagooglesearch
 
 # Custom Python libraries.
 
-__version__ = "2.0.0"
+__version__ = "2.1.0"
 
 # Logging
 ROOT_LOGGER = logging.getLogger("pagodo")
@@ -47,6 +47,7 @@ class Pagodo:
         save_urls_to_file=False,
         minimum_delay_between_dork_searches_in_seconds=37,
         maximum_delay_between_dork_searches_in_seconds=60,
+        disable_verify_ssl=False,
         verbosity=4,
     ):
         """Initialize Pagodo class object."""
@@ -89,6 +90,7 @@ class Pagodo:
         self.save_urls_to_file = save_urls_to_file
         self.minimum_delay_between_dork_searches_in_seconds = minimum_delay_between_dork_searches_in_seconds
         self.maximum_delay_between_dork_searches_in_seconds = maximum_delay_between_dork_searches_in_seconds
+        self.disable_verify_ssl = disable_verify_ssl
         self.verbosity = verbosity
 
         # Fancy way of generating a list of 20 random values between minimum_delay_between_dork_searches_in_seconds and
@@ -197,6 +199,7 @@ class Pagodo:
                     # Max desired valid URLs to collect per dork.
                     max_search_result_urls_to_return=self.max_search_result_urls_to_return_per_dork,
                     proxy=proxy,
+                    verify_ssl=not self.disable_verify_ssl,
                     verbosity=self.verbosity,
                 )
 
@@ -261,6 +264,12 @@ class Pagodo:
             except Exception as e:
                 ROOT_LOGGER.error(f"Error with dork: {dork}")
                 ROOT_LOGGER.error(f"EXCEPTION: {e}")
+                if type(e).__name__ == "SSLError" and (not self.disable_verify_ssl):
+                    ROOT_LOGGER.info(
+                        "If you are using self-signed certificates for an HTTPS proxy, try-rerunning with the -l "
+                        "switch to disable verifying SSL/TLS certificates.  Exiting..."
+                    )
+                    sys.exit(1)
 
             dork_counter += 1
 
@@ -317,6 +326,14 @@ if __name__ == "__main__":
         type=int,
         default=60,
         help="Maximum delay (in seconds) between a Google dork search.  Default: 60",
+    )
+    parser.add_argument(
+        "-l",
+        dest="disable_verify_ssl",
+        action="store_true",
+        required=False,
+        default=False,
+        help="Disable SSL/TLS validation.  Sometimes required if using an HTTPS proxy with self-signed certificates.",
     )
     parser.add_argument(
         "-m",
