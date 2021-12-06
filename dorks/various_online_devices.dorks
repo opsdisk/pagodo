@@ -57,7 +57,7 @@ intitle:"Dell Laser Printer M5200" port_0
 "RICOH Network Printer D model-Restore Factory"
 intitle:"GCC WebAdmin" -gcc.ru
 tilt intitle:"Live View / - AXIS" | inurl:view/view.shtml
-http://www.google.com/search?q=intitle:%22Network+Storage+Link+for+USB+2.0+Disks%22+Firmware&num=100&hl=en&lr=&c2coff=1&safe=off&filter=0
+http://www.google.com/search?q=intitle:%22Network+Storage+Link+for+USB+2.0+Disks%22+Firmware#=100&hl=en&lr=&c2coff=1&safe=off&filter=0
 intitle:iDVR -intitle:"com | net | shop" -inurl:"asp | htm | pdf | html | php | shtml | com | at | cgi | tv"
 intitle:"Orite IC301" | intitle:"ORITE Audio IP-Camera IC-301" -the -a
 intitle:"Netcam" intitle:"user login"
@@ -674,3 +674,46 @@ intitle:"PRTG Network Monitor" inurl:index.htm intext:"Password" -inurl:prtg
 intitle:"Netgear System Login" intext:"system name"
 intitle:"Hello! Welcome to Synology Web Station!"
 inurl:/nphMotionJpeg?Resolution=
+inurl:hp/device/webAccess
+intitle:"setup" "Network setup" "DHCP Client ID" -.com
+intitle:"Welcome-netis Wireless"
+"Router Name" "Router Model" "LAN MAC" "WAN MAC"
+intitle:"D-LINK CORPORATION, INC" intext:"D-Link Corporation, Inc." -dlink.ca
+intitle:"Login" intext:"PLANET Technology Corporation. All rights reserved."
+intitle:"JUNG KNX Smart-Panel" "JUNG Single Regular"
+intext:"This page displays the general system information of the print server."
+"Language" "SIM NUM" "DEV NUM" intitle:"mdvr"
+intitle:"Device(Foscam)" "Real-time IP Camera Monitoring System"
+intitle:"SoundTouch Access Point Setup"
+intitle:"Bose SoundTouch Wi-Fi Music System Setup" inurl:"/setup/index.asp"
+intitle:"ACEmanager" "ALEOS Version"
+"Datamanager" "Devices" "Reports" "Alarm" "Log" "Service" "Gp Run-On"
+intitle:"yawcam" "It's a webcam!" "user" "pass"
+intitle:"ipMonitor - Log in"
+intitle:"Codian MCU" "MCU" "Home Streaming Conferences"
+intext:"amcrest" "Invalid login credentials"
+inurl:/controlmenu.htm
+intitle:"Pyramid Debug Toolbar" inurl:_debug_toolbar
+intitle:"CirCarLife Scada" inurl:/html/index.html
+intext:"amcrest" "LDAP User"
+intitle:"Youless energy monitor" "Model" "Firmware" "www.youless.nl"
+inurl:/cgi-bin/login.html "qnap turbo nas"
+intitle:"C-more -- the best HMI presented by AutomationDirect"
+intitle:"OS-ZuKon" "SSS Siedle"
+intitle:"EnvisionGateway" "scheduler" "control"
+intitle:"IPC CHIP Main Page" "Beck IPC GmbH"
+inurl:/admin/public/asdm.jnlp "ASDM on"
+intitle:"SPC4300" "ID"
+©20 "Copyright Yamaha Corporation Visit"
+Fwd: intitle:"Codian MCU - Home Page"
+Fwd: intitle:"SPC4300" "ID"
+Fwd: intitle:"OS-ZuKon" "SSS Siedle"
+Fwd: intitle:"Heatmiser Wifi Thermostat" "username" -.com
+intitle:"webcamXP 5" inurl:admin.html
+intitle:"ADSL Router" inurl:"/login.htm"
+intitle:"Microseven M7CAM IP Camera"
+intitle:" - General Status [none]"
+intitle:"webcamXP" inurl:8080
+intext:"Real-time IP Camera Monitoring System" intext:"ActiveX Mode (For IE Browser)"
+intitle:"Secure Access Service" inurl:"/dana-na/auth/url_default/welcome.cgi"
+intitle:"MODBUS TCP RS485 Converter" intext:"Module Name: MMTCPBCONV" "powered by Atmel ARM."

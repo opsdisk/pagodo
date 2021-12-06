@@ -65,3 +65,18 @@ intitle:"index of" "nrpe.cfg"
 Dork: "Index of" "upload_image.php"
 Dork: "index of" "Production.json"
 index.of.?.frm
+intitle:"index of" "schema.sql"
+"index of /" intext:wp-config "zip"
+intitle: Index of /assets/admin/system
+inurl:/supportboard
+Google Dork: intitle:"index of" "/sql" "admin"
+intitle:"index of" "/cgi-bin" "admin"
+intext:"powered by BlueCMS v1.6"
+intitle:"index of" "master03.xml"
+intitle:"index of" "stylesheet.css"
+intitle:"index of" "pres.xml"
+intitle:"Index of" site:.in
+inurl:*gov intitle:"index of" "docker-compose"
+intitle:"index of" "*.pl"
+intitle:"index of" "*.phtml"
+intitle:"index of" "*.php"

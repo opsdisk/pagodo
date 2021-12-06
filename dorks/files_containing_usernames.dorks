@@ -42,3 +42,4 @@ intitle:"index of" "credentials.xml" | "credentials.inc" | "credentials.txt"
 intitle:"index of" "db.properties" | "db.properties.BAK"
 intitle:"index of" "contacts.txt"
 intext:"-----BEGIN CERTIFICATE-----" ext:txt
+intitle:"index of" "/usernames"

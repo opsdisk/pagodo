@@ -117,3 +117,4 @@ inurl:"/plugins/servlet/Wallboard/"
 mail/u/0 filetype:pdf
 intitle:"index of" "httpd.pid"
 inurl:wsnavigator/jsps
+inurl:maps.arcgis.com +"City of"
