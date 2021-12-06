@@ -434,3 +434,11 @@ intitle:"index of" "/configs"
 inurl:filemanager/upload/asp/ "index of"
 intitle:"index of" "contacts.vcf"
 intitle:index.of (inurl:admin | intitle:admin)
+intitle: "Index of" inurl:fileadmin
+intitle:"index of" "private/log"
+Google Dork: intitle: "index of" "payment"
+intitle:"index of SCADA"
+intitle: "index of backup.php"
+intitle: "index of backup.xml"
+intitle:" index of "/Invoices*"
+intitle:"index of" ".env"

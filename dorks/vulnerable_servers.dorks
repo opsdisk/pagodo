@@ -106,3 +106,7 @@ intitle:"Vulnerability Report" "Critical" ext:pdf
 inurl:RichWidgets/Popup_Upload.aspx
 intext:"user name" intext:"orion core" -solarwinds.com
 inurl /editor/filemanager/connectors/uploadtest.html
+intitle:"Icecast Streaming Media Server" "Icecast2 Status" -.com
+intitle:"index of" "/views/auth/passwords"
+intitle:"TileServer GL - Server for vector and raster maps with GL styles"
+inurl:adm/login.jsp.bak

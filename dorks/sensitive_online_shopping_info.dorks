@@ -9,3 +9,7 @@ inurl:shopdbtest.asp
 inurl:midicart.mdb
 intext:"Powered by X-Cart: shopping cart software" -site:x-cart.com
 dcid= bn= pin code=
+intext:" Design & Developed by Antique Touch - INDIA"
+inurl:/commodities.php?id=
+inurl:product-list.php?id=
+site:mail.* intitle:Dashboard

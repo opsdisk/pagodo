@@ -220,7 +220,7 @@ filetype:mdb "standard jet" (password | username | user | pass)
 ext:(doc | pdf | xls | txt | ps | rtf | odt | sxw | psw | ppt | pps | xml) (intext:confidential salary | intext:"budget approved") inurl:confidential
 intitle:"admin panel" +"Powered by RedKernel"
 intitle:MyShell 1.1.0 build 20010923
-http://www.google.com/search?q=intitle:%22Network+Storage+Link+for+USB+2.0+Disks%22+Firmware&num=100&hl=en&lr=&c2coff=1&safe=off&filter=0
+http://www.google.com/search?q=intitle:%22Network+Storage+Link+for+USB+2.0+Disks%22+Firmware#=100&hl=en&lr=&c2coff=1&safe=off&filter=0
 intitle:"AlternC Desktop"
 "inspanel" intitle:"login" -"cannot" "Login ID" -site:inspediumsoft.com
 "HostingAccelerator" intitle:"login" +"Username" -"news" -demo
@@ -5706,7 +5706,7 @@ inurl:"passwordreset.asp"
 intitle:"index of" "database/config"
 inurl:wp-content/plugins/final-tiles-grid-gallery-lite
 inurl:/wp-content/plugins/wp-ecommerce-shop-styling/
-Google Dork
+inurl:admlogin.asp
 intitle:"index of" "auth_config.php"
 intitle:"index of" "aws-config.php"
 intitle:"index of" "auth.config"
@@ -6648,3 +6648,692 @@ site:pastebin.com intitle:"password" 2021
 intitle:untitled filetype:xls intext:password
 site:gov.in intitle: admin login
 inurl:login.php site:.nl
+inurl:hp/device/webAccess
+intitle:"NetBiter" intext:"based on NetBiter" -.com
+site:login.microsoftonline.com -error
+intitle:"setup" "Network setup" "DHCP Client ID" -.com
+inurl "/admin/index.php" username=admin&password=password
+inurl:/about site:*.in
+inurl:/login site:.in
+inurl:"/userportal/webpages/myaccount/login.jsp"
+inurl /admin/login.php intitle panel admin
+site:*/admin.php inurl:files
+intitle:"TD-W9970" intext:"Model No. TD-W9970" -tp-link.com
+inurl:login/forgotten
+intitle:"Users" intext:"Read License" intext:"vtiger.com"
+intext:"Please enter the device's administrator password"
+intitle:"Router Access" inurl:Router_Login.asp
+intitle:"IP CAMERA" "User Login" "User Name" "Password" "Preview Stream"
+site:".edu" intitle:"admin login"
+Inurl:login.rsp "User name"
+intitle:"Welcome-netis Wireless"
+intitle:"fdt" intext:"Remember me" "Username"
+site:".uk" intitle:"admin login"
+intext:"Welcome to ZXHN H198A"
+site:".ae" intitle:"admin login"
+site:".au" intitle:"admin login"
+intitle:"Icecast Streaming Media Server" "Icecast2 Status" -.com
+"Desktop" "Simple" "Responsive" intitle:"Controllr"
+/inurl:upload site:doxbin.org ~password
+cms +inurl:login +site:"gov.in"
+intitle:"WATTrouter" "SYSTEM WEB INTERFACE"
+inurl:("administrator/login.aspx" OR "admin/login.aspx") +site:.com
+filetype:xlsx intext:"gmail.com" OR "hotmail.com" site:gov
+intext:"Atlassian Jira Project Management Software" Jira login
+intext:"Admin Login" inurl:"/login.aspx"
+intitle:"Gitea" "This website works better with JavaScript" "sign in" " Home" "Explore"-.com
+intitle:"F660" intext:"ZTE Corporation. All rightsreserved."
+intitle:"MultiView" "MultiView Events" "MOBOTIX"
+inurl:login intext:"Powered by Plone & Python" -plone.org
+inurl:"/bitrix/admin/" intitle:"Autorisation"
+inurl /admin/login intitle panel admin site:"*.in"
+intitle:"admin panel" OR intitle:"request password" intext:"email address"
+intitle:"admin login" site:.gov
+intitle:"faculty login"
+"Router Name" "Router Model" "LAN MAC" "WAN MAC"
+intitle:"D-LINK CORPORATION, INC" intext:"D-Link Corporation, Inc." -dlink.ca
+intitle:"Login" intext:"PLANET Technology Corporation. All rights reserved."
+site:wiki.*.com inurl:login.action
+inurl:login_fail.asp
+"Welcome to Polycom Web Configuration Utility" "Login as" "Password"
+intitle:"MedDream" "Softneta" -.com
+filetype:log username admin
+allintext:adhaar filetype:xlsx
+intitle:"TestRail" inurl:"/index.php?/auth/login/"
+intitle:"index of" "schema.sql"
+intitle:"JUNG KNX Smart-Panel" "JUNG Single Regular"
+"Username" "Password" "This system is for authorized use only." intitle:"Gaia"
+intext:"This page displays the general system information of the print server."
+"Language" "SIM NUM" "DEV NUM" intitle:"mdvr"
+inurl:("admin/password.php") +site:.com
+intitle:"admin login" site:.gov
+intitle:"faculty login"
+cms inurl:login site:"gov.ae"
+intitle:"Device(Foscam)" "Real-time IP Camera Monitoring System"
+intitle:"SoundTouch Access Point Setup"
+site:.com inurl:("administrator/login.php" OR "admin/login.php")
+intitle:"Bose SoundTouch Wi-Fi Music System Setup" inurl:"/setup/index.asp"
+intitle:"D-link" intext:"SharePort Web Access" "Hardware Version" "Firmware Version"
+"index of /" intext:wp-config "zip"
+inurl:destination=portals
+Pages Containing Login Portals
+site:pastebin.com intext:"password" | intitle:"password"
+intitle:"Zimbra Web Client Sign In" "Synacor"
+intitle:"login" "Clare Controls LLC"
+inurl: /ftp intitle:"office"
+intitle:"ACEmanager" "ALEOS Version"
+site:".om" intitle:"login"
+"Datamanager" "Devices" "Reports" "Alarm" "Log" "Service" "Gp Run-On"
+intitle:"admin login" site:.net
+intitle:"yawcam" "It's a webcam!" "user" "pass"
+intitle:"admin login" site:.org
+intitle:"Login - splunk"
+intitle:"oracle login" site:.gov
+inurl:employee-login.html
+intitle:"STEP by STIBO Systems" "Launch STEPworkbench" "Web UI Component Report"
+inurl:login intext:" fiesta login"
+intitle:"admin login" site:.in
+" Stanford CoreNLP " "Visualisation provided using the brat visualisation"
+intitle:"ipMonitor - Log in"
+intitle:"Codian MCU" "MCU" "Home Streaming Conferences"
+Google Dork: inurl:"admin/login" site:".gov.in"
+intext:"amcrest" "Invalid login credentials"
+intitle: "Index of" inurl:fileadmin
+intitle:"nPerfServer"
+intitle:"index of" "/views/auth/passwords"
+inurl:quicklinks.aspx
+intitle:"Domain Default page" "Parallels IP Holdings GmbH"
+inurl:/controlmenu.htm
+intitle:"jaeger UI" inurl:trace
+intext:"SECRET_KEY=" site:pastebin.com
+intext:"private_key=" site:pastebin.com
+intitle:"Pyramid Debug Toolbar" inurl:_debug_toolbar
+intitle:"CirCarLife Scada" inurl:/html/index.html
+"enable secret 5" ext:txt | ext:cfg
+intitle:"index of" "/webpack-dev-server/ssl/"
+inurl:wp-config.php.save
+intitle:"index of" "/homedir/etc/"
+intitle:"index of" AND inurl:magento AND inurl:/dev
+intitle:"index of" "private/log"
+intitle:"index of" "/wp-content/uploads/"
+intext:"API KEY" site:pastebin.com
+intitle:"Index of" service.pwd
+site:*/admin.php inurl:admin
+inurl:gov filetype:xls intext:password
+Inurl: "login" Intitle:index of username and pass
+intitle:"index of" "/usernames"
+intext:Provided by ProjectSend
+intitle|inurl:"SCADA login"
+intitle:"index of" "irc.log" | "irc.logs"
+allinurl:logon.html CSCOE
+site:*/phpmyadmin/import.php
+site:*/phpmyadmin/server_import.php
+intext:"Welcome to Huawei web page for network configuration."
+intitle: index of /bin/php.ini
+intitle:"LiveZilla Server Page"
+"Wowza Streaming Engine 4 Developer Edition"
+companies' service login Login Portal
+intitle:"Intelbras" "All Rights Reserved" -.com
+intext:"amcrest" "LDAP User"
+intitle: "Index of ftp passwords"
+intitle: "index of /files clients"
+intext:" Design & Developed by Antique Touch - INDIA"
+intitle|inurl::"IoT login"
+inurl: login.http
+intitle:"index of" "database.py"
+inurl:/admin/AdminLogin.jsp intitle:"CERGY - Administration"
+intitle:"Codian MCU - login" "Copyright TANDBERG"
+inurl:/_vti_bin/Authentication.asmx
+intitle:"Youless energy monitor" "Model" "Firmware" "www.youless.nl"
+inurl:/cgi-bin/login.html "qnap turbo nas"
+intitle:"admin login" site:.gov.in
+intitle:"index of" site:.gov.in
+ext:txt intext:Windows PowerShell transcript start
+intitle:"NETSurveillance WEB"
+intitle:"WATASHI SERVICE"
+"Lucee" "Error (expression)" -lucee.org
+intitle:"Success!" intext:"Your new web server is ready to use."
+Google Dork: intitle: "index of" "payment"
+intitle:"index of" "tls-cert.pem" | "tls-csr.pem" | "tls-key.pem"
+intitle:"Welcome to OpenResty!"
+intitle:"C-more -- the best HMI presented by AutomationDirect"
+intitle:"TileServer GL - Server for vector and raster maps with GL styles"
+intitle:"index of" "development.py"
+intitle:"index of" "production.py"
+intitle:"index of" "local_settings.py"
+inurl:/admin/radeditorprovider/dialoghandler.aspx "Loading the dialog..."
+intitle:"Shoutcast server" inurl:"/index.html" "SHOUTcast Server"
+phpMyAdmin -www filetype:conf site:*
+Google Dork: intitle:index.of ipconfig
+intitle:administration intext:"portail" "Login"
+inurl:login.rsp "User name"
+inurl:saml2/login
+inurl:"profile/login"
+intitle:"Welcome" intext:"Login"
+intext:"Powered by SmarterTrack"
+intext:"Infinitium Copyrights Reserved"
+inurl:/wp-content/themes/beach_apollo
+intitle: Index of /assets/admin/system
+intitle:"OS-ZuKon" "SSS Siedle"
+"PHP Projectworlds 1.0"
+intitle:"EnvisionGateway" "scheduler" "control"
+intitle:GoogleService-Info filetype:plist
+inurl:/supportboard
+intitle:"Index of" "build-an-atom"
+intitle:"IPC CHIP Main Page" "Beck IPC GmbH"
+"NTRIP Caster Table Contents" "This is a SNIP NTRIP Caster"
+Google Dork: intitle:"index of" "/sql" "admin"
+inurl:maps.arcgis.com +"City of"
+inurl:"robots" | "robot" intext:"Disallow:" | "Allow:" ext:txt
+inurl:autodiscover/autodiscover.xml
+intitle:"index of" "robots.txt"
+intitle:"index of" "development.js"
+site:*/etc/passwd inurl"/etc/passwd"
+"index of /" +passwd
+intext:Authorization: Bearer filetype:log
+intitle.index of .env
+intitle:"webcam" "login"
+intitle:index.of root user
+intitle:"Operations Automation Default Page"
+intext:"Powered by YzmCMS"
+site:*/oauth/authorize
+inurl:.html.php:intext:"admin"|intext:"user"|intext:"login":site:".in"
+intitle:"index of" "sourcecode"
+# Exploit Title: [SF Dork]
+inurl:/wp-content/themes/striking_r
+inurl:/wp-content/themes/avada
+inurl:/wp-content/themes/centum
+inurl:/wp-content/themes/ultimatum
+inurl:/wp-content/themes/IncredibleWP
+inurl:/wp-content/plugins/wp-e-commerce
+intitle: "index" inurl: log
+allintitle:Index of /wp-includes/
+intext:private_key filetype:log
+intext:api_key filetype:log
+inurl: /admin/webeditor/admin_login.asp
+intitle:"index of" "/cgi-bin" "admin"
+inurl:sap/public/bc
+intext:"docs.google.com/forms/d/"
+intitle:" index of " "/BigIp"
+intitle:"Dericam" "Remember Me"
+inurl:/admin/public/asdm.jnlp "ASDM on"
+intitle:"index of" "robots.txt"
+intext:"Number of Requests for items accessed on this Server"
+allintext:"[Sec. Info]" file.php
+allintext:"Call to undefined function"
+intitle: "Index of ipcam"
+intitle: "index of data clinic"
+intitle:"index of" "mongod.conf"
+inurl: /admin/login.php intitle: panel admin
+intitle:"index of " inurl:".bash_profile "
+intitle:"index of" "config.json"
+intitle:"index of" "docker-compose.yaml"
+inurl:execute-api site:amazonaws.com
+intitle:index of django.config
+allintext:password filetype:log after:2018
+intitle:"index of" inurl:gov Juicy Info |GHDB
+inurl:admin/reset.php -github
+intitle: "index of Health Records"
+intitle:"index of" "/api-debug.log"
+site:pastebin.com intext:"-----BEGIN CERTIFICATE-----"
+site:pastebin.com intext:"-----BEGIN RSA PRIVATE KEY-----"
+site:pastebin.com intext:":aad3b435b51404eeaad3b435b51404ee:"
+intitle:"index of" "schema.graphql"
+site:.execute-api.us-east-1.amazonaws.com
+inurl:employee filetype:xls
+intext:Provided by ProjectSend
+ext:xls intext:/etc/passwd | inurl:password
+"index of" intext:wpbdp-csv-exports
+inurl:mil intext:"UNCLASSIFIED/FOUO" ext:pdf
+intitle:"index of SCADA"
+filetype:log "AUTHTOKEN"
+intitle:"SPC4300" "ID"
+inurl: "admin-login.php"
+Dork - inurl: "site admin"
+intitle:"index of" "mysql.yaml"
+site:*/oauth/token
+inurl:"/app/kibana#"
+©20 "Copyright Yamaha Corporation Visit"
+intitle:"index of" "sftp.json"
+inurl:simplesaml/saml2/idp
+".:/opt/remi/php56/root/usr/share/pear" | ":/opt/remi/php56/root/usr/share/php"
+"boarding pass" site:http://tripadvisor.com
+intitle:index de sshd_config
+intitle: "index of backup.php"
+intitle: "index of backup.xml"
+Fwd: intitle:"Login" "FLX Web Server"
+intext:"powered by BlueCMS v1.6"
+site:pastebin.com intext:root: & :0: & ::: | intitle:passwd | shadow
+Fwd: intitle:"Codian MCU - Home Page"
+intitle:"Index of" "Apache/2.4.49"
+intitle: "access log" filetype: txt
+inurl:/webmail/src/login.php intext:"SquirrelMail"
+intitle:"index of" "credentials"
+Fwd: intitle:"Zimbra Web Client Sign In" "Synacor"
+site:pastebin.com intitle:"leak" | "breach" intext:"password" | "pw" | "pwd"
+Fwd: intitle:"SPC4300" "ID"
+"Warehouse Management System" Ext:pdf site:.gov
+Fwd: intitle:"Project Insight - Login" "Sign In to Continue" "Shift4 Payments"
+Fwd: intitle:"OS-ZuKon" "SSS Siedle"
+inurl:sap/public/ intext:Logon "Password"
+intitle: "index of" "admin" "/backup"
+intitle: "Library System by YahooBaba"
+intext:"Open Game Panel 2021"
+inurl:/wp-content/plugins/thecartpress/
+inurl:/wp-content/plugins/mstore-api/
+inurl:/plugins/pie-register/
+intitle:" index of "/Invoices*"
+site:"*.com" inurl: admin/index.php
+filetype:log intext:("apache2" | "htdocs")
+intext:"index of/" "client-1.0-SNAPSHOT"
+intitle:"phpinfo()" inurl:"phpinfo.php"
+intitle:"index of" "passwords" gov
+Fwd: intitle:"STEP by STIBO Systems" "Launch STEPworkbench" "Web UI Component Report"
+intitle:"Portal" & (inurl:"login.asp" | inurl:"login.aspx")
+intitle:"Portal" inurl:"login.php"
+New Dork
+intitle:"Index of" inurl:data/plugins/
+Google Dork: intitle:"Index of" "Apache/2.4.50"
+site:*/node_modules/ content:"ssh"
+site:*/node_modules/ content:"PEM"
+"com.sap.itsam.problems.java.systeminfo"
+intitle:"index of" "schema.mysql"
+intitle:"index of" "credentials"
+intitle:"Pi-hole - raspberrypi"
+inurl:"/responsible disclosure"
+intitle:cisco "This is a restricted Access Server"
+intitle:vmware "This is a restricted Access Server"
+inurl:mail intitle:Webmail - Login
+inurl:/admin/login.php intitle: "panel"
+Fwd: intitle:"Heatmiser Wifi Thermostat" "username" -.com
+intitle:"index of" "console"
+intitle:"index of" "logs"
+intitle:"webcamXP 5" inurl:admin.html
+site:*/*.asp
+Fwd: intitle:"MedDream" "Softneta" -.com
+index of / inurl:/pki/
+intext:"index of/" "top secret" gov
+inurl:/servicedesk/customer/user/signup
+inurl:wp-content/plugins/easy-wp-smtp
+Fwd: inurl:"/sslvpn_logon.shtml" intitle:"User Authentication" "WatchGuard Technologies"
+Re: inurl:"/app/kibana#"
+intitle:"Portal" inurl:"login.jsp"
+intitle:"SonicWall Analyzer Login"
+intext:"adobe coldfusion 8"
+intitle:"Issabel login - page"
+intitle:"Juniper Networks Web" "Log In"
+Fwd: intitle:"Support Portal" intext:"Bomgar Corporation. Redistribution Prohibited. All Rights Reserved." "Representatives"
+inurl:"/?page=login"
+inurl:"/?a=login" intext:"login"
+Fwd: intitle:"Authorize application" "Learn more about OAuth"
+Fwd: intitle:"Cloudphysician RADAR"
+filetype:conf intext:"Footer Powered By"
+inurl:/wp-content/plugins/elementor/
+inurl:/wp-content/plugins/wp-filebase/
+intitle:"ADSL Router" inurl:"/login.htm"
+"fluig" "login"
+intitle:"CMS" inurl:"login.php"
+site:*/membership-login/
+intitle:"TYPO3 CMS Login"
+intitle:"Sign in [Jenkins]" inurl:"login?from"
+intitle:"index of" "passwrod*"
+inurl:/designs/imm/index.php
+intitle:"Sophos" inurl:/userportal/webpages/myaccount/login.jsp
+inurl:fgtauth?
+inurl:"app.yaml" intext:"runtime: " ext:yaml
+inurl:/phpldapadmin/cmd.php
+inurl: https://app.zerocopter.com/rd/
+intitle:index.of conf.mysql
+intext:"password" intitle:"index of"
+allintitle:"MeshCentral - Login"
+intitle:"CMS" inurl:"login.jsp"
+intitle:"HRMS" inurl:"login.aspx"
+inurl:"index.php" intitle:"CMS Login"
+inurl:"robots" | "robot" intext:"admin" AND "Disallow" ext:txt
+intitle:"Student" inurl:"login.aspx"
+intitle:"index of" "mongod*"
+intitle:"Microseven M7CAM IP Camera"
+intitle:"Employee Login" & inurl:("login.aspx" | "login.asp")
+intitle:index.of wp.login
+intitle:"Journal" inurl:"login.aspx"
+intext:Project hosted at: For support, contact: Copyright Openbravo
+inurl:/wp-content/plugins/simple-forum/admin/
+intitle:index.of /Snowflake /robots.txt
+intitle:"index of" ".env.example"
+intitle:index of cv site:.com
+site:.bd http intitle: admin
+intitle:"Admin Login" inurl:"login.aspx"
+intext:swagger filetype:log
+intitle:"index of" "server.properties"
+inurl:login/users.pwd
+inurl:"wp-login.php?action=login"
+intitle:"LoRaWAN Login"
+intext: "mailenable" inurl:"/lang/sys/login.aspx"
+intitle:Hikvision login page
+intitle:ip camera login page
+inurl:password site:shodan.io
+Index of /apidoc/api-web/target/classes/
+intitle:"password reset"
+intitle:index.of /CMS /robots.txt
+intitle:"index of" "server.log"
+intitle:"index of" "/backup/sql"
+intitle:TYPO3 CMS Login: New TYPO3 site inurl:/typo3/index.php
+site:pastebin.com intext:username | password | SECRET_KEY
+site:pastebin.com intext:license key | expiration
+site:pastebin.com intext:username | password | secret_key | token
+intitle:index.of /email /robots.txt
+intitle:index.of /cftp /robots.txt
+inurl:"brandmeister page=login"
+allinurl:index.php?page= site:.gov.in
+"inurl:php?id=" site:.gov.bd
+Index of /vendor/spatie/robots-txt
+intitle:"index of" ".private.xml"
+intext:"admin" AND "login" | "sign in" AND "©" AND "rights reserved"
+site:pastebin.com intext:"administrator:500:"
+inurl:/wp-content/uploads/ ext:txt "username" | "user name" | "uname" | "user" | "userid" | "user id" AND "password" | "pass word" | "pwd" | "pw"
+intitle:"index of" ".env"
+"inurl:php?id=" site:.com
+intitle:"index of" ".ppt"
+site:github.com intext:"unattend xmlns" AND "password" ext:xml
+intitle:"index of" "workspace.xml"
+intitle:"index of" "-qpf"
+intitle:"index of" "-ipk"
+intitle:"index of" "Packages.gz"
+intitle:"index of" "mips32el-nf"
+intitle:"I-Portal" inurl:"login.jsp"
+intitle:"index of" ".phpunit.xml"
+intitle:"index of" " .AndroidManifest.xml"
+intitle:"RM Portal"
+intitle:"TOTVS SmartClient HTML - Parâmetros Iniciais"
+intitle:"Index of /" intext:"pass.txt"
+inurl:WS_FTP.log
+intext:"/pfx-password.txt" "[To Parent Directory]"
+intext:"Index of" "email.txt"
+intitle:"Gophish - Login"
+intitle:"index of" "pptx"
+intitle:"index of" "ppt.html"
+intitle:"index of" "slides-ppt"
+intitle:"index of" "-XML.pdf "
+intitle:"index of" "XML "
+intitle:"index of" "XML.Xerces "
+intitle:"index of" "infn.it"
+intitle:"index of" "lngs.infn.it "
+intitle:"index of" "extra"
+intitle:"index of" "extranet"
+intitle:"index of" "fsi"
+intitle:"index of" "oxid-esales"
+intitle:"index of" "wp-content"
+intitle:"index of" "css"
+intitle:"index of" "CD.pdf "
+intitle:"index of" "DOCS-TECH "
+intitle:"index of" " Server-Side "
+intitle:"index of" " py-text"
+intitle:"Kerio Connect Client" inurl:"/webmail/login/"
+Google Dork
+Google Dork
+Google Dork
+intitle:"index of" "htdocs"
+intitle:"index of" " unidecode"
+intitle:"index of" " cldr-data"
+intitle:"index of" " gettext"
+intitle:"index of" " src "
+intitle:"index of" " src.hint"
+intitle:"index of" "tar.xz"
+intitle:"index of" "pkgs"
+intitle:"index of" "ftp.riken
+intitle:"index of" "pub"
+intitle:"index of" "cygwin"
+intitle:"index of" "kde-l10n-de"
+intitle:"index of" "txdot"
+intitle:"index of" "mirror.koddos.net"
+intitle:"index of" "Squid-cache"
+intitle:"index of" "-login.php"
+intitle:"index of" "metin"
+intitle:"index of" "html-en"
+intitle:"index of" "html-intro"
+intitle:"index of" "echo-linux"
+intitle:"index of" "filelist.xml"
+intitle:"index of" "master01"
+intitle:"index of" "master03.xml"
+intitle:"index of" "stylesheet.css"
+intitle:"index of" "pres.xml"
+intext:"password" | "passwd" | "pwd" site:anonfiles.com
+intitle:" - General Status [none]"
+inurl:/carbon/admin/login.jsp
+site:*.example.com inurl:(elmah.axd | errorlog.axd) ext:axd
+inurl:errorlog.axd ext:axd
+intext:"Powered by " inurl:/login
+showing putty logs
+intext:"index of" "uploads"
+inurl:newsdesk.cgi?
+intitle:"index of" "script.js"
+inurl *:8080/login.php
+intitle:"index of" "admin-config"
+intitle:"index of" "admin.login.php"
+intitle:"index of" "admin.login.php"
+intitle:"index of" " wp-mail-smtp"
+intitle:"index of" "/resources"
+intext:"index of" "ftp"
+intext:"password" | "passwd" | "pwd" site:ghostbin.com
+intext:"untitled" intext:"login" filetype:php
+intitle:"index of" "untitled"
+intitle:"index of" "untitled" "wp-content" intext:scanned
+index of :"uploads" "parent" "salary" intext:salary
+index of :wp-config.zip
+intitle:"index of" ".ssh/authorized_keys"
+Intitle:database ext:sql
+intext:"untitled" intext:"password" filetype:php
+index of: "parent directory" "uploads"
+index of: "confidential" "uploads"
+intitle:"webmail Login"
+site:pastebin.com intext:password.txt
+index of: "cache" "uploads"
+index of: "QRcodes" "uploads"
+index of: "contracts" "uploads"
+index of : "phonebook "
+index of : "truecaller" "uploads"
+index of: "license" "upload"
+index of: "certificate" "upload"
+index of: "certificate" "wp-content"
+index of: "application" "upload"
+index of: "application form" "upload"
+index of: "documents" "wp-content"
+intitle:"index of" "_vti_inf.html"
+intitle:"index of" "service.pwd"
+intitle:"index of" "shtml.dll "
+inurl:admin ext:sql
+index of:"password" "wp-content"
+index of: "putty" "uploads"
+site:in inurl:/admin/login
+inurl:gov.in
+intitle:MailEnable inurl:"/Login.aspx"
+inurl:8888 ext:php inurl:login
+inurl:4444 ext:php inurl:login
+inurl:login.net
+index of: "participants" "uploads"
+site:com inurl:/admin/login
+filetype:txt site:gitlab.* "secret" OR "authtoken"
+site:gitlab.* intext:password intext:@gmail.com | @yahoo.com | @hotmail.com
+inurl: */.env
+intitle:"index of" "/.git/config"
+intitle:"index of" "*/ftp.txt"
+intext:"index of" "user-config"
+intitle:"database" "backup" filetype:sql
+intext:"sitemap" filetype:txt
+intext:pass filetype:txt
+inurl:/package.json
+intitle"index of" "username" "password" filetype: xlsx
+intitle:"Index of /logs/" "nginx"
+intext:"index of" "home_page"
+inurl:/mutillidae/ "Toggle Hints"
+intext:"index of" inurl:/etc/
+inurl:wp-content/uploads/wooccm_uploads
+intitle:"index of" "particle.js"
+index of: "invoice" "upload"
+intitle:"index of" Hindi movies
+intext:"index of" "wp-uploads"
+intext:"index of" "signin"
+site:.edu.in inurl:login.aspx
+site:.edu.in inurl:login.aspx
+index of: "marksheet" "upload"
+intext:"untitled" intext:"admin" filetype:php
+site:gov.in inurl:/admin/login
+inurl:gov.uk
+inurl:80 ext:php inurl:login
+intext:"Index of" intext:"password.zip"
+intext:"Index of" intext:"users.zip"
+intext:"Index of" "services.php | pass.php | passwd.php | credentials.txt"
+intitle:"index of" "dhcp"
+index of:"blog" "upload"
+inurl:cache/uploads
+intitle:"index of" "Apache/2.4.41 (Ubuntu) Server"
+index of:"customer/login"
+site:pastebin.com intext:pass.txt
+index of:"seller/login"
+site:*.in inurl: admin login
+inurl:gov.in & (intitle:login | intitle:signin)
+inurl:gov.in & inurl:wp-admin
+inurl:/commodities.php?id=
+{intitle: indexof/.git }
+intitle:"webcamXP" inurl:8080
+site:*.gov.in inurl:login.jsp
+site:gov.hk intitle:index of /
+inurl:pastebin "AWS_ACCESS_KEY"
+site:*/forgotpassword.php
+site:.edu.in inurl:login.php
+site:.edu intitle:"index of"
+site:.edu inurl:login "Admin"
+site:pastebin.com "*@gmail.com password"
+site:.edu inurl:search
+intitle:"Index of" "DCIM/camera"
+intitle:"Index of" "Screenshot"
+intitle:"Index of" "system32"
+intitle:"Index of" "Program files"
+intitle:"Index of" *.py
+intitle:"index of" "certificates"
+intitle:"index of" "/.cpanel"
+"index of" :excel documents
+intitle:"index of" :mobile number
+intitle:"index of" "node.js"
+intext:"Index of" intext:"config.zip"
+inurl: conf/fastcgi.conf
+inurl:conf/nginx.conf
+site:com intitle:"index of" .env
+inurl:gov.uk & inurl:wp-admin
+intitle:"Index of" *.xlsx
+site:smtp3.*.*/login
+intitle:"Index of" site:.in
+inurl:pastebin "SHODAN_API_KEY"
+inurl:*gov intitle:"index of/documents"
+inurl:.php?=*php site:.nic.in
+intitle:"index of" "/students"
+site:com "rfp" filetype:pdf
+site:.edu intext:"index of" "logs"
+intext:"Index of /chatlogs"
+inurl:pastebin "CVV"
+site: com intext " organisation data" filetype:xls
+intitle:"index of" "default.asp "
+intitle:"index of" " fileadmin "
+intitle:"index of" " YaBB.pl "
+intitle:"index of" " htsearch "
+intitle:"index of" " glimpse "
+intitle:"index of" " webdriver "
+intitle:"index of" " index.php.bak "
+intitle:"index of" " sendmail.inc "
+intitle:"index of" " login.jsp "
+intitle:"index of" " mod_auth_mysql "
+intitle:"index of" "test.bat "
+intitle:"index of" "msadcs.dll "
+intitle:"index of" "browser.inc "
+intitle:"index of" "hello.bat "
+intitle:"index of" "dvwssr.dll "
+intitle:"index of" Servlet"
+intitle:"index of" upload.asp "
+inurl:product-list.php?id=
+site:pastebin.com "password"
+inurl:pastebin "API_KEY"
+inurl:pastebin "Windows 10 Product Keys*"
+inurl:login.php site:.in
+intitle:"index of" "data*"
+intitle:"index of" "document*.pdf"
+inurl:linkedin.com "view my resume" facebook
+intitle.index of .log
+inurl:*gov intitle:"index of" "docker-compose"
+intitle:"index of" "sysinfo"
+intitle.index of .exe
+intitle.index of API*.txt
+intitle:"index of" site:gov.np
+intitle:"Login" intext:"camera"
+intitle:"index of" "*.mp4"
+intitle:"index of" "admin*.txt"
+site:.nic.in inurl:.php?id=
+inurl:.org intitle index.of "inflation"
+site:*/admin-portal/
+intitle:"index of" site:gov.ru
+intitle:"index of" site:gov.gr
+site:.in | .com | .net intitle:"index of" ftp
+inurl:forgotpassword.php
+intitle:"index of" site:gov.*
+intitle:"index of" "/public_html"
+inurl:node_modules/ua-parser-js
+intitle:"index of" "/public/js"
+site:drive.google.com "*.pdf"
+intitle:"index of "/key/" "key.txt"
+intitle:"index of" "/products"
+inurl:adm/login.jsp.bak
+intitle:"index of" "*.pl"
+intitle:"index of" "*.phtml"
+inurl:console/login.jsp
+intitle:"index of" "*.php"
+site:mail.* intitle:Dashboard
+inurl:EMSWebClient/
+intitle:"index of" "/mysql"
+site:*.ng intitle:index of
+inurl admin login php gov.in
+site:*.edu.in intitle:index of
+site:*.in inurl:jira login
+site:*.gov.au inurl:wp-admin
+inurl:*gov intitle:"index of" "docker-compose"
+inurl:pastebin "SHODAN_API_KEY"
+inurl:*gov intitle:"index of/documents"
+Fwd: intitle:"Schneider Electric Telecontrol - Industrial Web Control" intext:"Xflow "
+intitle"index of" "php"
+intitle:"index of" site:gov.in
+site:*.github.io intext:cheatsheet+offensive+pentesting
+intitle:"index of" "admin.js"
+inurl:gov.in & inurl:admin
+site:pastebin.com "admin password"
+intitle:"index of" "wp-inc"
+inurl *:8443/login.jsp
+allintext"account number"
+site:controlc.com intext:"password"
+site:rentry.co intext:"password"
+site:.edu intext:"index of" "payroll"
+intitle:"index of" "*.yaml"
+site:*.se intitle:"index of"
+site:*.id intitle:"index of" "screenshot*.jpg"
+intitle:"index of" "*.vcf"
+intitle:"index of" "apache.log" | "apache.logs"
+intext:"Real-time IP Camera Monitoring System" intext:"ActiveX Mode (For IE Browser)"
+intitle:"Login" intext:"cam"
+intitle:"Secure Access Service" inurl:"/dana-na/auth/url_default/welcome.cgi"
+inurl:"*admin | login" | inurl:.php | .asp
+intitle:"Teltonika -Web UI" | intitle:"Teltonika-RUT -Web UI" inurl:"/cgi-bin/luci"
+inurl:admin filetype:txt
+inurl:/admin/login.php intitle:("Iniciar sesion" OR "Login")
+intitle:"MODBUS TCP RS485 Converter" intext:"Module Name: MMTCPBCONV" "powered by Atmel ARM."
+inurl:admin filetype:xls site:gov.in
+site:pastebin.com intitle:"cpanel"
+inurl:/intranet/login.php
+intitle:index of settings.py
+site:postman.com + keyword
+inurl:admin filetype:xlsx site:gov.*
+db_password filetype:env
+inurl: /wp-content/uploads/ inurl:"robots.txt" "Disallow:" filetype:txt
+inurl:admin filetype:xls
+site:gov.* intitle:"index of" *.apk
+site:gov.* intitle:"index of" *.csv
+Fwd: intitle:"Index of /" intext:"resource/"
+Google to wordpress
+Fwd: intitle:"atvise - next generation"
+site:papaly.com + keyword

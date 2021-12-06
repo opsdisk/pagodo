@@ -184,3 +184,20 @@ intitle:"Welcome to WildFly" intext:"Administration Console"
 intitle:"Index of" site:.gov intext:"Server at"
 intitle:"Welcome" intext:"LiteSpeed Technologies, Inc. All Rights Reserved."
 intitle:"web server login" intext:"site ip"
+inurl: /ftp intitle:"office"
+intitle:"STEP by STIBO Systems" "Launch STEPworkbench" "Web UI Component Report"
+intitle:"nPerfServer"
+intitle:"Domain Default page" "Parallels IP Holdings GmbH"
+intitle:"index of" "/homedir/etc/"
+intitle:"index of" AND inurl:magento AND inurl:/dev
+"Wowza Streaming Engine 4 Developer Edition"
+intitle:"index of" site:.gov.in
+intitle:"WATASHI SERVICE"
+intitle:"Success!" intext:"Your new web server is ready to use."
+intitle:"Welcome to OpenResty!"
+intitle:"Shoutcast server" inurl:"/index.html" "SHOUTcast Server"
+"NTRIP Caster Table Contents" "This is a SNIP NTRIP Caster"
+inurl:"/app/kibana#"
+Fwd: intitle:"STEP by STIBO Systems" "Launch STEPworkbench" "Web UI Component Report"
+site:*/*.asp
+inurl *:8080/login.php

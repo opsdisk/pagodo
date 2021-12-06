@@ -933,7 +933,7 @@ inurl:resetpassword.do
 inurl:"/index.php?route=account/forgotten"
 inurl:emplogin.aspx
 inurl:"passwordreset.asp"
-Google Dork
+inurl:admlogin.asp
 site:*/auth.html intitle:login
 inurl:"forgotpassword.php"
 inurl:emplogin.html
@@ -1241,3 +1241,194 @@ Dork:- intitle:*admin (inurl:login)
 site:*/JIRA/login
 site:gov.in intitle: admin login
 inurl:login.php site:.nl
+intitle:"NetBiter" intext:"based on NetBiter" -.com
+site:login.microsoftonline.com -error
+inurl "/admin/index.php" username=admin&password=password
+inurl:/about site:*.in
+inurl:/login site:.in
+inurl:"/userportal/webpages/myaccount/login.jsp"
+inurl /admin/login.php intitle panel admin
+site:*/admin.php inurl:files
+intitle:"TD-W9970" intext:"Model No. TD-W9970" -tp-link.com
+inurl:login/forgotten
+intitle:"Users" intext:"Read License" intext:"vtiger.com"
+intext:"Please enter the device's administrator password"
+intitle:"Router Access" inurl:Router_Login.asp
+intitle:"IP CAMERA" "User Login" "User Name" "Password" "Preview Stream"
+site:".edu" intitle:"admin login"
+Inurl:login.rsp "User name"
+intitle:"fdt" intext:"Remember me" "Username"
+site:".uk" intitle:"admin login"
+intext:"Welcome to ZXHN H198A"
+site:".ae" intitle:"admin login"
+site:".au" intitle:"admin login"
+"Desktop" "Simple" "Responsive" intitle:"Controllr"
+/inurl:upload site:doxbin.org ~password
+cms +inurl:login +site:"gov.in"
+intitle:"WATTrouter" "SYSTEM WEB INTERFACE"
+inurl:("administrator/login.aspx" OR "admin/login.aspx") +site:.com
+intext:"Atlassian Jira Project Management Software" Jira login
+intext:"Admin Login" inurl:"/login.aspx"
+intitle:"Gitea" "This website works better with JavaScript" "sign in" " Home" "Explore"-.com
+intitle:"F660" intext:"ZTE Corporation. All rightsreserved."
+intitle:"MultiView" "MultiView Events" "MOBOTIX"
+inurl:login intext:"Powered by Plone & Python" -plone.org
+inurl:"/bitrix/admin/" intitle:"Autorisation"
+inurl /admin/login intitle panel admin site:"*.in"
+intitle:"admin panel" OR intitle:"request password" intext:"email address"
+intitle:"admin login" site:.gov
+intitle:"faculty login"
+site:wiki.*.com inurl:login.action
+inurl:login_fail.asp
+"Welcome to Polycom Web Configuration Utility" "Login as" "Password"
+intitle:"MedDream" "Softneta" -.com
+intitle:"TestRail" inurl:"/index.php?/auth/login/"
+"Username" "Password" "This system is for authorized use only." intitle:"Gaia"
+inurl:("admin/password.php") +site:.com
+intitle:"admin login" site:.gov
+intitle:"faculty login"
+cms inurl:login site:"gov.ae"
+site:.com inurl:("administrator/login.php" OR "admin/login.php")
+intitle:"D-link" intext:"SharePort Web Access" "Hardware Version" "Firmware Version"
+inurl:destination=portals
+Pages Containing Login Portals
+site:pastebin.com intext:"password" | intitle:"password"
+intitle:"Zimbra Web Client Sign In" "Synacor"
+intitle:"login" "Clare Controls LLC"
+site:".om" intitle:"login"
+intitle:"admin login" site:.net
+intitle:"admin login" site:.org
+intitle:"Login - splunk"
+intitle:"oracle login" site:.gov
+inurl:employee-login.html
+inurl:login intext:" fiesta login"
+intitle:"admin login" site:.in
+" Stanford CoreNLP " "Visualisation provided using the brat visualisation"
+Google Dork: inurl:"admin/login" site:".gov.in"
+site:*/admin.php inurl:admin
+intext:Provided by ProjectSend
+intitle|inurl:"SCADA login"
+allinurl:logon.html CSCOE
+companies' service login Login Portal
+intitle:"Intelbras" "All Rights Reserved" -.com
+intitle|inurl::"IoT login"
+inurl: login.http
+inurl:/admin/AdminLogin.jsp intitle:"CERGY - Administration"
+intitle:"Codian MCU - login" "Copyright TANDBERG"
+intitle:"admin login" site:.gov.in
+intitle:administration intext:"portail" "Login"
+inurl:login.rsp "User name"
+inurl:saml2/login
+inurl:"profile/login"
+intitle:"Welcome" intext:"Login"
+intext:"Infinitium Copyrights Reserved"
+site:*/etc/passwd inurl"/etc/passwd"
+intitle:"webcam" "login"
+site:*/oauth/authorize
+inurl:.html.php:intext:"admin"|intext:"user"|intext:"login":site:".in"
+intitle:"Dericam" "Remember Me"
+inurl: /admin/login.php intitle: panel admin
+inurl:admin/reset.php -github
+intext:Provided by ProjectSend
+inurl: "admin-login.php"
+Dork - inurl: "site admin"
+Fwd: intitle:"Login" "FLX Web Server"
+inurl:/webmail/src/login.php intext:"SquirrelMail"
+Fwd: intitle:"Zimbra Web Client Sign In" "Synacor"
+Fwd: intitle:"Project Insight - Login" "Sign In to Continue" "Shift4 Payments"
+inurl:sap/public/ intext:Logon "Password"
+intext:"Open Game Panel 2021"
+site:"*.com" inurl: admin/index.php
+intitle:"Portal" & (inurl:"login.asp" | inurl:"login.aspx")
+intitle:"Portal" inurl:"login.php"
+"com.sap.itsam.problems.java.systeminfo"
+intitle:cisco "This is a restricted Access Server"
+intitle:vmware "This is a restricted Access Server"
+inurl:mail intitle:Webmail - Login
+inurl:/admin/login.php intitle: "panel"
+Fwd: intitle:"MedDream" "Softneta" -.com
+Fwd: inurl:"/sslvpn_logon.shtml" intitle:"User Authentication" "WatchGuard Technologies"
+intitle:"Portal" inurl:"login.jsp"
+intitle:"SonicWall Analyzer Login"
+intitle:"Issabel login - page"
+intitle:"Juniper Networks Web" "Log In"
+Fwd: intitle:"Support Portal" intext:"Bomgar Corporation. Redistribution Prohibited. All Rights Reserved." "Representatives"
+inurl:"/?page=login"
+inurl:"/?a=login" intext:"login"
+Fwd: intitle:"Cloudphysician RADAR"
+filetype:conf intext:"Footer Powered By"
+"fluig" "login"
+intitle:"CMS" inurl:"login.php"
+site:*/membership-login/
+intitle:"TYPO3 CMS Login"
+intitle:"Sign in [Jenkins]" inurl:"login?from"
+inurl:/designs/imm/index.php
+intitle:"Sophos" inurl:/userportal/webpages/myaccount/login.jsp
+inurl:fgtauth?
+inurl:/phpldapadmin/cmd.php
+allintitle:"MeshCentral - Login"
+intitle:"CMS" inurl:"login.jsp"
+intitle:"HRMS" inurl:"login.aspx"
+inurl:"index.php" intitle:"CMS Login"
+intitle:"Student" inurl:"login.aspx"
+intitle:"Employee Login" & inurl:("login.aspx" | "login.asp")
+intitle:"Journal" inurl:"login.aspx"
+intext:Project hosted at: For support, contact: Copyright Openbravo
+site:.bd http intitle: admin
+intitle:"Admin Login" inurl:"login.aspx"
+inurl:login/users.pwd
+inurl:"wp-login.php?action=login"
+intitle:"LoRaWAN Login"
+intext: "mailenable" inurl:"/lang/sys/login.aspx"
+intitle:Hikvision login page
+intitle:ip camera login page
+intitle:TYPO3 CMS Login: New TYPO3 site inurl:/typo3/index.php
+inurl:"brandmeister page=login"
+intext:"admin" AND "login" | "sign in" AND "©" AND "rights reserved"
+intitle:"I-Portal" inurl:"login.jsp"
+intitle:"RM Portal"
+intitle:"TOTVS SmartClient HTML - Parâmetros Iniciais"
+intitle:"Gophish - Login"
+intitle:"Kerio Connect Client" inurl:"/webmail/login/"
+inurl:/carbon/admin/login.jsp
+intext:"Powered by " inurl:/login
+inurl:newsdesk.cgi?
+intext:"untitled" intext:"login" filetype:php
+intext:"untitled" intext:"password" filetype:php
+intitle:"webmail Login"
+site:in inurl:/admin/login
+inurl:gov.in
+intitle:MailEnable inurl:"/Login.aspx"
+inurl:8888 ext:php inurl:login
+inurl:4444 ext:php inurl:login
+inurl:login.net
+site:com inurl:/admin/login
+site:.edu.in inurl:login.aspx
+site:.edu.in inurl:login.aspx
+intext:"untitled" intext:"admin" filetype:php
+site:gov.in inurl:/admin/login
+inurl:80 ext:php inurl:login
+index of:"customer/login"
+index of:"seller/login"
+site:*.in inurl: admin login
+inurl:gov.in & (intitle:login | intitle:signin)
+inurl:gov.in & inurl:wp-admin
+site:*.gov.in inurl:login.jsp
+site:.edu.in inurl:login.php
+site:.edu inurl:login "Admin"
+inurl:gov.uk & inurl:wp-admin
+site:smtp3.*.*/login
+inurl:login.php site:.in
+intitle:"Login" intext:"camera"
+inurl:console/login.jsp
+inurl:EMSWebClient/
+inurl admin login php gov.in
+site:*.in inurl:jira login
+site:*.gov.au inurl:wp-admin
+Fwd: intitle:"Schneider Electric Telecontrol - Industrial Web Control" intext:"Xflow "
+inurl *:8443/login.jsp
+intitle:"Login" intext:"cam"
+inurl:"*admin | login" | inurl:.php | .asp
+intitle:"Teltonika -Web UI" | intitle:"Teltonika-RUT -Web UI" inurl:"/cgi-bin/luci"
+inurl:/admin/login.php intitle:("Iniciar sesion" OR "Login")
+inurl:/intranet/login.php
