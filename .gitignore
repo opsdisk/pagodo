@@ -1,5 +1,5 @@
-.venv/
-__pycache__/
 *.log
-pagodo_results*.txt
 pagodo_results*.json
+pagodo_results*.txt
+__pycache__/
+.venv/

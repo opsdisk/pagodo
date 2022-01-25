@@ -7337,3 +7337,5 @@ Fwd: intitle:"Index of /" intext:"resource/"
 Google to wordpress
 Fwd: intitle:"atvise - next generation"
 site:papaly.com + keyword
+inurl:adminpanel site:gov.*
+site:vps-*.vps.ovh.net

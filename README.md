@@ -211,7 +211,7 @@ which will increase the amount of time to complete.
 
 ## Google is blocking me!
 
-Performing 6500+ search requests to Google as fast as possible will simply not work.  Google will rightfully detect it
+Performing 7300+ search requests to Google as fast as possible will simply not work.  Google will rightfully detect it
 as a bot and block your IP for a set period of time.  One solution is to use a bank of HTTP(S)/SOCKS proxies and pass
 them to `pagodo`
 

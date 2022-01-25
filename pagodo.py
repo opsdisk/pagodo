@@ -16,7 +16,7 @@ import yagooglesearch
 
 # Custom Python libraries.
 
-__version__ = "2.2.0"
+__version__ = "2.2.1"
 
 # Logging
 ROOT_LOGGER = logging.getLogger("pagodo")
