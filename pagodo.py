@@ -79,7 +79,7 @@ class Pagodo:
         # All passed paramters look good, assign to the class object.
         self.google_dorks_file = google_dorks_file
         self.google_dorks = []
-        with open(google_dorks_file, "r") as fh:
+        with open(google_dorks_file, "r", encoding="utf-8") as fh:
             for line in fh.read().splitlines():
                 if line.strip():
                     self.google_dorks.append(line)
@@ -254,6 +254,10 @@ class Pagodo:
                     }
                     # fmt: on
 
+                    if self.save_pagodo_results_to_json_file != "":
+                        with open(self.save_pagodo_results_to_json_file, "w") as fh:
+                            json.dump(self.pagodo_results_dict, fh, indent=4)
+
                 # No Google dork results found.
                 else:
                     ROOT_LOGGER.info(f"Results: {dork_urls_list_size} URLs found for Google dork: {dork}")
@@ -287,11 +291,6 @@ class Pagodo:
 
         ROOT_LOGGER.info(f"Completion timestamp: {completion_timestamp}")
         self.pagodo_results_dict["completion_timestamp"] = completion_timestamp
-
-        # Save pagodo_results_dict to a .json file.
-        if self.save_pagodo_results_to_json_file:
-            with open(f"{self.base_file_name}.json", "w") as fh:
-                json.dump(self.pagodo_results_dict, fh, indent=4)
 
         return self.pagodo_results_dict
 
