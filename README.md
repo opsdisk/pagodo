@@ -209,6 +209,16 @@ between each different Google dork search.
 results at a time, so if you pick `-m 500`, 5 separate search queries will have to be made for each Google dork search,
 which will increase the amount of time to complete.
 
+### Save output
+`-o` - Save output to a json file specified by path. Every time a Google search is performed, the output of that search 
+will be added to the output json file so that you can have a realtime sense of progress.
+
+`-s` - Same as above, but the output is saved in a simple txt format.
+
+```bash
+python pagodo.py -g dorks/all_google_dorks.txt -s ~/pagodo/results.txt -o ~/some_folder/pagodo_results.json
+```
+
 ## Google is blocking me!
 
 Performing 7300+ search requests to Google as fast as possible will simply not work.  Google will rightfully detect it
@@ -260,7 +270,7 @@ Throw `proxychains4` in front of the `pagodo.py` script and each *request* looku
 thus source from a different IP).
 
 ```bash
-proxychains4 python pagodo.py -g dorks/all_google_dorks.txt -o -s
+proxychains4 python pagodo.py -g dorks/all_google_dorks.txt
 ```
 
 Note that this may not appear natural to Google if you:
