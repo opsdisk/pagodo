@@ -42,9 +42,9 @@ class Pagodo:
         google_dorks_file,
         domain="",
         max_search_result_urls_to_return_per_dork=100,
-        save_pagodo_results_to_json_file=False,
+        save_pagodo_results_to_json_file="",
         proxies="",
-        save_urls_to_file=False,
+        save_urls_to_file="",
         minimum_delay_between_dork_searches_in_seconds=37,
         maximum_delay_between_dork_searches_in_seconds=60,
         disable_verify_ssl=False,
@@ -240,8 +240,8 @@ class Pagodo:
                     self.total_urls_found += dork_urls_list_size
 
                     # Save URLs with valid results to an .txt file.
-                    if self.save_urls_to_file:
-                        with open(f"{self.base_file_name}.txt", "a") as fh:
+                    if self.save_urls_to_file != "":
+                        with open(self.save_urls_to_file, "a") as fh:
                             fh.write(f"# {dork}\n")
                             for url in dork_urls_list:
                                 fh.write(f"{url}\n")
@@ -361,9 +361,10 @@ if __name__ == "__main__":
     parser.add_argument(
         "-o",
         dest="save_pagodo_results_to_json_file",
-        action="store_true",
+        action="store",
         required=False,
-        default=False,
+        type=str,
+        default="",
         help=(
             "Save JSON dictionary to pagodo_results_<TIMESTAMP>.json file.  Contains more information than "
             "pagodo_results_<TIMESTAMP>.txt"
@@ -372,9 +373,10 @@ if __name__ == "__main__":
     parser.add_argument(
         "-s",
         dest="save_urls_to_file",
-        action="store_true",
+        action="store",
         required=False,
-        default=False,
+        type=str,
+        default="",
         help="Save any URLS found for a dork to the pagodo_results_<TIMESTAMP>.txt file.",
     )
     parser.add_argument(
