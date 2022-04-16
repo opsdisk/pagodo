@@ -16,7 +16,7 @@ import yagooglesearch
 
 # Custom Python libraries.
 
-__version__ = "2.2.1"
+__version__ = "2.3.1"
 
 # Logging
 ROOT_LOGGER = logging.getLogger("pagodo")
@@ -42,9 +42,9 @@ class Pagodo:
         google_dorks_file,
         domain="",
         max_search_result_urls_to_return_per_dork=100,
-        save_pagodo_results_to_json_file="",
+        save_pagodo_results_to_json_file=None,  # None = Auto-generate file name, otherwise pass a string for path and filename.
         proxies="",
-        save_urls_to_file="",
+        save_urls_to_file=None,  # None = Auto-generate file name, otherwise pass a string for path and filename.
         minimum_delay_between_dork_searches_in_seconds=37,
         maximum_delay_between_dork_searches_in_seconds=60,
         disable_verify_ssl=False,
@@ -122,6 +122,15 @@ class Pagodo:
         self.total_urls_found = 0
         self.proxy_rotation_index = 0
 
+        # -o with no filename.  Desire to save results, don't care about the file name.
+        if self.save_pagodo_results_to_json_file is None:
+            self.save_pagodo_results_to_json_file = f"{self.base_file_name}.json"
+
+        # -s with no filename.  Desire to save results, don't care about the file name.
+        if self.save_urls_to_file is None:
+            self.save_urls_to_file = f"{self.base_file_name}.txt"
+
+        import ipdb;ipdb.set_trace()
         # Assign log level.
         ROOT_LOGGER.setLevel((6 - self.verbosity) * 10)
 
@@ -146,13 +155,10 @@ class Pagodo:
 
         for dork in self.google_dorks:
 
-            # fmt: off
             self.pagodo_results_dict["dorks"][dork] = {
                 "urls_size": 0,
                 "urls": [],
-
             }
-            # fmt: on
 
             try:
                 dork = dork.strip()
@@ -240,23 +246,17 @@ class Pagodo:
                     self.total_urls_found += dork_urls_list_size
 
                     # Save URLs with valid results to an .txt file.
-                    if self.save_urls_to_file != "":
+                    if self.save_urls_to_file:
                         with open(self.save_urls_to_file, "a") as fh:
                             fh.write(f"# {dork}\n")
                             for url in dork_urls_list:
                                 fh.write(f"{url}\n")
                             fh.write("#" * 50 + "\n")
 
-                    # fmt: off
                     self.pagodo_results_dict["dorks"][dork] = {
                         "urls_size": dork_urls_list_size,
                         "urls": dork_urls_list,
                     }
-                    # fmt: on
-
-                    if self.save_pagodo_results_to_json_file != "":
-                        with open(self.save_pagodo_results_to_json_file, "w") as fh:
-                            json.dump(self.pagodo_results_dict, fh, indent=4)
 
                 # No Google dork results found.
                 else:
@@ -292,12 +292,29 @@ class Pagodo:
         ROOT_LOGGER.info(f"Completion timestamp: {completion_timestamp}")
         self.pagodo_results_dict["completion_timestamp"] = completion_timestamp
 
+        # Save pagodo_results_dict to a .json file.
+        if self.save_pagodo_results_to_json_file:
+            with open(self.save_pagodo_results_to_json_file, "w") as fh:
+                json.dump(self.pagodo_results_dict, fh, indent=4)
+
         return self.pagodo_results_dict
+
+
+# http://stackoverflow.com/questions/3853722/python-argparse-how-to-insert-newline-in-the-help-text
+class SmartFormatter(argparse.HelpFormatter):
+    def _split_lines(self, text, width):
+        if text.startswith("R|"):
+            return text[2:].splitlines()
+        # This is the RawTextHelpFormatter._split_lines
+        return argparse.HelpFormatter._split_lines(self, text, width)
 
 
 if __name__ == "__main__":
 
-    parser = argparse.ArgumentParser(description=f"pagodo - Passive Google Dork v{__version__}")
+    parser = argparse.ArgumentParser(
+        description=f"pagodo - Passive Google Dork v{__version__}",
+        formatter_class=SmartFormatter,
+    )
     parser.add_argument(
         "-g", dest="google_dorks_file", action="store", required=True, help="File containing Google dorks, 1 per line."
     )
@@ -359,24 +376,27 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "-o",
+        nargs="?",
+        metavar="JSON_FILE",
         dest="save_pagodo_results_to_json_file",
         action="store",
-        required=False,
-        type=str,
-        default="",
-        help=(
-            "Save JSON dictionary to pagodo_results_<TIMESTAMP>.json file.  Contains more information than "
-            "pagodo_results_<TIMESTAMP>.txt"
-        ),
+        default=False,
+        help="R|Save URL dork data to a JSON file.  Contains more information than .txt version\n"
+        "no -o = Do not save dork data to a JSON file\n"
+        "-o = Save dork data to pagodo_results_<TIMESTAMP>.json\n"
+        "-o JSON_FILE = Save dork data to JSON_FILE",
     )
     parser.add_argument(
         "-s",
+        nargs="?",
+        metavar="URL_FILE",
         dest="save_urls_to_file",
         action="store",
-        required=False,
-        type=str,
-        default="",
-        help="Save any URLS found for a dork to the pagodo_results_<TIMESTAMP>.txt file.",
+        default=False,
+        help="R|Save URL dork data to a text file.\n"
+        "no -s = Do not save dork data to a file\n"
+        "-s = Save dork data to pagodo_results_<TIMESTAMP>.txt\n"
+        "-s URL_FILE = Save dork data to URL_FILE",
     )
     parser.add_argument(
         "-v",
