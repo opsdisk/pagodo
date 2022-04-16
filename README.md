@@ -9,9 +9,9 @@ There are 2 parts.  The first is `ghdb_scraper.py` that retrieves the latest Goo
 `pagodo.py` that leverages the information gathered by `ghdb_scraper.py`.
 
 The core Google search library now uses the more flexible [yagooglesearch](https://github.com/opsdisk/yagooglesearch)
-instead of [googlesearch](https://github.com/MarioVilas/googlesearch).  Check out the
-[yagooglesearch README](https://github.com/opsdisk/yagooglesearch/blob/master/README.md) for a more in-depth explanation
-of the library differences and capabilities.
+instead of [googlesearch](https://github.com/MarioVilas/googlesearch).  Check out the [yagooglesearch
+README](https://github.com/opsdisk/yagooglesearch/blob/master/README.md) for a more in-depth explanation of the library
+differences and capabilities.
 
 This version of `pagodo` also supports native HTTP(S) and SOCKS5 application support, so no more wrapping it in a tool
 like `proxychains4` if you need proxy support.  You can specify multiple proxies to use in a round-robin fashion by
@@ -53,9 +53,9 @@ pip install -r requirements.txt
 
 ## ghdb_scraper.py
 
-To start off, `pagodo.py` needs a list of all the current Google dorks.  The repo contains a `dorks/` directory with
-the current dorks when the `ghdb_scraper.py` was last run. It's advised to run `ghdb_scraper.py` to get the freshest
-data before running `pagodo.py`.  The `dorks/` directory contains:
+To start off, `pagodo.py` needs a list of all the current Google dorks.  The repo contains a `dorks/` directory with the
+current dorks when the `ghdb_scraper.py` was last run. It's advised to run `ghdb_scraper.py` to get the freshest data
+before running `pagodo.py`.  The `dorks/` directory contains:
 
 * the `all_google_dorks.txt` file which contains all the Google dorks, one per line
 * the `all_google_dorks.json` file which is the JSON response from GHDB
@@ -165,8 +165,8 @@ pg = pagodo.Pagodo(
     google_dorks_file="dorks.txt",
     domain="github.com",
     max_search_result_urls_to_return_per_dork=3,
-    save_pagodo_results_to_json_file=True,
-    save_urls_to_file=True,
+    save_pagodo_results_to_json_file=None,  # None = Auto-generate file name, otherwise pass a string for path and filename.
+    save_urls_to_file=None,  # None = Auto-generate file name, otherwise pass a string for path and filename.
     verbosity=5,
 )
 pagodo_results_dict = pg.go()
@@ -209,15 +209,13 @@ between each different Google dork search.
 results at a time, so if you pick `-m 500`, 5 separate search queries will have to be made for each Google dork search,
 which will increase the amount of time to complete.
 
-### Save output
-`-o` - Save output to a json file specified by path. Every time a Google search is performed, the output of that search 
-will be added to the output json file so that you can have a realtime sense of progress.
+### Save Output
 
-`-s` - Same as above, but the output is saved in a simple txt format.
+`-o [optional/path/to/results.json]` - Save output to a JSON file.  If you do not specify a filename, a datetimestamped
+one will be generated.
 
-```bash
-python pagodo.py -g dorks/all_google_dorks.txt -s ~/pagodo/results.txt -o ~/some_folder/pagodo_results.json
-```
+`-s [optional/path/to/results.txt]` - Save URLs to a text file.  If you do not specify a filename, a datetimestamped one
+will be generated.
 
 ## Google is blocking me!
 
@@ -270,7 +268,7 @@ Throw `proxychains4` in front of the `pagodo.py` script and each *request* looku
 thus source from a different IP).
 
 ```bash
-proxychains4 python pagodo.py -g dorks/all_google_dorks.txt
+proxychains4 python pagodo.py -g dorks/all_google_dorks.txt -o [optional/path/to/results.json] -s [optional/path/to/results.txt]
 ```
 
 Note that this may not appear natural to Google if you:
