@@ -130,7 +130,6 @@ class Pagodo:
         if self.save_urls_to_file is None:
             self.save_urls_to_file = f"{self.base_file_name}.txt"
 
-        import ipdb;ipdb.set_trace()
         # Assign log level.
         ROOT_LOGGER.setLevel((6 - self.verbosity) * 10)
 
