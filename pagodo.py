@@ -91,17 +91,18 @@ class Pagodo:
     """Pagodo class object"""
 
     def __init__(
-        self,
-        google_dorks_file,
-        domain="",
-        max_search_result_urls_to_return_per_dork=100,
-        save_pagodo_results_to_json_file=None,  # None = Auto-generate file name, otherwise pass a string for path and filename.
-        proxies="",
-        save_urls_to_file=None,  # None = Auto-generate file name, otherwise pass a string for path and filename.
-        minimum_delay_between_dork_searches_in_seconds=37,
-        maximum_delay_between_dork_searches_in_seconds=60,
-        disable_verify_ssl=False,
-        verbosity=4,
+            self,
+            google_dorks_file,
+            domain="",
+            max_search_result_urls_to_return_per_dork=100,
+            save_pagodo_results_to_json_file=None,  # None = Auto-generate file name, otherwise pass a string for path and filename.
+            proxies="",
+            save_urls_to_file=None,  # None = Auto-generate file name, otherwise pass a string for path and filename.
+            minimum_delay_between_dork_searches_in_seconds=37,
+            maximum_delay_between_dork_searches_in_seconds=60,
+            disable_verify_ssl=False,
+            verbosity=4,
+            divide_waittime_by_proxies=False,
     ):
         """Initialize Pagodo class object."""
 
@@ -457,6 +458,15 @@ if __name__ == "__main__":
         type=int,
         default=4,
         help="Verbosity level (0=NOTSET, 1=CRITICAL, 2=ERROR, 3=WARNING, 4=INFO, 5=DEBUG).  Default: 4",
+    )
+    parser.add_argument(
+        "-w",
+        nargs="?",
+        metavar="",
+        dest="divide_waittime_by_proxies",
+        action="store",
+        default=False,
+        help="Divide the wait time between requests by the number of proxies that have not been blocked."
     )
 
     args = parser.parse_args()
