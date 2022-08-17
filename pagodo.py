@@ -34,6 +34,59 @@ console_handler.setFormatter(LOG_FORMATTER)
 ROOT_LOGGER.addHandler(console_handler)
 
 
+def set_next_non_timeout_proxy(proxy_timeouts: dict, proxy_rotation_index: int, proxy: str,
+                               proxies: list,
+                               proxy_index: int, client: yagooglesearch.SearchClient):
+    timeout_counter = 0
+    # If all proxies have been blocked run yagoogle with automated 429 handling
+    if proxy_timeouts[proxy]:
+        if proxy_timeouts[proxy] > datetime.datetime.now():
+            # Skipping proxy because it was bad less than an hour ago
+            while proxy_timeouts[proxy] > datetime.datetime.now():
+                timeout_counter += 1
+                if timeout_counter == len(proxy_timeouts):
+                    ROOT_LOGGER.warning("All proxies are blocked by Google.")
+                    client.yagooglesearch_manages_http_429s = True
+                    break
+                elif proxy_index == len(proxies) - 1:
+                    proxy_rotation_index = 0
+                proxy_index = proxy_rotation_index % len(proxies)
+                proxy = proxies[proxy_index]
+                proxy_rotation_index += 1
+                client.proxy = proxy
+                if not proxy_timeouts[proxy]:
+                    break
+    return proxy_timeouts, proxy_rotation_index, proxy, proxies, proxy_index, client
+
+
+def calculate_random_waittimes(minimum_delay_between_dork_searches_in_seconds,
+                               maximum_delay_between_dork_searches_in_seconds):
+    # Fancy way of generating a list of 20 random values between minimum_delay_between_dork_searches_in_seconds and
+    # maximum_delay_between_dork_searches_in_seconds.  A random value is selected between each different Google
+    # dork search.
+    """
+   1) Generate a random list of values between minimum_delay_between_dork_searches_in_seconds and
+      maximum_delay_between_dork_searches_in_seconds
+   2) Round those values to the tenths place
+   3) Re-case as a list
+   4) Sort the list
+   """
+    return sorted(
+        list(
+            map(
+                lambda x: round(x, 1),
+                [
+                    random.uniform(
+                        minimum_delay_between_dork_searches_in_seconds,
+                        maximum_delay_between_dork_searches_in_seconds,
+                    )
+                    for _ in range(20)
+                ],
+            )
+        )
+    )
+
+
 class Pagodo:
     """Pagodo class object"""
 
