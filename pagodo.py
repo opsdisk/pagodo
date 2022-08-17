@@ -142,8 +142,17 @@ class Pagodo:
         self.save_pagodo_results_to_json_file = save_pagodo_results_to_json_file
         self.proxies = proxies.strip().strip(",").split(",")
         self.save_urls_to_file = save_urls_to_file
-        self.minimum_delay_between_dork_searches_in_seconds = minimum_delay_between_dork_searches_in_seconds
-        self.maximum_delay_between_dork_searches_in_seconds = maximum_delay_between_dork_searches_in_seconds
+        self.divide_waittime_by_proxies = divide_waittime_by_proxies
+        if self.divide_waittime_by_proxies and proxies:
+            self.original_minimum_delay_between_dork_searches_in_seconds = minimum_delay_between_dork_searches_in_seconds
+            self.original_maximum_delay_between_dork_searches_in_seconds = maximum_delay_between_dork_searches_in_seconds
+            self.minimum_delay_between_dork_searches_in_seconds = minimum_delay_between_dork_searches_in_seconds / len(
+                self.proxies)
+            self.maximum_delay_between_dork_searches_in_seconds = maximum_delay_between_dork_searches_in_seconds / len(
+                self.proxies)
+        else:
+            self.minimum_delay_between_dork_searches_in_seconds = minimum_delay_between_dork_searches_in_seconds
+            self.maximum_delay_between_dork_searches_in_seconds = maximum_delay_between_dork_searches_in_seconds
         self.disable_verify_ssl = disable_verify_ssl
         self.verbosity = verbosity
 
