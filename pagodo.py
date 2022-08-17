@@ -156,30 +156,9 @@ class Pagodo:
         self.disable_verify_ssl = disable_verify_ssl
         self.verbosity = verbosity
 
-        # Fancy way of generating a list of 20 random values between minimum_delay_between_dork_searches_in_seconds and
-        # maximum_delay_between_dork_searches_in_seconds.  A random value is selected between each different Google
-        # dork search.
-        """
-        1) Generate a random list of values between minimum_delay_between_dork_searches_in_seconds and
-           maximum_delay_between_dork_searches_in_seconds
-        2) Round those values to the tenths place
-        3) Re-case as a list
-        4) Sort the list
-        """
-        self.delay_between_dork_searches_list = sorted(
-            list(
-                map(
-                    lambda x: round(x, 1),
-                    [
-                        random.uniform(
-                            minimum_delay_between_dork_searches_in_seconds,
-                            maximum_delay_between_dork_searches_in_seconds,
-                        )
-                        for _ in range(20)
-                    ],
-                )
-            )
-        )
+        self.delay_between_dork_searches_list = calculate_random_waittimes(
+            self.minimum_delay_between_dork_searches_in_seconds,
+            self.maximum_delay_between_dork_searches_in_seconds)
 
         self.base_file_name = f'pagodo_results_{datetime.datetime.now().strftime("%Y%m%d_%H%M%S")}'
         self.total_urls_found = 0
@@ -214,6 +193,8 @@ class Pagodo:
             "initiation_timestamp": initiation_timestamp,
             "completion_timestamp": "",
         }
+
+        proxy_timeouts = {self.proxies[i]: None for i in range(len(self.proxies))}
 
         for dork in self.google_dorks:
 
@@ -269,7 +250,15 @@ class Pagodo:
                     proxy=proxy,
                     verify_ssl=not self.disable_verify_ssl,
                     verbosity=self.verbosity,
+                    yagooglesearch_manages_http_429s=False,
                 )
+
+                if proxy_timeouts[proxy]:
+                    if proxy_timeouts[proxy] > datetime.datetime.now():
+                        proxy_timeouts, self.proxy_rotation_index, proxy, self.proxies, proxy_index, client = \
+                            set_next_non_timeout_proxy(proxy_timeouts, self.proxy_rotation_index,
+                                                       proxy, self.proxies,
+                                                       proxy_index, client)
 
                 # Randomize the user agent for best results.
                 client.assign_random_user_agent()
@@ -280,6 +269,31 @@ class Pagodo:
                 )
 
                 dork_urls_list = client.search()
+
+                if self.proxies and "HTTP_429_DETECTED" in dork_urls_list:
+                    # Check if there are proxies and an error was detected by yagooglesearch
+
+                    while "HTTP_429_DETECTED" in dork_urls_list:
+                        proxy_timeouts[proxy] = datetime.datetime.now() + datetime.timedelta(
+                            hours=1)
+
+                        good_proxies = sum(1 for value in proxy_timeouts.values() if value is None)
+                        if self.divide_waittime_by_proxies and self.proxies and good_proxies > 0:
+                            self.minimum_delay_between_dork_searches_in_seconds = \
+                                self.original_minimum_delay_between_dork_searches_in_seconds / good_proxies
+                            self.maximum_delay_between_dork_searches_in_seconds = \
+                                self.original_maximum_delay_between_dork_searches_in_seconds / good_proxies
+                            self.delay_between_dork_searches_list = calculate_random_waittimes(
+                                self.minimum_delay_between_dork_searches_in_seconds,
+                                self.maximum_delay_between_dork_searches_in_seconds)
+
+                        ROOT_LOGGER.warning(
+                            f"Proxy {proxy} is blocked by Google, trying the next one")
+                        proxy_timeouts, self.proxy_rotation_index, proxy, self.proxies, proxy_index, client = \
+                            set_next_non_timeout_proxy(proxy_timeouts, self.proxy_rotation_index,
+                                                       proxy,
+                                                       self.proxies, proxy_index, client)
+                        dork_urls_list = client.search()
 
                 # Remove any exploit-db.com URLs.
                 for url in dork_urls_list:
