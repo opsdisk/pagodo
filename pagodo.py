@@ -49,6 +49,7 @@ class Pagodo:
         maximum_delay_between_dork_searches_in_seconds=60,
         disable_verify_ssl=False,
         verbosity=4,
+        save_logs_to_file=None, # None = Use the default filename "pagodo.py.log", otherwise pass a string for path and filename.
     ):
         """Initialize Pagodo class object."""
 
@@ -92,6 +93,7 @@ class Pagodo:
         self.maximum_delay_between_dork_searches_in_seconds = maximum_delay_between_dork_searches_in_seconds
         self.disable_verify_ssl = disable_verify_ssl
         self.verbosity = verbosity
+        self.save_logs_to_file = save_logs_to_file
 
         # Fancy way of generating a list of 20 random values between minimum_delay_between_dork_searches_in_seconds and
         # maximum_delay_between_dork_searches_in_seconds.  A random value is selected between each different Google
@@ -129,6 +131,10 @@ class Pagodo:
         # -s with no filename.  Desire to save results, don't care about the file name.
         if self.save_urls_to_file is None:
             self.save_urls_to_file = f"{self.base_file_name}.txt"
+        
+        if self.save_logs_to_file is not None:
+            log_file_handler = logging.FileHandler(self.save_logs_to_file)
+            ROOT_LOGGER.addHandler(log_file_handler)
 
         # Assign log level.
         ROOT_LOGGER.setLevel((6 - self.verbosity) * 10)
@@ -404,6 +410,15 @@ if __name__ == "__main__":
         type=int,
         default=4,
         help="Verbosity level (0=NOTSET, 1=CRITICAL, 2=ERROR, 3=WARNING, 4=INFO, 5=DEBUG).  Default: 4",
+    )
+    parser.add_argument(
+        "--log",
+        nargs="?",
+        metavar="LOG_FILE",
+        dest="save_logs_to_file",
+        action="store",
+        default=False,
+        help="R|Save pagodo LOGS data to a log file.",
     )
 
     args = parser.parse_args()

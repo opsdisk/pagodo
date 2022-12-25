@@ -217,6 +217,11 @@ one will be generated.
 `-s [optional/path/to/results.txt]` - Save URLs to a text file.  If you do not specify a filename, a datetimestamped one
 will be generated.
 
+### Save logs
+
+`--log [optional/path/to/file.log]` - Save logs to the spcified file.  If you do not specify a filename, the default file 
+`pagodo.py.log` at the root of pagodo directory will be used.
+
 ## Google is blocking me!
 
 Performing 7300+ search requests to Google as fast as possible will simply not work.  Google will rightfully detect it
