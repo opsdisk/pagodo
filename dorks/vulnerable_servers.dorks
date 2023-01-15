@@ -110,3 +110,4 @@ intitle:"Icecast Streaming Media Server" "Icecast2 Status" -.com
 intitle:"index of" "/views/auth/passwords"
 intitle:"TileServer GL - Server for vector and raster maps with GL styles"
 inurl:adm/login.jsp.bak
+intitle:"HFS" AND intext:"httpfileserver 2.3" AND -intext:"remote"

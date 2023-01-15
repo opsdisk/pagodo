@@ -1056,7 +1056,7 @@ index of / inurl:/pki/
 intext:"index of/" "top secret" gov
 inurl:/servicedesk/customer/user/signup
 inurl:wp-content/plugins/easy-wp-smtp
-Re: inurl:"/app/kibana#"
+inurl:"/app/kibana#"
 intext:"adobe coldfusion 8"
 Fwd: intitle:"Authorize application" "Learn more about OAuth"
 inurl:/wp-content/plugins/elementor/
@@ -1318,3 +1318,130 @@ Fwd: intitle:"Index of /" intext:"resource/"
 Google to wordpress
 Fwd: intitle:"atvise - next generation"
 site:papaly.com + keyword
+intitle:"Apache Flink Web Dashboard"
+intitle:"Index of cd"
+intitle:"index of" "files.pl"
+intitle:"index of" "man.sh"
+allintitle:index of "/icewarp"
+allintitle:index of "/microweber"
+site:gov.* intitle:"index of" *Dokuments"
+site:gov.* intitle:"index of" *.css
+intitle:"index of" google-api-php-client
+intitle:"index of" twitter-api-php
+intitle:"index of" sns-login
+intitle:"index of" linkedin-api
+intitle:"index of" facebook-api
+intitle:"index of" instagram-api
+intitle:"index of" zoom-api
+=?UTF-8?Q?intitle:"Index_of=E2=80=9D_user=5Fcarts_OR_user_=5Fcart.?=
+intitle:"Index of" etc/shadow
+intitle:"Index of" people.1st
+service._vti_pvt.index
+=?UTF-8?Q?=E2=80=9CIndex_of_/backup=E2=80=9D?=
+# Description: site:gov.in filetype:xlsx "password"
+site:gov.* intitle:"index of" *.doc
+site:gov intitle:"index of" *.data
+intitle:"index of" .ovpn
+site:gov.* intitle:"index of" *.pptx
+site:org.* intitle:"index of" * resources
+site:gov.* intitle:"index of" *.xls
+intext:"SQL" && "DB" inurl:"/runtime/log/"
+intitle:" index of "/order/status"
+intitle:"index of" "wp-upload"
+intitle:"index of" filetype:sql
+intitle:"index of" " *config.php "
+intitle:"index of" " admin.php "
+intitle:index of /backup private
+intitle:"index of" " index.php?id= "
+intitle:"index of" " wp-includes "
+inurl:.com index of apks
+intitle:index of "aws/credentials"
+inurl:wp-content/plugins/reflex-gallery/
+site:com.* intitle:"index of" *.admin
+site:com.* intitle:"index of" *.admin.password
+index of "fileadmin/php"
+intitle:"index of" "admin-shell"
+site:gov.* intitle:"index of" *.php
+site:gov.* intitle:"index of" *.shell
+site:com.* intitle:"index of" *shell.php
+site:gov.* intitle:"index of" *.db
+site:com.* intitle:"index of" *.db
+site:com.* intitle:"index of" *.sql
+site:.edu intext:"index of" "shell"
+"index of" :.py
+"index of" :.env
+"index of" filetype:env
+"index of" filetype:sql
+"index of" filetype:db
+inurl:*org intitle:"index of" "docker-compose"
+intext:"/webdynpro/resources/sap.com/"
+intitle:"index of" ".env" OR "pass"
+ext:java intext:"import org.apache.logging.log4j.Logger;"
+intitle:"index of" "java.log" | "java.logs"
+intitle:index of ./jira-software
+intext:"token" filetype:log "authenticate"
+intitle:"index of" "printenv.pl
+intitle:"login" intext:"authorized users only"
+inurl: document/d intext: ssn
+inurl:gitlab "AWS_SECRET_KEY"
+inurl:/_vti_bin/ ext:asmx
+inurl:/_layouts "[To Parent Directory]"
+intitle:"ManageEngine Desktop Central 10" AND (inurl:configurations OR inurl:authorization)
+site:.com intitle:"index of" /payments.txt
+intitle:index of "error_log"
+site:.com intitle:"index of" /paypal
+site:cloudfront.net inurl:d
+site:amazonaws.com inurl:elb.amazonaws.com
+intitle:"index of "docker-compose.yml"
+intitle:"index of" "keystore.jks"
+site:*.com "index of" error_logs
+site:.com intitle:"index of" /ipa
+intitle:"index of" aws/
+intitle:"index of" "catalina.out"
+intitle:"index of" include/
+intitle:"index of" /gscloud
+intitle:"index of" ("passenger.*.log" | "passenger.log" | | "production.log" )
+index of /wp-admin.zip
+intitle:"index of" "private_key.pem"
+intitle:"Index of /" inurl:(resume|cv)
+intitle:"index of "cloud-config.yml"
+intitle: index of "awstats"
+intitle:"index of" "db.py"
+Re: intext:"index of /" "server at"
+inurl:s3.amazonaws.com intitle:"AWS S3 Explorer"
+inurl:/admin ext:config
+index of:"backtrack" "hack" ext:php
+intitle:"index of" "cookies" "php"
+intitle:" TROJANS" Analysis Report
+intitle:"bugs" Analysis Report
+intext:"index of" "httpclient" "login"
+intext:"sign up" "**" filetype:php
+intext:"index of" "repository"
+intext:"index of" "transaction"
+intext:"index of" ".html"
+intext:"index of" "phonepe" "wp-content"
+intitle:"index of smtp"
+intext: "admin" "subscribe" filetype:php
+intext:"index of" "ipaddress"
+intitle:"index of /" intext:".env"
+intitle:"index of" "cron.sh"
+Sensitive Dork Exposing Uploads and Transcation details
+intitle:"index of" "setup.sh"
+intitle:"index of" "after.sh"
+intitle:"index of" "*db.sh"
+intitle:"index of" "configure.sh"
+intitle:"index of" "deploy.sh"
+intitle:"index of" "release.sh"
+intitle:"index of" intext:"Apache/2.2.3"
+inurl: /wp-includes/uploads
+intitle: "index of" intext: human resources
+intitle:"index of"|"access_token.json"
+filetype:reg [HKEY_USERSDEFAULT]
+inurl:/sym404/root
+intext:"index of" ".sql"
+intitle:"index of" inurl:superadmin
+intitle:"index of" inurl:SUID
+intitle:"IIS Windows Server"
+intitle:"WAMPSERVER Homepage"
+intitle:"index of" intext:"Apache/2.2.3"
+inurl: json beautifier online

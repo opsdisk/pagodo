@@ -717,3 +717,15 @@ intitle:"webcamXP" inurl:8080
 intext:"Real-time IP Camera Monitoring System" intext:"ActiveX Mode (For IE Browser)"
 intitle:"Secure Access Service" inurl:"/dana-na/auth/url_default/welcome.cgi"
 intitle:"MODBUS TCP RS485 Converter" intext:"Module Name: MMTCPBCONV" "powered by Atmel ARM."
+intitle:" SyncThru Web Service" intext:"Supplies Information"
+inurl:webcam site:skylinewebcams.com inurl:roma
+inurl:/doc/page/login.asp?
+inurl:7001/console intitle:weblogic
+Various Online Devices Dork
+intitle:"Roteador Wireless" inurl:login.asp
+intitle:"web server login" "please enter your login"
+intitle:"Network Camera" inurl:main.cgi
+intitle:"Pi-hole-ip" inurl:admin
+intitle:"NoVus IP camera" -com
+intitle:"Gargoyle Router Management Utility" -com|net
+inurl:viewer/live/index.html
