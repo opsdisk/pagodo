@@ -219,8 +219,8 @@ will be generated.
 
 ### Save logs
 
-`--log [optional/path/to/file.log]` - Save logs to the spcified file.  If you do not specify a filename, the default file 
-`pagodo.py.log` at the root of pagodo directory will be used.
+`--log [optional/path/to/file.log]` - Save logs to the specified file.  If you do not specify a filename, the default
+file `pagodo.py.log` at the root of pagodo directory will be used.
 
 ## Google is blocking me!
 
