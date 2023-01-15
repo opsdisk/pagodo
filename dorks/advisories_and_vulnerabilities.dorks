@@ -2216,3 +2216,4 @@ inurl:wp-content/plugins/Ultimate-member
 inurl:/wp-content/plugins/wpdiscuz/
 inurl:quicklinks.aspx
 "PHP Projectworlds 1.0"
+inurl:"index.php?page=news.php"

@@ -1432,3 +1432,47 @@ inurl:"*admin | login" | inurl:.php | .asp
 intitle:"Teltonika -Web UI" | intitle:"Teltonika-RUT -Web UI" inurl:"/cgi-bin/luci"
 inurl:/admin/login.php intitle:("Iniciar sesion" OR "Login")
 inurl:/intranet/login.php
+intitle:"Login to SDT-CS3B1"
+inurl:"ucp.php?mode=login"
+intitle:iDRAC* inurl:login.html
+Fwd: intitle:"Web UI" inurl:"/cgi-bin/luci"
+inurl:/intranet/signup
+inurl:/admin/login.php intitle:("Iniciar sesion" OR "hacked")
+inurl:"*admin|login" site: gov
+intitle:"index of" " *admin-login.php "
+site:.com intitle:"Admin portal"
+"This system" inurl:login
+intitle:"SAP Web Application Server" logon
+inurl:/sap/bc/webdynpro/ logon
+intitle:"Login. MicroStrategy"
+inurl:"microstrategy/servlet/mstrweb"
+inurl:/RDWeb/Pages/en-US/ filetype:aspx ~login
+intitle:"ST Web Client"
+inurl:"/sap/admin/public"
+sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html -site:sap.com
+intitle:[TM4Web] inurl:login.msw
+inurl:"opac/login " site:.edu
+Fwd: site:*/opac/login
+intitle:"JupyterHub" inurl:/hub/login
+inurl:"/index.php?qa=login"
+intitle:"Login" -com "/doc/page/login.asp"
+inurl:_admin "login"
+intitle:"Login page for" inurl:user.cgi
+intext:"change your SurgeMAIL account settings"
+intitle:"Oracle Access Management" "login" -inurl:oracle
+intitle:"Login to Redash"
+intitle:"Login to ICC PRO system"
+intitle:"Login - Residential Gateway"
+intitle:"System Administration" inurl:top.cgi
+Dork for Employees Self Service(ESS) Login Portals
+inurl:443 ext:php inurl:login
+inurl:http ext:php inurl:login
+intitle:"Device(IP CAMERA)" "language" -com|net
+intext:"login to authorize" "DynDNS"
+intitle:"Synnefo Admin"
+inurl:_admin "login.aspx"
+intitle:"User Authentication : IR*"
+intitle:'olt web management interface'
+inurl:"admin/default.aspx"
+allintitle:"Log on to MACH-ProWeb"
+intitle:"WEB SERVICE" "wan" "lan" "alarm"

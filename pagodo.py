@@ -16,22 +16,8 @@ import yagooglesearch
 
 # Custom Python libraries.
 
-__version__ = "2.3.1"
 
-# Logging
-ROOT_LOGGER = logging.getLogger("pagodo")
-# ISO 8601 datetime format by default.
-LOG_FORMATTER = logging.Formatter("%(asctime)s [%(threadName)-12.12s] [%(levelname)s] %(message)s")
-
-# Setup file logging.
-log_file_handler = logging.FileHandler("pagodo.py.log")
-log_file_handler.setFormatter(LOG_FORMATTER)
-ROOT_LOGGER.addHandler(log_file_handler)
-
-# Setup console logging.
-console_handler = logging.StreamHandler()
-console_handler.setFormatter(LOG_FORMATTER)
-ROOT_LOGGER.addHandler(console_handler)
+__version__ = "2.4.0"
 
 
 class Pagodo:
@@ -49,8 +35,27 @@ class Pagodo:
         maximum_delay_between_dork_searches_in_seconds=60,
         disable_verify_ssl=False,
         verbosity=4,
+        specific_log_file_name="pagodo.py.log",
     ):
         """Initialize Pagodo class object."""
+
+        # Logging
+        self.log = logging.getLogger("pagodo")
+        log_formatter = logging.Formatter("%(asctime)s [%(threadName)-12.12s] [%(levelname)s] %(message)s")
+
+        # Setup file logging.
+        log_file_handler = logging.FileHandler(specific_log_file_name)
+        log_file_handler.setFormatter(log_formatter)
+        self.log.addHandler(log_file_handler)
+
+        # Setup console logging.
+        console_handler = logging.StreamHandler()
+        console_handler.setFormatter(log_formatter)
+        self.log.addHandler(console_handler)
+
+        # Assign log level.
+        self.verbosity = verbosity
+        self.log.setLevel((6 - self.verbosity) * 10)
 
         # Run parameter checks.
         if not os.path.exists(google_dorks_file):
@@ -76,7 +81,7 @@ class Pagodo:
             print("max_search_result_urls_to_return_per_dork (-m) must be greater than 0")
             sys.exit(0)
 
-        # All passed paramters look good, assign to the class object.
+        # All passed parameters look good, assign to the class object.
         self.google_dorks_file = google_dorks_file
         self.google_dorks = []
         with open(google_dorks_file, "r", encoding="utf-8") as fh:
@@ -91,7 +96,6 @@ class Pagodo:
         self.minimum_delay_between_dork_searches_in_seconds = minimum_delay_between_dork_searches_in_seconds
         self.maximum_delay_between_dork_searches_in_seconds = maximum_delay_between_dork_searches_in_seconds
         self.disable_verify_ssl = disable_verify_ssl
-        self.verbosity = verbosity
 
         # Fancy way of generating a list of 20 random values between minimum_delay_between_dork_searches_in_seconds and
         # maximum_delay_between_dork_searches_in_seconds.  A random value is selected between each different Google
@@ -100,7 +104,7 @@ class Pagodo:
         1) Generate a random list of values between minimum_delay_between_dork_searches_in_seconds and
            maximum_delay_between_dork_searches_in_seconds
         2) Round those values to the tenths place
-        3) Re-case as a list
+        3) Re-cast as a list
         4) Sort the list
         """
         self.delay_between_dork_searches_list = sorted(
@@ -130,15 +134,12 @@ class Pagodo:
         if self.save_urls_to_file is None:
             self.save_urls_to_file = f"{self.base_file_name}.txt"
 
-        # Assign log level.
-        ROOT_LOGGER.setLevel((6 - self.verbosity) * 10)
-
     def go(self):
         """Start pagodo Google dork search."""
 
         initiation_timestamp = datetime.datetime.now().isoformat()
 
-        ROOT_LOGGER.info(f"Initiation timestamp: {initiation_timestamp}")
+        self.log.info(f"Initiation timestamp: {initiation_timestamp}")
 
         # Initialize starting dork number.
         dork_counter = 1
@@ -175,7 +176,7 @@ class Pagodo:
                 # Search string is longer than 32 words.
                 if len(query.split(" ")) > 32:
                     ignored_string = " ".join(query.split(" ")[32:])
-                    ROOT_LOGGER.warning(
+                    self.log.warning(
                         "Google limits queries to 32 words (separated by spaces):  Removing from search query: "
                         f"'{ignored_string}'"
                     )
@@ -187,7 +188,7 @@ class Pagodo:
                     if query.endswith('"'):
                         updated_query = f'{updated_query}"'
 
-                    ROOT_LOGGER.info(f"New search query: {updated_query}")
+                    self.log.info(f"New search query: {updated_query}")
 
                     query = updated_query
 
@@ -211,25 +212,25 @@ class Pagodo:
                 # Randomize the user agent for best results.
                 client.assign_random_user_agent()
 
-                ROOT_LOGGER.info(
+                self.log.info(
                     f"Search ( {dork_counter} / {total_dorks_to_search} ) for Google dork [ {query} ] using "
                     f"User-Agent '{client.user_agent}' through proxy '{proxy}'"
                 )
 
                 dork_urls_list = client.search()
 
-                # Remove any exploit-db.com URLs.
+                # Remove any false positive URLs.
                 for url in dork_urls_list:
-                    # Ignore results from specific URLs like exploit-db.com, cert.org, and GHDB's Twitter account that
+                    # Ignore results from specific URLs like exploit-db.com, cert.org, and OffSec's Twitter account that
                     # may just be providing information about the vulnerability.  Keeping it simple with regex.
                     ignore_url_list = [
                         "https://www.kb.cert.org",
                         "https://www.exploit-db.com/",
-                        "https://twitter.com/googlehacking/",
+                        "https://twitter.com/ExploitDB/",
                     ]
                     for ignore_url in ignore_url_list:
                         if re.search(ignore_url, url, re.IGNORECASE):
-                            ROOT_LOGGER.warning(f"Removing {ignore_url} URL: {url}")
+                            self.log.warning(f"Removing {ignore_url} false positive URL: {url}")
                             dork_urls_list.remove(url)
 
                 dork_urls_list_size = len(dork_urls_list)
@@ -237,10 +238,10 @@ class Pagodo:
                 # Google dork results found.
                 if dork_urls_list:
 
-                    ROOT_LOGGER.info(f"Results: {dork_urls_list_size} URLs found for Google dork: {dork}")
+                    self.log.info(f"Results: {dork_urls_list_size} URLs found for Google dork: {dork}")
 
                     dork_urls_list_as_string = "\n".join(dork_urls_list)
-                    ROOT_LOGGER.info(f"dork_urls_list:\n{dork_urls_list_as_string}")
+                    self.log.info(f"dork_urls_list:\n{dork_urls_list_as_string}")
 
                     self.total_urls_found += dork_urls_list_size
 
@@ -259,16 +260,15 @@ class Pagodo:
 
                 # No Google dork results found.
                 else:
-                    ROOT_LOGGER.info(f"Results: {dork_urls_list_size} URLs found for Google dork: {dork}")
+                    self.log.info(f"Results: {dork_urls_list_size} URLs found for Google dork: {dork}")
 
             except KeyboardInterrupt:
                 sys.exit(0)
 
             except Exception as e:
-                ROOT_LOGGER.error(f"Error with dork: {dork}")
-                ROOT_LOGGER.error(f"EXCEPTION: {e}")
+                self.log.error(f"Error with dork: {dork}.  Exception {e}")
                 if type(e).__name__ == "SSLError" and (not self.disable_verify_ssl):
-                    ROOT_LOGGER.info(
+                    self.log.info(
                         "If you are using self-signed certificates for an HTTPS proxy, try-rerunning with the -l "
                         "switch to disable verifying SSL/TLS certificates.  Exiting..."
                     )
@@ -279,16 +279,14 @@ class Pagodo:
             # Only sleep if there are more dorks to search.
             if dork != self.google_dorks[-1]:
                 pause_time = random.choice(self.delay_between_dork_searches_list)
-                ROOT_LOGGER.info(f"Sleeping {pause_time} seconds before executing the next dork search...")
+                self.log.info(f"Sleeping {pause_time} seconds before executing the next dork search...")
                 time.sleep(pause_time)
 
-        ROOT_LOGGER.info(
-            f"Total URLs found for the {total_dorks_to_search} total dorks searched: {self.total_urls_found}"
-        )
+        self.log.info(f"Total URLs found for the {total_dorks_to_search} total dorks searched: {self.total_urls_found}")
 
         completion_timestamp = datetime.datetime.now().isoformat()
 
-        ROOT_LOGGER.info(f"Completion timestamp: {completion_timestamp}")
+        self.log.info(f"Completion timestamp: {completion_timestamp}")
         self.pagodo_results_dict["completion_timestamp"] = completion_timestamp
 
         # Save pagodo_results_dict to a .json file.
@@ -315,7 +313,11 @@ if __name__ == "__main__":
         formatter_class=SmartFormatter,
     )
     parser.add_argument(
-        "-g", dest="google_dorks_file", action="store", required=True, help="File containing Google dorks, 1 per line."
+        "-g",
+        dest="google_dorks_file",
+        action="store",
+        required=True,
+        help="File containing Google dorks, 1 per line.",
     )
     parser.add_argument(
         "-d",
@@ -368,9 +370,9 @@ if __name__ == "__main__":
         default="",
         help=(
             "Comma separated string of proxies to round-robin through.  Example: "
-            "https://myproxy:8080,socks5h://127.0.0.1:9050,socks5h://127.0.0.1:9051 - The proxy scheme must confrom "
-            "per the Python requests library: https://docs.python-requests.org/en/master/user/advanced/#proxies  See "
-            "https://github.com/opsdisk/yagooglesearch for more information."
+            "https://myproxy:8080,socks5h://127.0.0.1:9050,socks5h://127.0.0.1:9051 - The proxy scheme must conform "
+            "per the Python requests library: https://docs.python-requests.org/en/master/user/advanced/#proxies  Also "
+            "see https://github.com/opsdisk/yagooglesearch for more information."
         ),
     )
     parser.add_argument(
@@ -404,6 +406,14 @@ if __name__ == "__main__":
         type=int,
         default=4,
         help="Verbosity level (0=NOTSET, 1=CRITICAL, 2=ERROR, 3=WARNING, 4=INFO, 5=DEBUG).  Default: 4",
+    )
+    parser.add_argument(
+        "--log",
+        dest="specific_log_file_name",
+        action="store",
+        default="pagodo.py.log",
+        required=False,
+        help="Save log data to a specific log filename, otherwise the default is pagodo.py.log",
     )
 
     args = parser.parse_args()

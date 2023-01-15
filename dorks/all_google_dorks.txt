@@ -6956,7 +6956,7 @@ intext:"index of/" "top secret" gov
 inurl:/servicedesk/customer/user/signup
 inurl:wp-content/plugins/easy-wp-smtp
 Fwd: inurl:"/sslvpn_logon.shtml" intitle:"User Authentication" "WatchGuard Technologies"
-Re: inurl:"/app/kibana#"
+inurl:"/app/kibana#"
 intitle:"Portal" inurl:"login.jsp"
 intitle:"SonicWall Analyzer Login"
 intext:"adobe coldfusion 8"
@@ -7339,3 +7339,198 @@ Fwd: intitle:"atvise - next generation"
 site:papaly.com + keyword
 inurl:adminpanel site:gov.*
 site:vps-*.vps.ovh.net
+intitle:"Apache Flink Web Dashboard"
+intitle:"Login to SDT-CS3B1"
+intitle:" SyncThru Web Service" intext:"Supplies Information"
+inurl:"ucp.php?mode=login"
+intitle:iDRAC* inurl:login.html
+intitle:"Index of cd"
+intitle:"index of" "files.pl"
+intitle:"index of" "man.sh"
+allintitle:index of "/icewarp"
+allintitle:index of "/microweber"
+Fwd: intitle:"Web UI" inurl:"/cgi-bin/luci"
+site:gov.* intitle:"index of" *Dokuments"
+site:gov.* intitle:"index of" *.css
+intitle:"index of" google-api-php-client
+intitle:"index of" twitter-api-php
+intitle:"index of /" "sqlite.db"
+intitle:"index of" sns-login
+intitle:"index of" linkedin-api
+intitle:"index of" facebook-api
+intitle:"index of" instagram-api
+intitle:"index of" zoom-api
+=?UTF-8?Q?intitle:"Index_of=E2=80=9D_user=5Fcarts_OR_user_=5Fcart.?=
+intitle:"Index of" htpasswd
+intitle:"Index of" etc/shadow
+intitle:"Index of" pwd.db
+intitle:"Index of" people.1st
+service._vti_pvt.index
+=?UTF-8?Q?=E2=80=9CIndex_of_/backup=E2=80=9D?=
+# Description: site:gov.in filetype:xlsx "password"
+intitle:index.of.etc
+inurl:/intranet/signup
+site:gov.* intitle:"index of" *.doc
+site:gov intitle:"index of" *.data
+intitle:"index of" .ovpn
+site:gov.* intitle:"index of" *.pptx
+site:org.* intitle:"index of" * resources
+site:gov.* intitle:"index of" *.xls
+inurl:/admin/login.php intitle:("Iniciar sesion" OR "hacked")
+intext:"SQL" && "DB" inurl:"/runtime/log/"
+intitle:" index of "/order/status"
+inurl:"*admin|login" site: gov
+intitle:"index of" "wp-upload"
+intitle:"index of" filetype:sql
+intitle:"index of" " *admin-login.php "
+intitle:"index of" " *config.php "
+intitle:"index of" " admin.php "
+intitle:index of /backup private
+intitle:"index of" " index.php?id= "
+intitle:"index of" " wp-includes "
+inurl:.com index of movies
+inurl:.com index of apks
+site:.com intitle:"Admin portal"
+intitle:index of "aws/credentials"
+inurl:wp-content/plugins/reflex-gallery/
+site:com.* intitle:"index of" *.admin
+site:com.* intitle:"index of" *.admin.password
+index of "fileadmin/php"
+intitle:"index of" "admin-shell"
+site:gov.* intitle:"index of" *.php
+site:gov.* intitle:"index of" *.shell
+site:com.* intitle:"index of" *shell.php
+site:gov.* intitle:"index of" *.db
+site:com.* intitle:"index of" *.db
+site:com.* intitle:"index of" *.sql
+site:.edu intext:"index of" "shell"
+"index of" :.py
+"index of" :.env
+"index of" filetype:env
+"index of" filetype:sql
+"index of" filetype:db
+site:com intitle:index of ..................etcpasswd
+inurl:*org intitle:"index of" "docker-compose"
+intext:"/webdynpro/resources/sap.com/"
+intitle:"index of" ".env" OR "pass"
+intitle:"HFS" AND intext:"httpfileserver 2.3" AND -intext:"remote"
+ext:java intext:"import org.apache.logging.log4j.Logger;"
+"This system" inurl:login
+intitle:"SAP Web Application Server" logon
+intitle:"index of" "java.log" | "java.logs"
+intitle:index of ./jira-software
+allintext:wp-includes/rest-api
+inurl:/sap/bc/webdynpro/ logon
+intext:"token" filetype:log "authenticate"
+intitle:"index of" "printenv.pl
+intitle:Index of "pyvenv.cfg"
+inurl:webcam site:skylinewebcams.com inurl:roma
+inurl:/doc/page/login.asp?
+intitle:"login" intext:"authorized users only"
+intitle:"Login. MicroStrategy"
+inurl:"microstrategy/servlet/mstrweb"
+inurl:/RDWeb/Pages/en-US/ filetype:aspx ~login
+intitle:"ST Web Client"
+inurl:7001/console intitle:weblogic
+inurl: document/d intext: ssn
+inurl:gitlab "AWS_SECRET_KEY"
+inurl:/_vti_bin/ ext:asmx
+inurl:/_layouts "[To Parent Directory]"
+intitle:"ManageEngine Desktop Central 10" AND (inurl:configurations OR inurl:authorization)
+inurl:"/sap/admin/public"
+sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html -site:sap.com
+site:.com intitle:"index of" /payments.txt
+intitle:index of "error_log"
+site:.com intitle:"index of" /paypal
+site:cloudfront.net inurl:d
+site:amazonaws.com inurl:elb.amazonaws.com
+intitle:"index of "docker-compose.yml"
+intitle:"index of" "keystore.jks"
+site:*.com "index of" error_logs
+site:.com intitle:"index of" /ipa
+intitle:"index of" aws/
+intitle:"index of" "catalina.out"
+intitle:"index of" include/
+intitle:"index of" /gscloud
+intitle:"index of" ("passenger.*.log" | "passenger.log" | | "production.log" )
+index of /wp-admin.zip
+intitle:"index of" "private_key.pem"
+intitle:"Index of /" inurl:(resume|cv)
+intitle:"index of "cloud-config.yml"
+intitle:[TM4Web] inurl:login.msw
+intitle: index of "awstats"
+inurl:"opac/login " site:.edu
+Various Online Devices Dork
+Fwd: site:*/opac/login
+intitle:"index of" "db.py"
+Re: intext:"index of /" "server at"
+inurl:s3.amazonaws.com intitle:"AWS S3 Explorer"
+Dork
+inurl:/admin ext:config
+intitle:"JupyterHub" inurl:/hub/login
+inurl:"/index.php?qa=login"
+intitle:"Login" -com "/doc/page/login.asp"
+intitle:"Roteador Wireless" inurl:login.asp
+inurl:_admin "login"
+intitle:"web server login" "please enter your login"
+intitle:"Login page for" inurl:user.cgi
+intext:"change your SurgeMAIL account settings"
+intitle:"Oracle Access Management" "login" -inurl:oracle
+intitle:"Login to Redash"
+intitle:"Login to ICC PRO system"
+intitle:"Network Camera" inurl:main.cgi
+intitle:"Login - Residential Gateway"
+intitle:"System Administration" inurl:top.cgi
+Dork for Employees Self Service(ESS) Login Portals
+index of:"backtrack" "hack" ext:php
+intitle:"index of" "cookies" "php"
+inurl:443 ext:php inurl:login
+intitle:" TROJANS" Analysis Report
+intitle:"bugs" Analysis Report
+inurl:http ext:php inurl:login
+intext:"index of" "httpclient" "login"
+intext:"sign up" "**" filetype:php
+intext:"index of" "repository"
+intext:"index of" "transaction"
+intext:"index of" ".html"
+intext:"index of" "phonepe" "wp-content"
+intitle:"index of smtp"
+intext: "admin" "subscribe" filetype:php
+intext:"index of" "ipaddress"
+intitle:"index of /" intext:".env"
+intitle:"Pi-hole-ip" inurl:admin
+intitle:"NoVus IP camera" -com
+intitle:"Device(IP CAMERA)" "language" -com|net
+intitle:"Gargoyle Router Management Utility" -com|net
+intext:"login to authorize" "DynDNS"
+intitle:"Synnefo Admin"
+inurl:_admin "login.aspx"
+intitle:"index of" "cron.sh"
+intitle:"User Authentication : IR*"
+Sensitive Dork Exposing Uploads and Transcation details
+intitle:"index of" "setup.sh"
+intitle:"index of" "after.sh"
+intitle:"index of" "*db.sh"
+intitle:"index of" "configure.sh"
+intitle:"index of" "deploy.sh"
+intitle:"index of" "release.sh"
+intitle:"index of" intext:"Apache/2.2.3"
+inurl: /wp-includes/uploads
+inurl:viewer/live/index.html
+intitle:'olt web management interface'
+inurl:"admin/default.aspx"
+intitle:Index of "/venv"
+allintitle:"Log on to MACH-ProWeb"
+intitle:"WEB SERVICE" "wan" "lan" "alarm"
+intitle: "index of" intext: human resources
+intitle:"index of"|"access_token.json"
+filetype:reg [HKEY_USERSDEFAULT]
+inurl:/sym404/root
+inurl:"index.php?page=news.php"
+intext:"index of" ".sql"
+intitle:"index of" inurl:superadmin
+intitle:"index of" inurl:SUID
+intitle:"IIS Windows Server"
+intitle:"WAMPSERVER Homepage"
+intitle:"index of" intext:"Apache/2.2.3"
+inurl: json beautifier online

@@ -442,3 +442,7 @@ intitle: "index of backup.php"
 intitle: "index of backup.xml"
 intitle:" index of "/Invoices*"
 intitle:"index of" ".env"
+intitle:"index of /" "sqlite.db"
+site:com intitle:index of ..................etcpasswd
+intitle:Index of "pyvenv.cfg"
+intitle:Index of "/venv"
