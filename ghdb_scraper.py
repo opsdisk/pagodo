@@ -63,7 +63,13 @@ def retrieve_google_dorks(
     }
 
     print(f"[+] Requesting URL: {url}")
-    response = requests.get(url, headers=headers, timeout=10)
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+    except requests.exceptions.SSLError:
+        import urllib3
+        requests.packages.urllib3.disable_warnings()
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        response = requests.get(url, headers=headers, timeout=10, verify=False)
 
     if response.status_code != 200:
         print(f"[-] Error retrieving google dorks from: {url}")
