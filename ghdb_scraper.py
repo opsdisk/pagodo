@@ -3,6 +3,7 @@
 # Standard Python libraries.
 import argparse
 import json
+import urllib3
 
 # Third party Python libraries.
 from bs4 import BeautifulSoup
@@ -64,12 +65,20 @@ def retrieve_google_dorks(
 
     print(f"[+] Requesting URL: {url}")
     try:
-        response = requests.get(url, headers=headers, timeout=10)
+        response = requests.get(
+            url,
+            headers=headers,
+            timeout=10,
+        )
     except requests.exceptions.SSLError:
-        import urllib3
         requests.packages.urllib3.disable_warnings()
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-        response = requests.get(url, headers=headers, timeout=10, verify=False)
+        response = requests.get(
+            url,
+            headers=headers,
+            timeout=10,
+            verify=False,
+        )
 
     if response.status_code != 200:
         print(f"[-] Error retrieving google dorks from: {url}")
@@ -90,7 +99,6 @@ def retrieve_google_dorks(
 
     # Loop through dorks, collecting and organizing them.
     for dork in json_dorks:
-
         # Extract dork from <a href> using BeautifulSoup.
         # "<a href=\"/ghdb/5052\">inurl:_cpanel/forgotpwd</a>"
         soup = BeautifulSoup(dork["url_title"], "html.parser")
@@ -105,7 +113,6 @@ def retrieve_google_dorks(
 
         # Create an empty list for each category if it doesn't already exist.
         if numeric_category_id not in category_dict:
-
             category_dict[numeric_category_id] = {"category_name": category_name, "dorks": []}
 
         # Some of the URL titles have trailing tabs, use replace() to remove it in place.  The strip() method cannot be
@@ -116,12 +123,10 @@ def retrieve_google_dorks(
 
     # If requested, break up dorks into individual files based off category.
     if save_individual_categories_to_files:
-
         # Sort category_dict based off the numeric keys.
         category_dict = dict(sorted(category_dict.items()))
 
         for key, value in category_dict.items():
-
             # Provide some category metrics.
             print(f"[*] Category {key} ('{value['category_name']}') has {len(value['dorks'])} dorks")
 
@@ -169,7 +174,6 @@ def retrieve_google_dorks(
 
 
 if __name__ == "__main__":
-
     categories = {
         1: "Footholds",
         2: "File Containing Usernames",
