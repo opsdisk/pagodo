@@ -154,7 +154,6 @@ class Pagodo:
         }
 
         for dork in self.google_dorks:
-
             self.pagodo_results_dict["dorks"][dork] = {
                 "urls_size": 0,
                 "urls": [],
@@ -237,7 +236,6 @@ class Pagodo:
 
                 # Google dork results found.
                 if dork_urls_list:
-
                     self.log.info(f"Results: {dork_urls_list_size} URLs found for Google dork: {dork}")
 
                     dork_urls_list_as_string = "\n".join(dork_urls_list)
@@ -307,7 +305,6 @@ class SmartFormatter(argparse.HelpFormatter):
 
 
 if __name__ == "__main__":
-
     parser = argparse.ArgumentParser(
         description=f"pagodo - Passive Google Dork v{__version__}",
         formatter_class=SmartFormatter,
