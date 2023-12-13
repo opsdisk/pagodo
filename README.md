@@ -46,7 +46,7 @@ Scripts are written for Python 3.6+.  Clone the git repository and install the r
 ```bash
 git clone https://github.com/opsdisk/pagodo.git
 cd pagodo
-virtualenv -p python3.7 .venv  # If using a virtual environment.
+python3 -m venv .venv  # If using a virtual environment.
 source .venv/bin/activate  # If using a virtual environment.
 pip install -r requirements.txt
 ```
