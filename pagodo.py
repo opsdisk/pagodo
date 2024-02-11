@@ -11,13 +11,15 @@ import re
 import sys
 import time
 
+
 # Third party Python libraries.
 import yagooglesearch
+
 
 # Custom Python libraries.
 
 
-__version__ = "2.6.0"
+__version__ = "2.6.1"
 
 
 class Pagodo:
@@ -311,6 +313,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "-g",
+        "--google-dorks-file",
         dest="google_dorks_file",
         action="store",
         required=True,
@@ -318,6 +321,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "-d",
+        "--domain",
         dest="domain",
         action="store",
         required=False,
@@ -325,6 +329,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "-i",
+        "--minimum-delay-between-dork-searches",
         dest="minimum_delay_between_dork_searches_in_seconds",
         action="store",
         required=False,
@@ -334,6 +339,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "-x",
+        "--maximum-delay-between-dork-searches",
         dest="maximum_delay_between_dork_searches_in_seconds",
         action="store",
         required=False,
@@ -343,6 +349,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "-l",
+        "--disable-ssl-verification",
         dest="disable_verify_ssl",
         action="store_true",
         required=False,
@@ -351,6 +358,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "-m",
+        "--max-search-urls-to-return-per-dork",
         dest="max_search_result_urls_to_return_per_dork",
         action="store",
         required=False,
@@ -360,6 +368,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "-p",
+        "--proxies",
         dest="proxies",
         action="store",
         required=False,
@@ -374,6 +383,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "-o",
+        "--json-results-file",
         nargs="?",
         metavar="JSON_FILE",
         dest="save_pagodo_results_to_json_file",
@@ -386,6 +396,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "-s",
+        "--text-results-file",
         nargs="?",
         metavar="URL_FILE",
         dest="save_urls_to_file",
@@ -398,6 +409,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "-v",
+        "--verbosity",
         dest="verbosity",
         action="store",
         type=int,
@@ -405,6 +417,7 @@ if __name__ == "__main__":
         help="Verbosity level (0=NOTSET, 1=CRITICAL, 2=ERROR, 3=WARNING, 4=INFO, 5=DEBUG).  Default: 4",
     )
     parser.add_argument(
+        "-z",
         "--log",
         dest="specific_log_file_name",
         action="store",
