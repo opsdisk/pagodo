@@ -1,18 +1,20 @@
 #!/usr/bin/env python
-
 # Standard Python libraries.
 import argparse
 import json
 import urllib3
 
+
 # Third party Python libraries.
 from bs4 import BeautifulSoup
 import requests
 
+
 # Custom Python libraries.
 
 
-__version__ = "1.1.0"
+__version__ = "1.1.1"
+
 
 """
 Dork dictionary example:
@@ -162,13 +164,11 @@ def retrieve_google_dorks(
     print(f"[*] Total Google dorks retrieved: {total_dorks}")
 
     # Package up a nice dictionary to return.
-    # fmt: off
     ghdb_dict = {
         "total_dorks": total_dorks,
         "extracted_dorks": extracted_dorks,
         "category_dict": category_dict,
     }
-    # fmt: on
 
     return ghdb_dict
 
