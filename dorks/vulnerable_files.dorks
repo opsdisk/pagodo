@@ -83,3 +83,4 @@ intitle:"index of" "*.php"
 intitle:index.of.etc
 inurl:.com index of movies
 allintext:wp-includes/rest-api
+intitle:"index of" "*.phtml" site:.edu

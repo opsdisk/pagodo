@@ -111,3 +111,19 @@ intitle:"index of" "/views/auth/passwords"
 intitle:"TileServer GL - Server for vector and raster maps with GL styles"
 inurl:adm/login.jsp.bak
 intitle:"HFS" AND intext:"httpfileserver 2.3" AND -intext:"remote"
+inurl:"/geoserver/ows?service=wfs"
+inurl:install.php intitle:"Froxlor Server Management Panel - Installation"
+Apache Struts 2.x Path Traversal Vulnerability (CVE-2023-50164) Detection Dork
+intitle:"OpenVpn Status Monitor"
+intitle:"Installation Wizard - PowerCMS v2"
+intitle:"Welcome to iTop version" wizard
+allintitle:"Bright Cluster Manager" site:.edu
+"PMB" AND ("changelog.txt" OR inurl:opac_css)
+Google Dorks for Default XAMPP Dashboards
+inurl:"wa.exe?TICKET"
+intitle:"FileCatalyst file transfer solution"
+allintitle:"ITRS OP5 Monitor"
+Google Dork Submisson For GlobalProtect Portal
+intext:"siemens" & inurl:"/portal/portal.mwsl"
+intitle:"SSL Network Extender Login" -checkpoint.com
+inurl:"cgi-bin/koha"

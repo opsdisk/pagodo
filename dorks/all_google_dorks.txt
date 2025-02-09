@@ -7448,6 +7448,7 @@ intitle:"index of "docker-compose.yml"
 intitle:"index of" "keystore.jks"
 site:*.com "index of" error_logs
 site:.com intitle:"index of" /ipa
+Inquiry about Search Results for intitle:"index.of" *S3
 intitle:"index of" aws/
 intitle:"index of" "catalina.out"
 intitle:"index of" include/
@@ -7534,3 +7535,410 @@ intitle:"IIS Windows Server"
 intitle:"WAMPSERVER Homepage"
 intitle:"index of" intext:"Apache/2.2.3"
 inurl: json beautifier online
+inurl index.php id= site.bd
+inurl:authorization.do intext:"ADSelfService Plus"
+intitle:"index of /database/migrations"
+intitle:"Index of /webcam/"
+intitle:"NB1601 Web Manager"
+intitle:"Netgate pfSense Plus - Login"
+intitle:"Parallels User Portal"
+allintitle:"wireless controller login"
+inurl:"/adfs/ls/"
+inurl: administrator/components/com_admin/sql/updates/mysql/
+inurl: administrator/components/com_admin/sql/updates/sqlazure
+inurl: administrator/components
+inurl:"device.rsp" -com
+inurl: wp-content/plugin/404-redirection-manager
+site:investor.*.* AND inurl:home/default.aspx
+site:cp.*.* intitle:"login"
+intitle:"Oracle WebLogic Server"
+intext:"index of" ".git"
+intext:"index of" "phpinfo"
+intext:"index of" "xmlrpc.php"
+intext:"index of" "phpMyAdmin"
+intitle:BioTime AND intext:ZKTeco Security LLC
+inurl: wp-content/plugin/8-degree-notification-bar
+inurl:assystnetmob
+intitle: index of /secrets/
+intitle:"index of" "login.sh"
+intitle:phaser inurl:/frameprop.htm
+# Google Dork: intitle:"index of" "admin" "cgi-bin"
+intext:"index of" "backuop/*.sql"
+site:*/AdminLogin.aspx
+intitle:index of "wc.db"
+Google Dork: HP Laserjet Config Network Page
+inurl:"/wp-content/plugins/imagemagick-engine/"
+# Google Dork: intext:"Powered by Virtual Airlines Manager [v2.6.2]"
+intitle:"index of" intext:"Apache/1.4"
+DHDB - GOOGLE DORK
+intitle:index.of intext:log inurl:nasa
+Google Dork: Xerox Phaser Printer Properties Page
+Google Dork: Brother Printers Properties Page
+Index:Index of /wp-admin
+inurl:GeminiVAIdServer
+inurl:GeminiVAIdServer
+intitle:"index of /" intext:".db
+intext:phpMiniAdmin inurl:phpminiadmin ext:php
+inurl:backup filetype:sql
+New Google Dork Discovery: Indexof:admin site:*.com
+intext:"index of" "config"
+intitle:"Ignition Gateway" "launch designer"
+site:ap.*.* intitle:"login"
+intitle:"Index of /cam/"
+intitle:"index of" intext:user inurl:data
+Dork wp-config.bak - Exploit Title: intext: "index of" "wp-config.php.bak"
+index of:admin.asp
+allintitle:"Eclypse Login"
+allintitle:"TutorTrac Login"
+allintitle:"OMERO.web - Login"
+allintitle:"Untangle Administrator Login"
+allintitle:"eSlideManager - Login"
+allintitle:"Supermicro BMC Login"
+allintitle:"Building Operation WebStation"
+allintitle:"ProjectDox Login"
+site:email.*.* intitle:"login"
+intitle:"index of" /etc/shadow
+intitle:"index of" inurl:admin/login
+allintitle:"Cyberoam SSL VPN Portal"
+inurl:"device.rsp" -in
+intext:"index of" "wp-content.zip" - Files Containing Juicy Info
+Re: New Dork Submission for Google Hacking Database !!
+intext:"index of" smb.conf
+inurl:robots filetype:txt
+intitle:"index of" "database.sql"
+Re: intext:"index of" "wp-content.zip" - Files Containing Juicy Info
+intitle:"index of" inurl:wp-json index.json
+Google Dork : intitle:"Toshiba Network Camera"
+inurl:login/login
+inurl:guest/auth_login.php
+site:.in intext:"Index of" intitle:"index of"
+inurl: "phpmyadmin/setup/"
+site:.com intitle:index of /wp-admin
+inurl:ssh intitle:index of /files
+inurl:"/api-docs"
+intitle:"index of" "checkout"
+allintitle:"Login | Control WebPanel" Control WebPanel Login
+intitle:"Index of" site:.bd
+intitle:"index of" inurl:admin/php
+allintitle:"VidyoRouter Configuration"
+inurl:adminpanel site:*.in
+allintitle:"MobileIron User Portal: Sign In"
+allintitle:"Synapse Mobility Login"
+allintitle:"ResolutionMD Login"
+intitle:"index of "conf.json"
+BroadBand Device Webserver
+intitle:index of django/admin site:.*
+intitle:"index of "application.yml"
+intitle:"index of " "shell.txt"
+inurl:/superadmin/login intext:login
+intitle:'Sypex Dumper" inurl:sxd
+intext:"index of" downloads" site:*.*
+inurl:"/sap/bc/gui/sap/its/webgui?sap-client=SAP*"
+GHDB-GOOGLE DORK
+Dork Submission
+intitle:"index of /" "docker-compose.yml" ".env"
+intitle:"index of /" "public.zip"
+intitle:"index of /" "admin.zip" "admin/"
+intitle:"index of /" ".apk" inurl:".ir/"
+allintitle:"Login | wplogin Login
+inurl:"/scada-vis"
+inurl:*/signIn.do
+intitle:"index of" "config.html"
+=?UTF-8?Q?intext:"Please_respect_other_people=E2=80=99s_priva?= =?UTF-8?Q?cy_and_rights_when_using_product."_hikvision?=
+inurl:":8080/" intext:"index of /" "win64" -LiteSpeed
+inurl:".ir/" intext:"index of /" ".ovpn"
+intitle:"index of /" "styleci.yml" ".env"
+inurl:"/private" intext:"index of /" inurl:"owncloud" -litespeed
+inurl:"/private" intext:"index of /" "win64" -litespeed
+intitle:"index of" "properties.json"
+intitle:"index of" "config.php"
+intitle:"index of " "config/db"
+inurl:"/private" intext:"index of /" "config"
+inurl:info.php intext:"PHP Version" intitle:"phpinfo()"
+Google Dork: Recoh Printer Properties Page
+inurl:cas/login?service=http
+About dorks
+intext:"Index of" intext:"backup.tar"
+Index of" intext:"source_code.zip
+intext:"Index of" intext:"backend/"
+intext:"Index of" intext:"plugin/"
+intext:"Index of" intext:"bitbucket-pipelines.yml"
+intext:"Index of" intext:"/etc"
+Re: Thank you for your submission! Re: intitle:index of db.sqlite3
+inurl: "/admin" intitle:"Admin Login"
+intext:pom.xml intitle:"index of /"
+Re: intitle:"index of" "docker-compose.yml"
+Re: GHDB Dork
+Re: GHDB - Dork
+inurl: "/wp-content/uploads"
+Google dork submission: intitle:"index of" "users.yml" | "admin.yml" | "config.yml"
+intitle:"index of "phpunit.yml"
+allintitle:"Opengear Management Console"
+intext:"index of" inurl:jwks-rsa
+intitle:"index of" "download.php?file="
+intext:"index of" inurl:json-rpc
+inurl:"wp-content" intitle:"index.of" intext:backup"
+inurl:"wp-content" intitle:"index.of" intext:wp-config.php
+inurl:"php?sql=select" ext:php
+inurl: /libraries/joomla/database/
+inurl:/wp-login.php?action=register intext:"Register For This Site"
+inurl:user intitle:"Drupal" intext:"Log in" -"powered by"
+CMS Made Simple < 2.2.10 - SQL Injection
+inurl:wp-content/uploads/wcpa_uploads
+Files Containing Juicy Info
+Vulnerable Files
+intitle:"Sharing API Info"
+intitle:"index of" github-api
+intitle:"index of" google-maps-api
+intitle:"Index of" inurl:/backup/ "admin.zip"
+inurl:*/wp-content/plugins/contact-form-7/
+Re: "index of /backup.sql
+Re: intitle:index.of conf.php
+intitle:"index of" "profiler"
+intitle:"index of" "private.properties"
+allintitle:"A8810-0"
+allintitle:"macOS Server" site:.edu
+Re: inurl:"/user" intitle:"userlogin"
+Re: inurl:"/admin" intitle:"adminlogin"
+inurl:wp-content/uploads/sites
+intitle:"SCM Manager" intext:1.60
+RE: inurl:/wp-content/uploads/wpo_wcpdf
+intext:"ArcGIS REST Services Directory" intitle:"Folder: /"
+inurl:"/login.aspx" intitle:"adminlogin"
+inurl:"/login.aspx" intitle:"user"
+intitle:"PaperCut login"
+Google dorks
+site:co.in inurl:/login.aspx
+site:co.in inurl:/admin.aspx
+site:.org inurl:/admin.aspx
+site:.org inurl:/login.aspx
+site:.com inurl:/login.aspx
+inurl:"/geoserver/ows?service=wfs"
+intitle:"index of" "pass.txt"
+intitle:"index of" "config.txt"
+inurl:uux.aspx
+allintext:static/uploads
+inurl: /default.rdp
+My name is Jannatul Adnin and I would like to report a new Google dork.
+new google dork
+intitle:"Index of /api/"
+intitle:"Index of /bank/"
+inurl:php?id=1 site:com
+inurl:tech "login"
+inurl:"cf/assets" "MultiFileUpload.swf"
+intitle:"index of /wp-content/plugins"
+intitle:"index of" ".ssh" OR "ssh_config" OR "ssh_known_hosts" OR "authorized_keys" OR "id_rsa" OR "id_dsa"
+inurl:wp-includes
+inurl:"adminLogin/" intitle:"Admin Panel"
+For Google dork
+index of: /aadhar
+google dork give nginx.conf file
+inurl:wp-config.txt intext:mysql
+inurl:/phpMyAdmin/index.php?server=1
+intext:"Login" inurl:/secure
+intitle:"index of" ".sql"
+site: zoom+meeting+passcode
+admin panel and open server misconfigure
+intitle:"Documentation Index" intext:"Apache Tomcat Servlet" inurl:"docs"
+intitle:"index of" "npm-debug.log"
+intitle:"index of" "backup.zip"
+allintitle: "smart office suite - login page"
+intitle:"index of" "creds.txt"
+intitle:"index of" "C:Windows"
+intitle:"index of" "login.php.txt"
+intitle:"index of" "username.txt"
+intitle:"index of" "configuration.txt"
+intitle:"index of" "domain.txt"
+intitle:"index of" "bugs.txt"
+Shopping Website Login Pages
+inurl:"/spotfire/login.html"
+intitle:"index of" "postman_collection.json"
+intitle:"Index of" inurl:/backup/ "wp-config"
+intitle:"index of" intext: "login.php"
+site:.com inurl:/signup.aspx
+inurl:"/login.php" intitle:"admin"
+site:linkedin.com intitle:"@gmail"
+"-- phpMyAdmin SQL Dump" ext:txt
+inurl:/ui/login.aspx
+intitle:index.of intext:log site:.bd
+intitle:"online portal login"
+index of /wp-admin.jpg site:bd
+initial:inurl:uux.aspx
+intitle:"Error log for /LM/".edu
+Fwd: intitle:"index of" "login" site:bd
+Fwd: Google Dork: inurl:login/login-user
+intitle:"index of" "*.phtml" site:.edu
+intitle:"index of" "/userlist/"
+inurl:"xslt?PAGE=C_4_0"
+intitle:"index of" "about-me"
+"index of" "cloudapp.azure.com"
+"index of" "cloudapp.net"
+Google Dorks
+intitle:"Unibox Administration"
+site:www.openbugbounty.org intext:"xss" intext:"Unpatched"
+site:.co.in intitle:index of /wp-admin
+intitle:index.of login.js
+site:.com intitle:"index of" /mobikwike
+Submiting a google dork.
+Submitting a google dork.
+New submission
+site:.com intitle:"index of"/sbi
+site:.com intitle:"index of"/csb
+"structure" + ext:sql
+site:..us inurl:"login.php"
+intitle:"index of" "/config/prod/"
+intitle:"Login - Jorani"
+Reporting a New Google Dork : intitle: "index of" administrator
+Reporting a New Google Dork : intitle:"index of" mysql inurl:./db/
+Reporting a New Google Dork: intitle:index.of./.database
+intext:"index of" "phpinfo" site:*.in
+Fwd: site:.co.in intitle:index of /wp-admin
+Re: site:www.openbugbounty.org intext:"xss" intext:"Unpatched"
+inurl:"/cgi-bin/home.ha"
+Open API Keys
+intitle:index of "main.js"
+inurl:/restgui/start.html
+intitle:"cs141 webmanager"
+Firewall Log Google Dork Submission
+AWS Cloud Hosted Login Pages
+intitle:"Index of /databases"
+inurl: "index of" "phpstan.neon"
+intitle:"Index of /_MACOSX"
+intitle:"Index of /vendor/guzzlehttp"
+intitle:"Index of /flipbook"
+intitle:"Index of /app/webroot/img"
+intitle:"Index of /wp-includes/sitemaps"
+intitle:"Index of /biuro"
+intitle:"Index of /node_modules/"
+intitle:"Index of /node"
+intitle:"index of" "plesk-stat"
+Re: New Dork Submission for Google Hacking Database !!
+inurl:/admin.php
+intext:"index of wp-content/uploads"
+intitle:"index of" ec2 -aws
+intitle:"index of" graphql-api
+Google Docs data breach through dorks
+Google Dork: inurl:"/bitrix/redirect.php?goto="
+KCFinder Google Dork
+Plone installation files
+Concrete5 CMS files
+intitle:"Webcam" inurl:WebCam.htm
+site:.com inurl:login | inurl:logon | inurl:sign-in | inurl:signin | inurl:portal
+intitle:"index of" "*robots.txt" site:.edu
+inurl:"/database.json"
+inurl: edu + site: admin
+intext:"index of" "infophp()"
+intitle:"index of" "secret.txt"
+intitle:"index of" "config.php.txt"
+inurl:adminpanel site:*.* -site:github.com
+site:login.*.* | site:portal.*.*
+site:login.*.* site:portal.*.*
+intitle:"index of " *.js"
+site:admin.*.* inurl:login
+site:prod.*.* inurl:login
+inurl:pastebin "VISA"
+Google Dork
+intitle:"index of" private
+intitle:"index of"Eventlog Analyzer
+intitle:"index of" "wp-config.php.old" | "wp-config.php.backup"
+intitle:"index of" inurl:/config/
+New google dork for bitcoin - Saleh Lardhi
+inurl:signup | inurl:sign-up | inurl:register | inurl:registration
+site:*.edu.* inurl:globalprotect
+inurl:"/wp-content/debug.log"
+inurl:"/wp-includes/user.php" -site:wordpress.org -site:github.com -site:fossies.org
+allinurl:"add_vhost.php?lang=english"
+New GHDB Submission: Site Backup Index Exposure
+filetype:txt CLAVE*.txt OR clave*.txt
+intext:"Reportico" site:.com OR site:.org OR site:.net OR site:.gov OR site:.edu
+site:*.ac.* intitle:"index of" *.ics
+site:*.edu.* intitle:"index of" *.ics
+site:s3.amazonaws.com "index of /"
+intitle:"WAMPSERVER Homepage"
+inurl: /adminer.php
+site:*.com */admin.txt
+intext:"index of" "pins" site:*.com
+intitle:index.of /logs.txt
+filetype:log intext:"Account Number"
+Submission of New Google Dork
+site:.edu intext:"robotics" inurl:/research
+inurl:."install.appcenter.ms/orgs/"
+inurl:typo3/index.php
+site:*.ac.* filetype:template
+site:*.edu.* filetype:template
+intitle:"index of" "configuration.php"
+intext:"index of" server.conf
+site:*.* inurl:php_error.log - Sensitive information disclosure
+site:*.*.* intitle:"index of" *.pcapng
+inurl:/HappyAxis.jsp
+intext:"index of"store
+intitle:index of db.py
+intext:"index of" app
+site:id filetype:sql
+allintitle:"ASPECT Control Panel"
+allintitle:"CAT12CE - WebInterface"
+allintitle:"code-server login"
+intext:"administrator" filetype:txt intext:"account" inurl:/admin , intext:"administrator" filetype:txt intext:"account" allinurl:
+inurl:"UserLogin/" intitle:"Panel"
+intitle:"phpinfo" site:*.com.* intext:"HTTP_HOST"
+GHDB submissions -1
+intitle:"Index of" intext:"config" site:*.com.*
+intext:"userfiles" intitle:"Index Of" site:*.com.*
+intitle:"Index of" intext:"php" site:*.com.*
+Google dorks
+Google Dork
+site:.com "index of docker"
+intext:"user" filetype:php intext:"account" inurl:/admin
+inurl:"?url=http"
+intitle:"Fleet Management Portal"
+intitle:"index of" database.properties
+filetype:reg reg HKEY_CURRENT_USER SSHHOSTKEYS
+(site:jsonformatter.org | site:codebeautify.org) & (intext:aws | intext:bucket | intext:password | intext:secret | intext:username)
+inurl:install.php intitle:"Froxlor Server Management Panel - Installation"
+Apache Struts 2.x Path Traversal Vulnerability (CVE-2023-50164) Detection Dork
+intitle:"OpenVpn Status Monitor"
+ext:java intext:"executeUpdate"
+"Started by upstream project" ext:txt
+intitle:"Installation Wizard - PowerCMS v2"
+intitle:"Welcome to iTop version" wizard
+intitle:"index of" env.cgi
+allintitle:"Bright Cluster Manager" site:.edu
+intitle:"Index of /confidential"
+"PMB" AND ("changelog.txt" OR inurl:opac_css)
+inurl:* "encryption.txt"
+intext:"index of" web
+inurl:* "auditing.txt"
+intitle:"index of" cgi.pl
+inurl:"/wp-json/oembed/1.0/embed?url="
+Google Dorks for Default XAMPP Dashboards
+site:com inurl:invoice
+inurl:"wa.exe?TICKET"
+intitle: index of /concrete/Password
+intitle:"FileCatalyst file transfer solution"
+allintitle:"ITRS OP5 Monitor"
+inurl:/s3.amazonaws.com ext:xml intext:index of -site:github.com
+inurl:pastebin intitle:mastercard
+"configmap.yaml" | "config.yaml" | "*-config.yaml" intitle:"index of"
+"rbac.yaml" | "role.yaml" | "rolebinding.yaml" | "*-rbac.yaml" intitle:"index of"
+intitle:Index of "/etc/network" | "/etc/cni/net.d"
+site:uat.* * inurl:login
+site:preprod.* * inurl:login
+intitle:"index of" setting.php
+intext:"dhcpd.conf" "index of"
+intitle:"/zircote/swagger-php"
+intitle:index of /etc/openldap
+intitle:"GlobalProtect Portal"
+"PHP Fatal error:" ext:log OR ext:txt
+"Header for logs at time" ext:log
+"START test_database" ext:log
+site:.edu filetype:xls "root" database
+intitle:index of /etc/ssh
+Google Dork Submisson For GlobalProtect Portal
+intext:"siemens" & inurl:"/portal/portal.mwsl"
+intext:"aws_access_key_id" | intext:"aws_secret_access_key" filetype:json | filetype:yaml
+intitle:"SSL Network Extender Login" -checkpoint.com
+inurl:"cgi-bin/koha"
+intext:"proftpd.conf" "index of"
+inurl:home.htm intitle:1766
+site:github.com "BEGIN OPENSSH PRIVATE KEY"
+ext:nix "BEGIN OPENSSH PRIVATE KEY"
