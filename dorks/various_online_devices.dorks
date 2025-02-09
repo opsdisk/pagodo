@@ -729,3 +729,15 @@ intitle:"Pi-hole-ip" inurl:admin
 intitle:"NoVus IP camera" -com
 intitle:"Gargoyle Router Management Utility" -com|net
 inurl:viewer/live/index.html
+intitle:phaser inurl:/frameprop.htm
+Google Dork: HP Laserjet Config Network Page
+Google Dork: Xerox Phaser Printer Properties Page
+Google Dork: Brother Printers Properties Page
+inurl:"device.rsp" -in
+Google Dork : intitle:"Toshiba Network Camera"
+=?UTF-8?Q?intext:"Please_respect_other_people=E2=80=99s_priva?= =?UTF-8?Q?cy_and_rights_when_using_product."_hikvision?=
+Google Dork: Recoh Printer Properties Page
+Re: GHDB - Dork
+allintitle:"A8810-0"
+intitle:"Webcam" inurl:WebCam.htm
+inurl:home.htm intitle:1766

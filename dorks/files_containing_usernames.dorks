@@ -43,3 +43,5 @@ intitle:"index of" "db.properties" | "db.properties.BAK"
 intitle:"index of" "contacts.txt"
 intext:"-----BEGIN CERTIFICATE-----" ext:txt
 intitle:"index of" "/usernames"
+"Header for logs at time" ext:log
+"START test_database" ext:log

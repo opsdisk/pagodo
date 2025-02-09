@@ -2217,3 +2217,4 @@ inurl:/wp-content/plugins/wpdiscuz/
 inurl:quicklinks.aspx
 "PHP Projectworlds 1.0"
 inurl:"index.php?page=news.php"
+# Google Dork: intext:"Powered by Virtual Airlines Manager [v2.6.2]"

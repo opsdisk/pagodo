@@ -1476,3 +1476,74 @@ intitle:'olt web management interface'
 inurl:"admin/default.aspx"
 allintitle:"Log on to MACH-ProWeb"
 intitle:"WEB SERVICE" "wan" "lan" "alarm"
+inurl:authorization.do intext:"ADSelfService Plus"
+intitle:"NB1601 Web Manager"
+intitle:"Netgate pfSense Plus - Login"
+intitle:"Parallels User Portal"
+allintitle:"wireless controller login"
+inurl:"/adfs/ls/"
+inurl:"device.rsp" -com
+site:cp.*.* intitle:"login"
+inurl:assystnetmob
+intitle:"index of" "login.sh"
+site:*/AdminLogin.aspx
+inurl:GeminiVAIdServer
+inurl:GeminiVAIdServer
+intitle:"Ignition Gateway" "launch designer"
+site:ap.*.* intitle:"login"
+allintitle:"Eclypse Login"
+allintitle:"TutorTrac Login"
+allintitle:"OMERO.web - Login"
+allintitle:"Untangle Administrator Login"
+allintitle:"eSlideManager - Login"
+allintitle:"Supermicro BMC Login"
+allintitle:"Building Operation WebStation"
+site:email.*.* intitle:"login"
+allintitle:"Cyberoam SSL VPN Portal"
+inurl:guest/auth_login.php
+allintitle:"Login | Control WebPanel" Control WebPanel Login
+inurl:adminpanel site:*.in
+allintitle:"MobileIron User Portal: Sign In"
+allintitle:"Synapse Mobility Login"
+allintitle:"ResolutionMD Login"
+inurl:/superadmin/login intext:login
+inurl:"/sap/bc/gui/sap/its/webgui?sap-client=SAP*"
+allintitle:"Login | wplogin Login
+inurl:cas/login?service=http
+inurl: "/admin" intitle:"Admin Login"
+allintitle:"Opengear Management Console"
+Re: inurl:"/user" intitle:"userlogin"
+Re: inurl:"/admin" intitle:"adminlogin"
+inurl:"/login.aspx" intitle:"adminlogin"
+inurl:"/login.aspx" intitle:"user"
+intitle:"PaperCut login"
+site:co.in inurl:/login.aspx
+site:co.in inurl:/admin.aspx
+site:.org inurl:/admin.aspx
+site:.org inurl:/login.aspx
+site:.com inurl:/login.aspx
+inurl:uux.aspx
+inurl:tech "login"
+inurl:"adminLogin/" intitle:"Admin Panel"
+intext:"Login" inurl:/secure
+admin panel and open server misconfigure
+allintitle: "smart office suite - login page"
+Shopping Website Login Pages
+inurl:"/spotfire/login.html"
+inurl:/ui/login.aspx
+intitle:"online portal login"
+initial:inurl:uux.aspx
+intitle:"Unibox Administration"
+Submitting a google dork.
+site:..us inurl:"login.php"
+intitle:"Login - Jorani"
+inurl:/restgui/start.html
+intitle:"cs141 webmanager"
+site:.com inurl:login | inurl:logon | inurl:sign-in | inurl:signin | inurl:portal
+site:login.*.* site:portal.*.*
+site:admin.*.* inurl:login
+site:prod.*.* inurl:login
+allintitle:"ASPECT Control Panel"
+allintitle:"CAT12CE - WebInterface"
+allintitle:"code-server login"
+inurl:"UserLogin/" intitle:"Panel"
