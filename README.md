@@ -1,5 +1,19 @@
 # pagodo - Passive Google Dork
 
+## ⚠️ Archiving pagodo
+
+> **This repository is archived and no longer maintained.**
+
+In July/August 2026, Google changed how search results are returned, rendering the [yagooglesearch](https://github.com/opsdisk/yagooglesearch) library that `pagodo` utilizes unreliable. The library that `yagooglesearch` was based on, [googlesearch](https://github.com/MarioVilas/googlesearch), was archived on February 13, 2026. Its [issue tracker](https://github.com/MarioVilas/googlesearch/issues/124) also documents problems with search results no longer appearing.
+
+As a result, this repository was archived on November 1, 2026, and is no longer maintained.
+
+For background:
+
+- [Overview of the changes](https://www.seroundtable.com/google-search-goto-tracking-41957.html)
+- [Technical deep dive](https://www.scrapingbee.com/blog/google-goto-redirect-urls/)
+- [Browser add-on for handling Google’s redirect URLs](https://googlegotourl.com/)
+
 ## Introduction
 
 `pagodo` automates Google searching for potentially vulnerable web pages and applications on the Internet. It replaces
